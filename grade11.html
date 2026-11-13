@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grade 11 Mathematics | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="grade11.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <a href="grade.html" class="back-link">← Grades</a>
+        <h1>MathsHelpSA</h1>
+    </header>
+
+    <!-- Welcome section -->
+    <main class="container">
+
+        <section class="welcome">
+            <span class="grade-label">GRADE 11</span>
+
+            <h2>Let's Learn Mathematics!</h2>
+
+            <p>
+                Choose a topic below. Learn the concepts,
+                follow worked examples and practise your skills.
+            </p>
+        </section>
+
+       
+<!-- Topics -->
+<section class="topics">
+
+    <h2 class="section-title">Choose a Topic</h2>
+
+    <!-- EXponents -->
+    <article class="topic-card">
+        <div class="topic-icon">²</div>
+
+        <h3>Exponents</h3>
+
+        <p>Learn the laws of exponents and how to simplify expressions.</p>
+
+        <button class="learn-button" onclick="showLesson('exponents')">
+            Start Learning
+        </button>
+
+        <div id="exponents" class="lesson">
+
+            <h4>Worked Example</h4>
+
+            <p>Simplify:</p>
+
+            <div class="math-question">
+                2³ × 2²
+            </div>
+
+            <button class="step-button" onclick="showSteps('exponentSteps')">
+                Show Solution Steps
+            </button>
+
+            <div id="exponentSteps" class="steps">
+                <p><strong>Step 1:</strong> Identify the bases.</p>
+                <p>Both terms have base 2.</p>
+
+                <p><strong>Step 2:</strong> Apply the multiplication law.</p>
+                <p>When multiplying powers with the same base, add the exponents.</p>
+
+                <p>2³ × 2² = 2³⁺²</p>
+
+                <p><strong>Step 3:</strong> Add the exponents.</p>
+                <p>2⁵ = 2 × 2 × 2 × 2 × 2</p>
+
+                <p class="answer">Final Answer: 32</p>
+            </div>
+
+            <!-- 20 Exponents Practice Questions -->
+            <div id="exponentsPractice" class="practice-section"></div>
+
+        </div>
+    </article>
+
+
+    <!-- EQUATIONS -->
+    <article class="topic-card">
+        <div class="topic-icon">x</div>
+
+        <h3>Equations</h3>
+
+        <p>Learn how to solve equations and find the value of x.</p>
+
+        <button class="learn-button" onclick="showLesson('equations')">
+            Start Learning
+        </button>
+
+        <div id="equations" class="lesson">
+
+            <h4>Worked Example</h4>
+
+            <p>Solve for x:</p>
+
+            <div class="math-question">
+                2x + 4 = 12
+            </div>
+
+            <button class="step-button" onclick="showSteps('equationSteps')">
+                Show Solution Steps
+            </button>
+
+            <div id="equationSteps" class="steps">
+                <p><strong>Step 1:</strong> Subtract 4 from both sides.</p>
+                <p>2x = 12 - 4</p>
+
+                <p><strong>Step 2:</strong> Simplify.</p>
+                <p>2x = 8</p>
+
+                <p><strong>Step 3:</strong> Divide both sides by 2.</p>
+                <p>x = 8 ÷ 2</p>
+
+                <p class="answer">Final Answer: x = 4</p>
+            </div>
+
+            <!-- 20 Equations Practice Questions -->
+            <div id="equationsPractice" class="practice-section"></div>
+
+        </div>
+    </article>
+
+
+    <!-- TRIGONOMETRY -->
+    <article class="topic-card">
+        <div class="topic-icon">△</div>
+
+        <h3>Trigonometry</h3>
+
+        <p>Understand sine, cosine and tangent ratios.</p>
+
+        <button class="learn-button" onclick="showLesson('trigonometry')">
+            Start Learning
+        </button>
+
+        <div id="trigonometry" class="lesson">
+
+            <h4>Worked Example</h4>
+
+            <p>Calculate sin(30°).</p>
+
+            <div class="math-question">
+                sin(30°) = ?
+            </div>
+
+            <button class="step-button" onclick="showSteps('trigSteps')">
+                Show Solution Steps
+            </button>
+
+            <div id="trigSteps" class="steps">
+                <p><strong>Step 1:</strong> Recall the exact trigonometric value.</p>
+
+                <p><strong>Step 2:</strong> Use the standard special-angle value.</p>
+
+                <p>sin(30°) = 1/2</p>
+
+                <p class="answer">Final Answer: 1/2</p>
+            </div>
+
+            <!-- 20 Trigonometry Practice Questions -->
+            <div id="trigonometryPractice" class="practice-section"></div>
+
+        </div>
+    </article>
+
+
+    <!-- PROBABILITY -->
+    <article class="topic-card">
+        <div class="topic-icon">%</div>
+
+        <h3>Probability</h3>
+
+        <p>Learn how to calculate the probability of events.</p>
+
+        <button class="learn-button" onclick="showLesson('probability')">
+            Start Learning
+        </button>
+
+        <div id="probability" class="lesson">
+
+            <h4>Worked Example</h4>
+
+            <p>A fair die has six sides. What is the probability of rolling a 4?</p>
+
+            <div class="math-question">
+                P(rolling a 4) = ?
+            </div>
+
+            <button class="step-button" onclick="showSteps('probabilitySteps')">
+                Show Solution Steps
+            </button>
+
+            <div id="probabilitySteps" class="steps">
+                <p><strong>Step 1:</strong> Count the possible outcomes.</p>
+                <p>There are 6 possible outcomes.</p>
+
+                <p><strong>Step 2:</strong> Count the favourable outcomes.</p>
+                <p>Only one outcome is a 4.</p>
+
+                <p><strong>Step 3:</strong> Apply the probability formula.</p>
+                <p>P(A) = Favourable outcomes / Total outcomes</p>
+
+                <p>P(4) = 1/6</p>
+
+                <p class="answer">Final Answer: 1/6</p>
+            </div>
+
+            <!-- 20 Probability Practice Questions -->
+            <div id="probabilityPractice" class="practice-section"></div>
+
+        </div>
+    </article>
+
+</section>
+
+
+<!-- More Topics Coming Soon -->
+<section class="coming-soon">
+
+    <h2>More Topics Coming Soon!</h2>
+
+    <p>
+        We are working on adding more Grade 11 Mathematics
+        lessons, examples and practice questions.
+    </p>
+
+    <div class="coming-topics">
+
+        <div class="coming-topic-card">
+            <span>📈</span>
+            <h3>Functions</h3>
+            <p>Explore graphs, equations and different types of functions.</p>
+            <span class="coming-label">COMING SOON</span>
+        </div>
+
+        <div class="coming-topic-card">
+            <span>📐</span>
+            <h3>Analytical Geometry</h3>
+            <p>Learn about straight lines, gradients and distance.</p>
+            <span class="coming-label">COMING SOON</span>
+        </div>
+
+        <div class="coming-topic-card">
+            <span>🔢</span>
+            <h3>Sequences and Series</h3>
+            <p>Understand number patterns and sequences.</p>
+            <span class="coming-label">COMING SOON</span>
+        </div>
+
+        <div class="coming-topic-card">
+            <span>📊</span>
+            <h3>Statistics</h3>
+            <p>Explore data, averages and data interpretation.</p>
+            <span class="coming-label">COMING SOON</span>
+        </div>
+
+        <div class="coming-topic-card">
+            <span>📏</span>
+            <h3>Measurement</h3>
+            <p>Practise measurement and related calculations.</p>
+            <span class="coming-label">COMING SOON</span>
+        </div>
+
+        <div class="coming-topic-card">
+            <span>🧮</span>
+            <h3>Financial Mathematics</h3>
+            <p>Learn about interest, growth and financial calculations.</p>
+            <span class="coming-label">COMING SOON</span>
+        </div>
+
+    </div>
+
+    <p class="coming-message">
+        Stay tuned! More learning content is on the way.
+    </p>
+
+</section>
+
+
+    <footer>
+        <p>MathsHelpSA | Learn Mathematics Step by Step</p>
+    </footer>
+
+    <script src="grade11.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MathsHelpSA</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="cover.css">
+</head>
+
+<body>
+
+    <!-- COVER PAGE -->
+    <main class="cover">
+
+        <div class="float f1">f(x) = x²</div>
+        <div class="float f2">P(A) = favourable / total</div>
+
+        <section class="hero">
+
+            <!-- LEFT GRAPH -->
+            <div class="graph-box">
+                <p>PARABOLA • f(x) = x²</p>
+
+                <canvas id="parabolaCanvas"
+                        width="210"
+                        height="150">
+                </canvas>
+
+                <p class="graph-note">
+                    Calculus: f'(x) = 2x
+                </p>
+            </div>
+
+            <!-- WEBSITE TITLE -->
+            <div class="title-box">
+
+                <h1>
+                    MATHS<br>
+                    <span>HELPSA</span>
+                </h1>
+
+                <div class="subtitle">
+                    FREE Grade 11 &amp; 12 Maths
+                </div>
+
+            </div>
+
+            <!-- RIGHT GRAPH -->
+            <div class="graph-box">
+                <p>EXPONENTIAL • y = 2ˣ</p>
+
+                <canvas id="expCanvas"
+                        width="210"
+                        height="150">
+                </canvas>
+
+                <p class="graph-note">
+                    Functions: Exponential growth
+                </p>
+            </div>
+
+        </section>
+
+        <!-- MATHEMATICS TOPICS -->
+        <p class="topics">
+            Algebra • Functions • Calculus<br>
+            Trigonometry • Probability
+        </p>
+
+        <p class="tagline">
+            Learn it. Practise it. Understand every step.
+        </p>
+
+        <!-- GO TO GRADE SELECTION -->
+        <a href="grade.html" class="btn-start">
+            START LEARNING →
+        </a>
+
+        <button class="replay" id="replayButton">
+            ↻ Replay Both Graphs
+        </button>
+
+        <p class="small">
+            No login • No payment • Works on phone
+        </p>
+
+    </main>
+
+    <!-- Connect JavaScript -->
+    <script src="cover.js"></script>
+
+</body>
+</html>
