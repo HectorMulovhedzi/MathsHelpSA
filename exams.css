@@ -230,3 +230,61 @@ footer {
         font-size: 18px;
     }
 }
+
+/* Official paper cards */
+
+.paper-card {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.paper-year {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.paper-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.paper-card p {
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.paper-link {
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paper-link:hover {
+    background: #1d4ed8;
+}
+
+.archive-note {
+    background: #eff6ff;
+    padding: 15px;
+    border-left: 4px solid #1e40af;
+    line-height: 1.6;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.section-description {
+    line-height: 1.6;
+    margin: 15px 0;
+}
