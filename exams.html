@@ -8,7 +8,6 @@
     <title>Mathematics Past Papers | MathsHelpSA</title>
 
     <link rel="icon" type="image/png" href="maths.png">
-
     <link rel="stylesheet" href="exams.css">
 </head>
 
@@ -16,12 +15,14 @@
 
     <header class="header">
         <h1>MathsHelpSA</h1>
-        <a href="grade.html" class="home-link">Back to Grades</a>
+        <a href="grade.html" class="back-link">Back to Grades</a>
     </header>
 
-    <main class="exams-container">
+    <main class="container">
 
         <section class="welcome">
+            <span class="grade-label">GRADE 11 & 12</span>
+
             <h2>Mathematics Past Papers</h2>
 
             <p>
@@ -33,122 +34,122 @@
         <!-- Grade selection -->
         <section class="grade-selection">
 
-            <button
-                class="grade-button active"
-                onclick="showGrade('grade11', this)">
-                Grade 11
-            </button>
+            <h2 class="section-title">Choose Your Grade</h2>
 
-            <button
-                class="grade-button"
-                onclick="showGrade('grade12', this)">
-                Grade 12
-            </button>
+            <div class="grade-buttons">
+
+                <button
+                    class="grade-button active"
+                    onclick="showGrade('grade11', this)">
+                    Grade 11
+                </button>
+
+                <button
+                    class="grade-button"
+                    onclick="showGrade('grade12', this)">
+                    Grade 12
+                </button>
+
+            </div>
 
         </section>
 
         <!-- Grade 11 -->
         <section id="grade11" class="paper-section">
 
-            <h2>Grade 11 Mathematics Papers</h2>
+            <h2 class="section-title">Grade 11 Mathematics</h2>
 
-            <p class="section-description">
+            <p class="section-intro">
                 Access Grade 11 Mathematics examination papers
                 and memorandums from the official DBE website.
             </p>
 
-            <div class="paper-card">
+            <div class="year-grid">
 
-                <div class="paper-year">2015–2018</div>
+                <article class="year-card">
 
-                <h3>Grade 11 Common Examination Papers</h3>
+                    <h3>2015–2018</h3>
 
-                <p>
-                    The DBE Grade 11 archive includes Mathematics
-                    Paper 1, Paper 2 and their memorandums.
-                </p>
+                    <p>
+                        Grade 11 common examination papers,
+                        including Mathematics Paper 1, Paper 2
+                        and available memorandums.
+                    </p>
 
-                <a
-                    href="https://www.education.gov.za/Curriculum/NationalSeniorCertificate%28NSC%29Examinations/Grade11Exams.aspx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="paper-link">
+                    <a
+                        href="https://www.education.gov.za/Curriculum/NationalSeniorCertificate%28NSC%29Examinations/Grade11Exams.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Grade 11 Papers
+                    </a>
 
-                    View Grade 11 Papers
+                </article>
 
-                </a>
+                <article class="year-card">
 
-            </div>
+                    <h3>2020–2026</h3>
 
-            <div class="paper-card">
+                    <p>
+                        Explore the wider DBE examination archive
+                        for additional available Grade 11 papers.
+                    </p>
 
-                <div class="paper-year">2020–2026</div>
+                    <a
+                        href="https://www.education.gov.za/Examinations/tabid/338/Default.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Explore DBE Archive
+                    </a>
 
-                <h3>DBE Previous Examination Papers</h3>
-
-                <p>
-                    Visit the wider DBE examination archive and
-                    look for available Grade 11 Mathematics papers.
-                </p>
-
-                <a
-                    href="https://www.education.gov.za/Examinations/tabid/338/Default.aspx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="paper-link">
-
-                    Explore DBE Examination Archive
-
-                </a>
+                </article>
 
             </div>
 
             <p class="archive-note">
-                Note: The dedicated Grade 11 archive currently lists
-                Mathematics papers from 2015 to 2018. The wider archive
-                may contain additional Grade 11 papers.
+                Note: The dedicated Grade 11 DBE archive currently
+                lists Mathematics papers from 2015 to 2018.
+                Additional years are not guaranteed.
             </p>
 
         </section>
 
         <!-- Grade 12 -->
-        <section id="grade12" class="paper-section">
+        <section id="grade12" class="paper-section" hidden>
 
-            <h2>Grade 12 Mathematics Papers</h2>
+            <h2 class="section-title">Grade 12 Mathematics</h2>
 
-            <p class="section-description">
+            <p class="section-intro">
                 Prepare for your final examinations using official
-                DBE Mathematics papers and memorandums.
+                DBE Mathematics examination papers and memorandums.
             </p>
 
-            <div class="paper-card">
+            <div class="year-grid">
 
-                <div class="paper-year">2020–2026</div>
+                <article class="year-card">
 
-                <h3>Grade 12 Previous Examination Papers</h3>
+                    <h3>2020–2026</h3>
 
-                <p>
-                    Find available examination papers from different
-                    examination sessions, including May/June and
-                    November where available.
-                </p>
+                    <p>
+                        Find available Mathematics examination papers
+                        from different examination sessions, including
+                        May/June and November where available.
+                    </p>
 
-                <a
-                    href="https://www.education.gov.za/Examinations/tabid/338/Default.aspx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="paper-link">
+                    <a
+                        href="https://www.education.gov.za/Examinations/tabid/338/Default.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Grade 12 Papers
+                    </a>
 
-                    View Grade 12 Papers
-
-                </a>
+                </article>
 
             </div>
 
             <p class="archive-note">
                 On the DBE website, select the examination year
-                and find Mathematics Paper 1, Paper 2 and the
-                corresponding memorandums.
+                and look for Mathematics Paper 1, Paper 2 and
+                their corresponding memorandums.
             </p>
 
         </section>
@@ -168,7 +169,7 @@
 
         </section>
 
-        <footer class="footer-text">
+        <footer>
             MathsHelpSA - Learn Mathematics Step by Step.
         </footer>
 
