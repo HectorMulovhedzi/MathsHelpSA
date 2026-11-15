@@ -8,7 +8,7 @@ function showGrade(gradeId, clickedButton) {
         section.style.display = "none";
     });
 
-    // Show selected grade
+    // Show the selected grade
     const selectedGrade = document.getElementById(gradeId);
 
     if (selectedGrade) {
@@ -22,12 +22,12 @@ function showGrade(gradeId, clickedButton) {
         button.classList.remove("active");
     });
 
-    // Highlight selected button
+    // Highlight the selected button
     clickedButton.classList.add("active");
 }
 
 
-// Display Grade 11 when the page first opens
+// Display Grade 11 when the page opens
 document.addEventListener("DOMContentLoaded", function() {
 
     const grade11 = document.getElementById("grade11");
@@ -41,4 +41,5 @@ document.addEventListener("DOMContentLoaded", function() {
         grade12.style.display = "none";
     }
 
+    console.log("MathsHelpSA Past Papers page connected!");
 });
