@@ -387,3 +387,129 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* =====================================
+   TRIGONOMETRY AND IDENTITY LESSONS
+===================================== */
+
+.lesson h3 {
+    color: #1e40af;
+    font-size: 21px;
+    margin: 22px 0 12px;
+}
+
+.lesson h4 {
+    color: #1e3a8a;
+    margin-top: 22px;
+    line-height: 1.5;
+}
+
+.lesson hr {
+    border: none;
+    border-top: 1px solid #dbeafe;
+    margin: 28px 0;
+}
+
+.lesson ul {
+    margin: 12px 0 18px 25px;
+    color: #334155;
+    line-height: 1.8;
+}
+
+.lesson li {
+    margin-bottom: 7px;
+}
+
+.lesson > p {
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+/* Formula boxes */
+
+.math-question {
+    overflow-wrap: anywhere;
+    line-height: 1.8;
+}
+
+/* Step-by-step proofs */
+
+.steps {
+    border-left: 4px solid #2563eb;
+    line-height: 1.7;
+}
+
+.steps p {
+    overflow-wrap: anywhere;
+}
+
+/* Final answers */
+
+.answer {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Graph containers */
+
+.graph-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 12px;
+    background: white;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.graph-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Uploaded functions image */
+
+.function-image {
+    width: 100%;
+    margin: 18px auto;
+    padding: 10px;
+    background: white;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+}
+
+.function-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Better spacing on small screens */
+
+@media (max-width: 600px) {
+
+    .lesson h3 {
+        font-size: 19px;
+    }
+
+    .lesson h4 {
+        font-size: 17px;
+    }
+
+    .math-question {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .steps {
+        padding: 13px;
+    }
+
+    .graph-container {
+        padding: 5px;
+    }
+}

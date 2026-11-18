@@ -1,22 +1,41 @@
 
-// Show or hide a lesson
+// ==========================================
+// SHOW OR HIDE LESSONS
+// ==========================================
+
 function showLesson(lessonId) {
     const lesson = document.getElementById(lessonId);
+
+    if (!lesson) {
+        console.error("Lesson not found:", lessonId);
+        return;
+    }
 
     lesson.style.display =
         lesson.style.display === "block" ? "none" : "block";
 }
 
-// Show or hide worked solution steps
+
+// ==========================================
+// SHOW OR HIDE SOLUTION STEPS
+// ==========================================
+
 function showSteps(stepsId) {
     const steps = document.getElementById(stepsId);
+
+    if (!steps) {
+        console.error("Solution steps not found:", stepsId);
+        return;
+    }
 
     steps.style.display =
         steps.style.display === "block" ? "none" : "block";
 }
 
-// 20 practice questions for each topic
-// Each question includes its answer and a short explanation.
+
+// ==========================================
+// PRACTICE QUESTIONS
+// ==========================================
 
 const practiceData = {
 
@@ -26,21 +45,21 @@ const practiceData = {
         ["Simplify: (3²)³", "3²ˣ³ = 3⁶ = 729"],
         ["Calculate: 4⁰", "Any non-zero number to the power 0 is 1. Answer: 1"],
         ["Calculate: 2⁻³", "2⁻³ = 1/2³ = 1/8"],
-        ["Simplify: 3² × 3⁻¹", "3²⁺⁽⁻¹⁾ = 3¹ = 3"],
+        ["Simplify: 3² × 3⁻¹", "3²⁺⁽⁻¹⁾ = 3"],
         ["Calculate: (2 × 3)²", "6² = 36"],
-        ["Calculate: 2³ + 2²", "8 + 4 = 12. Add the powers' values; do not add the exponents."],
-        ["Simplify: 10³ ÷ 10", "10³ ÷ 10¹ = 10² = 100"],
-        ["Simplify: x³ × x⁵", "x³⁺⁵ = x⁸"],
-        ["Simplify: x⁷ ÷ x²", "x⁷⁻² = x⁵, where x ≠ 0"],
-        ["Simplify: (a²b³)²", "a⁴b⁶. Multiply each exponent by 2."],
+        ["Calculate: 2³ + 2²", "8 + 4 = 12"],
+        ["Simplify: 10³ ÷ 10", "10³ ÷ 10¹ = 100"],
+        ["Simplify: x³ × x⁵", "x⁸"],
+        ["Simplify: x⁷ ÷ x²", "x⁵, where x ≠ 0"],
+        ["Simplify: (a²b³)²", "a⁴b⁶"],
         ["Calculate: 16^(1/2)", "√16 = 4"],
         ["Calculate: 27^(1/3)", "∛27 = 3"],
         ["Calculate: 8^(-2/3)", "∛8 = 2, so 2⁻² = 1/4"],
-        ["Solve: 2ˣ = 32", "32 = 2⁵, therefore x = 5"],
-        ["Solve: 3^(x+1) = 81", "81 = 3⁴, so x + 1 = 4. Therefore x = 3"],
+        ["Solve: 2ˣ = 32", "x = 5"],
+        ["Solve: 3^(x+1) = 81", "x + 1 = 4, therefore x = 3"],
         ["Simplify: (x⁻²)⁻¹", "x², where x ≠ 0"],
-        ["TRICK: Calculate 0⁻²", "Undefined. A negative exponent means a reciprocal, and division by zero is not allowed."],
-        ["TRICK: Compare (-2)⁴ and -2⁴", "(-2)⁴ = 16, but -2⁴ = -(2⁴) = -16. Brackets matter."]
+        ["TRICK: Calculate 0⁻²", "Undefined because division by zero is not allowed."],
+        ["TRICK: Compare (-2)⁴ and -2⁴", "(-2)⁴ = 16, while -2⁴ = -16."]
     ],
 
     equations: [
@@ -49,21 +68,21 @@ const practiceData = {
         ["Solve: 2(x + 3) = 14", "2x + 6 = 14, so x = 4"],
         ["Solve: 5x + 2 = 3x + 10", "2x = 8, so x = 4"],
         ["Solve: x/3 + 2 = 6", "x/3 = 4, so x = 12"],
-        ["Solve: 4(x - 2) = 2x + 6", "4x - 8 = 2x + 6; 2x = 14; x = 7"],
-        ["Solve: x² = 49", "x = ±7. Both 7 and -7 have a square of 49."],
-        ["Solve: x² - 9 = 0", "x² = 9, so x = ±3"],
-        ["Factorise and solve: x² + 5x + 6 = 0", "(x + 2)(x + 3) = 0, so x = -2 or x = -3"],
-        ["Solve: x² - 5x + 6 = 0", "(x - 2)(x - 3) = 0, so x = 2 or x = 3"],
-        ["Solve: x² - 4 = 0", "(x - 2)(x + 2) = 0, so x = ±2"],
-        ["Solve: 2x² - 8 = 0", "2x² = 8; x² = 4; x = ±2"],
+        ["Solve: 4(x - 2) = 2x + 6", "4x - 8 = 2x + 6, so x = 7"],
+        ["Solve: x² = 49", "x = ±7"],
+        ["Solve: x² - 9 = 0", "x = ±3"],
+        ["Solve: x² + 5x + 6 = 0", "(x + 2)(x + 3) = 0, so x = -2 or -3"],
+        ["Solve: x² - 5x + 6 = 0", "(x - 2)(x - 3) = 0, so x = 2 or 3"],
+        ["Solve: x² - 4 = 0", "x = ±2"],
+        ["Solve: 2x² - 8 = 0", "x = ±2"],
         ["Solve: x² + 4x + 4 = 0", "(x + 2)² = 0, so x = -2"],
-        ["Solve: x² - 2x - 8 = 0", "(x - 4)(x + 2) = 0, so x = 4 or x = -2"],
-        ["Solve: 2x + 3 < 11", "2x < 8, so x < 4"],
-        ["Solve: -3x > 12", "Divide by -3 and reverse the inequality: x < -4"],
-        ["Solve simultaneously: x + y = 10 and x - y = 2", "Add the equations: 2x = 12, so x = 6. Then y = 4."],
-        ["Solve: (x - 1)(x + 4) = 0", "x - 1 = 0 or x + 4 = 0. So x = 1 or x = -4"],
-        ["TRICK: Solve: x² = -9 over the real numbers", "There is no real solution because the square of a real number cannot be negative."],
-        ["TRICK: Solve: 2(x + 3) = 2x + 6", "Both sides are identical. Every real value of x is a solution."]
+        ["Solve: x² - 2x - 8 = 0", "x = 4 or x = -2"],
+        ["Solve: 2x + 3 < 11", "x < 4"],
+        ["Solve: -3x > 12", "Reverse the inequality: x < -4"],
+        ["Solve simultaneously: x + y = 10 and x - y = 2", "x = 6 and y = 4"],
+        ["Solve: (x - 1)(x + 4) = 0", "x = 1 or x = -4"],
+        ["TRICK: Solve x² = -9 over real numbers", "There is no real solution."],
+        ["TRICK: Solve 2(x + 3) = 2x + 6", "Every real number is a solution."]
     ],
 
     trigonometry: [
@@ -76,62 +95,106 @@ const practiceData = {
         ["Calculate: sin 60°", "sin 60° = √3/2"],
         ["Calculate: cos 30°", "cos 30° = √3/2"],
         ["Calculate: tan 60°", "tan 60° = √3"],
-        ["Simplify: sin²θ + cos²θ", "Using the identity sin²θ + cos²θ = 1. Answer: 1"],
-        ["If sin θ = 3/5 and θ is acute, find cos θ.", "Using a 3-4-5 triangle, cos θ = 4/5"],
-        ["If opposite = 6 and hypotenuse = 10, find sin θ.", "sin θ = opposite/hypotenuse = 6/10 = 3/5"],
+        ["Simplify: sin²θ + cos²θ", "Using the square identity, the answer is 1."],
+        ["If sin θ = 3/5 and θ is acute, find cos θ.", "cos θ = 4/5"],
+        ["If opposite = 6 and hypotenuse = 10, find sin θ.", "sin θ = 6/10 = 3/5"],
         ["If adjacent = 8 and hypotenuse = 10, find cos θ.", "cos θ = 8/10 = 4/5"],
         ["If opposite = 5 and adjacent = 5, find tan θ.", "tan θ = 5/5 = 1"],
         ["Solve sin θ = 1/2 for 0° ≤ θ ≤ 360°.", "θ = 30° or 150°"],
         ["Solve cos θ = 1/2 for 0° ≤ θ ≤ 360°.", "θ = 60° or 300°"],
         ["Solve tan θ = 1 for 0° ≤ θ ≤ 360°.", "θ = 45° or 225°"],
-        ["Simplify: (sin θ)/(cos θ)", "This is the identity tan θ, where cos θ ≠ 0"],
-        ["TRICK: Calculate tan 90°", "Undefined. tan θ = sin θ/cos θ, and cos 90° = 0."],
-        ["TRICK: If sin θ = 0.5, must θ be 30°?", "Not always. Between 0° and 360°, θ can be 30° or 150°."]
+        ["Simplify: sin θ / cos θ", "tan θ, where cos θ ≠ 0"],
+        ["TRICK: Calculate tan 90°", "Undefined because cos 90° = 0."],
+        ["TRICK: If sin θ = 0.5, must θ be 30°?", "No. Between 0° and 360°, θ can be 30° or 150°."]
+    ],
+
+    functions: [
+        ["Given y = 2x + 1, calculate y when x = 3.", "y = 2(3) + 1 = 7"],
+        ["Given y = 3x - 2, calculate y when x = 2.", "y = 3(2) - 2 = 4"],
+        ["Find the gradient between (1; 3) and (3; 7).", "m = (7 - 3)/(3 - 1) = 2"],
+        ["Find the y-intercept of y = 4x + 5.", "The y-intercept is 5."],
+        ["Find the gradient of y = -2x + 3.", "The gradient is -2."],
+        ["Given y = x², calculate y when x = 3.", "y = 3² = 9"],
+        ["Given y = x² + 2, calculate y when x = 3.", "y = 9 + 2 = 11"],
+        ["Given y = x² - 4, calculate y when x = 2.", "y = 4 - 4 = 0"],
+        ["What is the turning point of y = x²?", "The turning point is (0; 0)."],
+        ["Does y = -x² open upwards or downwards?", "Downwards because the coefficient of x² is negative."],
+        ["Find y when x = 2 in y = 6/x.", "y = 6/2 = 3"],
+        ["Can x equal zero in y = 4/x?", "No. Division by zero is undefined."],
+        ["Find the amplitude of y = 3 sin x.", "Amplitude = |3| = 3"],
+        ["Find the amplitude of y = -2 cos x.", "Amplitude = |-2| = 2"],
+        ["Find the period of y = sin x.", "The period is 360°."],
+        ["What does q do in y = sin x + q?", "It shifts the graph vertically by q units."],
+        ["What happens when a is negative in y = a sin x?", "The graph is reflected in the x-axis."],
+        ["Calculate the average gradient between (2; 4) and (4; 16).", "(16 - 4)/(4 - 2) = 6"],
+        ["TRICK: Is y = 1/x defined at x = 0?", "No. Division by zero is undefined."],
+        ["TRICK: Does a negative amplitude mean the amplitude is negative?", "No. Amplitude is the absolute value of a and cannot be negative."]
     ],
 
     probability: [
-        ["A fair die is rolled. Find P(rolling a 4).", "1 favourable outcome out of 6. Answer: 1/6"],
+        ["A fair die is rolled. Find P(rolling a 4).", "1/6"],
         ["A fair coin is tossed. Find P(heads).", "1/2"],
-        ["A die is rolled. Find P(rolling an even number).", "Even numbers: 2, 4, 6. Answer: 3/6 = 1/2"],
-        ["A die is rolled. Find P(rolling a number greater than 4).", "Outcomes: 5 and 6. Answer: 2/6 = 1/3"],
+        ["A die is rolled. Find P(rolling an even number).", "3/6 = 1/2"],
+        ["A die is rolled. Find P(rolling greater than 4).", "2/6 = 1/3"],
         ["A bag has 3 red and 2 blue balls. Find P(red).", "3/5"],
         ["A bag has 4 green and 6 yellow balls. Find P(yellow).", "6/10 = 3/5"],
-        ["Find the complement of an event with probability 0.3.", "P(not A) = 1 - 0.3 = 0.7"],
+        ["Find the complement of an event with probability 0.3.", "1 - 0.3 = 0.7"],
         ["If P(A) = 0.6, find P(not A).", "1 - 0.6 = 0.4"],
-        ["Two coins are tossed. Find P(two heads).", "Possible outcomes: HH, HT, TH, TT. Answer: 1/4"],
-        ["Two dice are rolled. Find P(a total of 7).", "Six outcomes give 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1). Answer: 6/36 = 1/6"],
-        ["If P(A) = 0.4 and P(B) = 0.3 and they are mutually exclusive, find P(A or B).", "P(A ∪ B) = 0.4 + 0.3 = 0.7"],
+        ["Two coins are tossed. Find P(two heads).", "1/4"],
+        ["Two dice are rolled. Find P(a total of 7).", "6/36 = 1/6"],
+        ["If mutually exclusive events have probabilities 0.4 and 0.3, find P(A or B).", "0.4 + 0.3 = 0.7"],
         ["If P(A) = 0.5, P(B) = 0.4 and P(A ∩ B) = 0.2, find P(A ∪ B).", "0.5 + 0.4 - 0.2 = 0.7"],
         ["Two independent events have probabilities 1/2 and 1/3. Find P(both).", "1/2 × 1/3 = 1/6"],
-        ["A card is selected from a standard 52-card deck. Find P(an ace).", "There are 4 aces. Answer: 4/52 = 1/13"],
-        ["A card is selected from a standard deck. Find P(a heart).", "There are 13 hearts. Answer: 13/52 = 1/4"],
-        ["A die is rolled. Find P(not rolling a 6).", "5 outcomes are not 6. Answer: 5/6"],
-        ["A bag has 2 red and 3 blue balls. One ball is selected and replaced. Find P(two red balls in two selections).", "2/5 × 2/5 = 4/25"],
-        ["TRICK: Can a probability be 1.2?", "No. A probability must be between 0 and 1 inclusive."],
-        ["TRICK: If P(A) = 0.7, can P(not A) also be 0.7?", "No. P(not A) = 1 - 0.7 = 0.3."],
-        ["TRICK: Two events are mutually exclusive. Can they happen together?", "No. Mutually exclusive events cannot happen at the same time, so P(A ∩ B) = 0."]
+        ["Find P(an ace) from a standard 52-card deck.", "4/52 = 1/13"],
+        ["Find P(a heart) from a standard deck.", "13/52 = 1/4"],
+        ["A die is rolled. Find P(not rolling a 6).", "5/6"],
+        ["A bag has 2 red and 3 blue balls. A ball is replaced after each selection. Find P(two reds).", "2/5 × 2/5 = 4/25"],
+        ["TRICK: Can a probability be 1.2?", "No. Probability must be between 0 and 1."],
+        ["TRICK: If P(A) = 0.7, can P(not A) also be 0.7?", "No. P(not A) = 0.3."],
+        ["TRICK: Can mutually exclusive events happen together?", "No. Their intersection has probability zero."]
     ]
 };
 
-// Build the practice questions on the page
+
+// ==========================================
+// CREATE PRACTICE QUESTIONS
+// ==========================================
+
 function createPractice(topic, containerId) {
+
     const container = document.getElementById(containerId);
 
-    if (!container) return;
+    if (!container) {
+        console.warn("Practice container not found:", containerId);
+        return;
+    }
+
+    // Prevent questions from being added twice
+    if (container.dataset.loaded === "true") {
+        return;
+    }
 
     const questions = practiceData[topic];
 
+    if (!questions) {
+        console.error("Practice topic not found:", topic);
+        return;
+    }
+
     const heading = document.createElement("h4");
     heading.textContent = "Practice: 20 Questions";
-    container.appendChild(heading);
 
     const intro = document.createElement("p");
     intro.textContent =
-        "Try each question before revealing its answer. TRICK questions test common mistakes.";
-    container.appendChild(intro);
+        "Try each question before revealing the answer. Read the explanation carefully.";
+
+    container.append(heading, intro);
 
     questions.forEach((item, index) => {
-        const [question, answer] = item;
+
+        const question = item[0];
+        const answer = item[1];
+
         const isTrick = question.startsWith("TRICK:");
 
         const card = document.createElement("div");
@@ -140,9 +203,12 @@ function createPractice(topic, containerId) {
         const number = document.createElement("h5");
         number.textContent = `Question ${index + 1}`;
 
-        const type = document.createElement("span");
-        type.className = isTrick ? "question-tag trick-tag" : "question-tag";
-        type.textContent = isTrick ? "TRICK QUESTION" : "PRACTICE";
+        const tag = document.createElement("span");
+        tag.className = isTrick
+            ? "question-tag trick-tag"
+            : "question-tag";
+
+        tag.textContent = isTrick ? "TRICK QUESTION" : "PRACTICE";
 
         const questionText = document.createElement("p");
         questionText.textContent = question.replace("TRICK: ", "");
@@ -157,22 +223,46 @@ function createPractice(topic, containerId) {
         answerBox.hidden = true;
 
         answerButton.addEventListener("click", function () {
+
             answerBox.hidden = !answerBox.hidden;
+
             answerButton.textContent =
                 answerBox.hidden ? "Show Answer" : "Hide Answer";
+
         });
 
-        card.append(number, type, questionText, answerButton, answerBox);
+        card.append(
+            number,
+            tag,
+            questionText,
+            answerButton,
+            answerBox
+        );
+
         container.appendChild(card);
+
     });
+
+    container.dataset.loaded = "true";
 }
 
-// Add all four practice sets when the page loads
+
+// ==========================================
+// CONNECT ALL PRACTICE SECTIONS
+// ==========================================
+
 document.addEventListener("DOMContentLoaded", function () {
+
     createPractice("exponents", "exponentsPractice");
+
     createPractice("equations", "equationsPractice");
+
     createPractice("trigonometry", "trigonometryPractice");
+
+    createPractice("functions", "functionsPractice");
+
     createPractice("probability", "probabilityPractice");
 
-    console.log("Grade 11 lessons and 80 practice questions loaded!");
+    console.log("MathsHelpSA Grade 11 JavaScript connected successfully!");
+
 });
