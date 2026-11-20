@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grade 11 Trigonometry | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="trig.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>MathsHelpSA</h1>
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+    </header>
+
+    <main class="container">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <span class="grade-label">GRADE 11 MATHEMATICS</span>
+
+            <h2>Trigonometry</h2>
+
+            <p>
+                Learn trigonometric ratios, special angles,
+                identities and trigonometric graphs through
+                notes, examples and practice questions.
+            </p>
+        </section>
+
+        <nav class="topic-navigation">
+    <a href="#notes">Study Notes</a>
+    <a href="#ratios">Ratios</a>
+    <a href="#examples">Worked Examples</a>
+    <a href="#practice">Practice</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#graphs">Graphs</a>
+</nav>
+
+        <!-- STUDY NOTES -->
+        <section class="content-section" id="notes">
+
+            <button class="section-toggle"
+                onclick="toggleSection('notesContent', this)">
+                📘 Study Notes
+                <span>＋</span>
+            </button>
+
+            <div id="notesContent" class="section-content" hidden>
+
+                <h3>1. What is Trigonometry?</h3>
+
+                <p>
+                    Trigonometry is the study of the relationship
+                    between angles and sides of triangles.
+                </p>
+
+                <h3>2. The Three Trigonometric Ratios</h3>
+
+                <p>For a right-angled triangle:</p>
+
+                <div class="formula-box">
+                    <p><strong>SOH:</strong> sin θ = Opposite / Hypotenuse</p>
+                    <p><strong>CAH:</strong> cos θ = Adjacent / Hypotenuse</p>
+                    <p><strong>TOA:</strong> tan θ = Opposite / Adjacent</p>
+                </div>
+
+                <p class="important-note">
+                    Remember: SOH-CAH-TOA helps you remember
+                    the three trigonometric ratios.
+                </p>
+
+                <h3>3. Identifying the Sides</h3>
+
+                <ul>
+                    <li><strong>Hypotenuse:</strong> The longest side, opposite the right angle.</li>
+                    <li><strong>Opposite:</strong> The side opposite the angle θ.</li>
+                    <li><strong>Adjacent:</strong> The side next to θ, excluding the hypotenuse.</li>
+                </ul>
+
+                <h3>4. Special Angles</h3>
+
+                <p>Learn these important values:</p>
+
+                <div class="formula-box">
+                    <p>sin 30° = 1/2</p>
+                    <p>cos 30° = √3/2</p>
+                    <p>tan 30° = √3/3</p>
+
+                    <p>sin 45° = √2/2</p>
+                    <p>cos 45° = √2/2</p>
+                    <p>tan 45° = 1</p>
+
+                    <p>sin 60° = √3/2</p>
+                    <p>cos 60° = 1/2</p>
+                    <p>tan 60° = √3</p>
+                </div>
+
+                <h3>5. The CAST Rule</h3>
+
+                <p>
+                    The CAST rule helps determine which
+                    trigonometric ratios are positive in each quadrant.
+                </p>
+
+                <ul>
+                    <li><strong>Quadrant I:</strong> All ratios are positive.</li>
+                    <li><strong>Quadrant II:</strong> Sine is positive.</li>
+                    <li><strong>Quadrant III:</strong> Tangent is positive.</li>
+                    <li><strong>Quadrant IV:</strong> Cosine is positive.</li>
+                </ul>
+
+                <h3>6. The Basic Trigonometric Identity</h3>
+
+                <div class="formula-box">
+                    sin² θ + cos² θ = 1
+                </div>
+
+                <h3>7. Important Reminders</h3>
+
+                <ul>
+                    <li>Check whether your calculator is in degree mode when working with degrees.</li>
+                    <li>Always identify the correct sides before choosing a ratio.</li>
+                    <li>Show all working in calculations.</li>
+                    <li>Use exact values for special angles where required.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- TRIGONOMETRIC RATIOS -->
+        <section class="content-section" id="ratios">
+
+            <button class="section-toggle"
+                onclick="toggleSection('ratiosContent', this)">
+                📐 Trigonometric Ratios and Diagrams
+                <span>＋</span>
+            </button>
+
+            <div id="ratiosContent" class="section-content" hidden>
+
+                <h3>Understanding SOH-CAH-TOA</h3>
+
+                <p>
+                    Study the right-angled triangle below.
+                    Identify the opposite, adjacent and hypotenuse
+                    relative to angle θ.
+                </p>
+
+                <div class="graph-card">
+                    <svg viewBox="0 0 500 330" width="100%"
+                        role="img"
+                        aria-label="Right angled triangle showing opposite, adjacent and hypotenuse sides">
+
+                        <polygon points="100,260 400,260 400,70"
+                            fill="#dbeafe"
+                            stroke="#2563eb"
+                            stroke-width="4"/>
+
+                        <path d="M 380 260 L 380 240 L 400 240"
+                            fill="none"
+                            stroke="#172554"
+                            stroke-width="2"/>
+
+                        <text x="215" y="290" fill="#172554"
+                            font-size="17">Adjacent</text>
+
+                        <text x="410" y="170" fill="#172554"
+                            font-size="17">Opposite</text>
+
+                        <text x="210" y="145" fill="#172554"
+                            font-size="17">Hypotenuse</text>
+
+                        <text x="110" y="250" fill="#dc2626"
+                            font-size="18">θ</text>
+                    </svg>
+                </div>
+
+                <p>
+                    Use the angle θ at the bottom-left corner
+                    to identify each side.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLES -->
+<section class="content-section" id="examples">
+
+    <button class="section-toggle"
+        onclick="toggleSection('examplesContent', this)">
+        ✏️ Worked Examples
+        <span>＋</span>
+    </button>
+
+    <div id="examplesContent" class="section-content" hidden>
+
+        <!-- PART 1: SIMPLIFYING -->
+        <h3>Part 1: Simplifying Trigonometric Expressions</h3>
+
+        <div class="example-card">
+            <h4>Example 1</h4>
+
+            <div class="math-question">
+                cos²θ × tanθ + tanθ × sin²θ
+            </div>
+
+            <p>Simplify the expression.</p>
+
+            <button class="step-button"
+                onclick="showSteps('identitySimplify1')">
+                Show Solution
+            </button>
+
+            <div id="identitySimplify1" class="steps">
+                <p><strong>Step 1:</strong> Start with the expression.</p>
+                <p>cos²θ tanθ + tanθ sin²θ</p>
+
+                <p><strong>Step 2:</strong> Factor out tanθ.</p>
+                <p>tanθ(cos²θ + sin²θ)</p>
+
+                <p><strong>Step 3:</strong> Use the identity:</p>
+                <p>cos²θ + sin²θ = 1</p>
+
+                <p><strong>Final Answer:</strong></p>
+                <div class="answer">tanθ</div>
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h4>Example 2</h4>
+
+            <div class="math-question">
+                (2 tanθ cosθ sinθ) / (cos²θ − 1)
+            </div>
+
+            <button class="step-button"
+                onclick="showSteps('identitySimplify2')">
+                Show Solution
+            </button>
+
+            <div id="identitySimplify2" class="steps">
+                <p><strong>Step 1:</strong> Start with the expression.</p>
+                <p>2 tanθ cosθ sinθ / (cos²θ − 1)</p>
+
+                <p><strong>Step 2:</strong> Use the identity:</p>
+                <p>cos²θ − 1 = −sin²θ</p>
+
+                <p><strong>Step 3:</strong> Replace tanθ with sinθ/cosθ.</p>
+                <p>[2 × (sinθ/cosθ) × cosθ × sinθ] / (−sin²θ)</p>
+
+                <p><strong>Step 4:</strong> Cancel common factors.</p>
+
+                <div class="answer">−2</div>
+            </div>
+        </div>
+
+        <!-- PART 2: PROOFS -->
+        <h3>Part 2: Proving Trigonometric Identities</h3>
+
+        <p>
+            An identity is an equation that is true for every
+            allowed value of the variable.
+        </p>
+
+        <p>
+            When proving identities, simplify one side or both
+            sides until they are equal.
+        </p>
+
+        <div class="example-card">
+            <h4>Method 1: Simplify the Left-Hand Side</h4>
+
+            <div class="math-question">
+                Prove that:
+                <br>
+                tanθ + cosθ/(1 + sinθ) = 1/cosθ
+            </div>
+
+            <button class="step-button"
+                onclick="showSteps('identityProof1')">
+                Show Proof
+            </button>
+
+            <div id="identityProof1" class="steps">
+                <p><strong>Step 1:</strong> Start with the LHS.</p>
+                <p>tanθ + cosθ/(1 + sinθ)</p>
+
+                <p><strong>Step 2:</strong> Use tanθ = sinθ/cosθ.</p>
+                <p>sinθ/cosθ + cosθ/(1 + sinθ)</p>
+
+                <p><strong>Step 3:</strong> Find a common denominator.</p>
+                <p>[sinθ(1 + sinθ) + cos²θ] / [cosθ(1 + sinθ)]</p>
+
+                <p><strong>Step 4:</strong> Expand the numerator.</p>
+                <p>[sinθ + sin²θ + cos²θ] / [cosθ(1 + sinθ)]</p>
+
+                <p><strong>Step 5:</strong> Use sin²θ + cos²θ = 1.</p>
+                <p>(sinθ + 1) / [cosθ(1 + sinθ)]</p>
+
+                <p><strong>Step 6:</strong> Cancel the common factor.</p>
+
+                <div class="answer">
+                    LHS = 1/cosθ = RHS
+                    <br>
+                    Identity proved.
+                </div>
+
+                <p><strong>Restrictions:</strong>
+                    cosθ ≠ 0 and 1 + sinθ ≠ 0.
+                </p>
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h4>Method 2: Simplify Both Sides</h4>
+
+            <div class="math-question">
+                Prove that:
+                <br>
+                (sin²θ − cos²θ)/(sinθ cosθ + cos²θ)
+                = tanθ − 1
+            </div>
+
+            <button class="step-button"
+                onclick="showSteps('identityProof2')">
+                Show Proof
+            </button>
+
+            <div id="identityProof2" class="steps">
+                <p><strong>Left-hand side:</strong></p>
+
+                <p>
+                    Factorise the numerator and denominator:
+                </p>
+
+                <p>
+                    [(sinθ − cosθ)(sinθ + cosθ)] /
+                    [cosθ(sinθ + cosθ)]
+                </p>
+
+                <p>Cancel the common factor.</p>
+
+                <p>
+                    (sinθ − cosθ)/cosθ
+                </p>
+
+                <p>
+                    = sinθ/cosθ − 1
+                </p>
+
+                <p>
+                    = tanθ − 1
+                </p>
+
+                <p><strong>Right-hand side:</strong></p>
+
+                <p>tanθ − 1</p>
+
+                <div class="answer">
+                    LHS = RHS
+                    <br>
+                    Identity proved.
+                </div>
+
+                <p><strong>Restrictions:</strong>
+                    cosθ ≠ 0 and sinθ + cosθ ≠ 0.
+                </p>
+            </div>
+        </div>
+
+        <!-- PART 3: RESTRICTIONS -->
+        <h3>Part 3: Restrictions on Trigonometric Identities</h3>
+
+        <div class="example-card">
+            <h4>Example 3</h4>
+
+            <div class="math-question">
+                Prove that:
+                <br>
+                tan²θ × cos²θ = sin²θ
+            </div>
+
+            <button class="step-button"
+                onclick="showSteps('identityProof3')">
+                Show Proof
+            </button>
+
+            <div id="identityProof3" class="steps">
+                <p><strong>Step 1:</strong> Start with the LHS.</p>
+                <p>tan²θ × cos²θ</p>
+
+                <p><strong>Step 2:</strong> Replace tan²θ.</p>
+                <p>(sin²θ/cos²θ) × cos²θ</p>
+
+                <p><strong>Step 3:</strong> Cancel cos²θ.</p>
+
+                <div class="answer">
+                    sin²θ = RHS
+                    <br>
+                    Identity proved.
+                </div>
+
+                <p>
+                    <strong>Restriction:</strong>
+                    cosθ ≠ 0.
+                </p>
+            </div>
+        </div>
+
+        <!-- PART 4: BASIC CALCULATIONS -->
+        <h3>Part 4: Basic Trigonometric Calculations</h3>
+
+        <div class="example-card">
+            <h4>Example 4</h4>
+
+            <div class="math-question">
+                Calculate sin 30°.
+            </div>
+
+            <button class="step-button"
+                onclick="showSteps('trigSteps')">
+                Show Solution
+            </button>
+
+            <div id="trigSteps" class="steps">
+                <p>Use the special angle values.</p>
+                <p>sin 30° = 1/2</p>
+
+                <div class="answer">
+                    Final Answer: 1/2
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- PRACTICE -->
+        <section class="content-section" id="practice">
+
+            <button class="section-toggle"
+                onclick="toggleSection('practiceContent', this)">
+                📝 Practice Questions
+                <span>＋</span>
+            </button>
+
+            <div id="practiceContent" class="section-content" hidden>
+                <div id="trigonometryPractice"></div>
+            </div>
+
+        </section>
+
+        <!-- GRAPHS -->
+<section class="content-section" id="graphs">
+
+    <button class="section-toggle"
+        onclick="toggleSection('graphsContent', this)">
+        📈 Trigonometric Graphs
+        <span>＋</span>
+    </button>
+
+    <div id="graphsContent" class="section-content" hidden>
+
+        <h3>Trigonometric Graphs</h3>
+
+        <p>
+            Learn how the sine, cosine and tangent functions
+            behave when the angle changes.
+        </p>
+
+        <div id="trigGraphs"></div>
+
+    </div>
+
+</section>
+ 
+<section class="content-section" id="quiz">
+
+    <button class="section-toggle"
+        onclick="toggleSection('quizContent', this)">
+
+        🏆 Trigonometry Quiz
+
+        <span>＋</span>
+
+    </button>
+
+    <div id="quizContent" class="section-content" hidden>
+
+        <h3>Test Your Trigonometry Knowledge</h3>
+
+        <p>Answer all 10 questions and submit your quiz to see your mark and corrections.</p>
+
+        <div id="trigQuiz"></div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 MathsHelpSA | Learn Mathematics Step by Step</p>
+    </footer>
+
+    <script src="trig.js"></script>
+
+</body>
+</html>

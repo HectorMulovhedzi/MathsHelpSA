@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Equations and Inequalities | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="equations.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1>Equations and Inequalities</h1>
+        <p>Grade 11 Mathematics</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Let's Learn Equations and Inequalities!</h2>
+
+            <p>
+                Learn how to solve different types of equations
+                and inequalities step by step.
+            </p>
+        </section>
+
+        <nav class="topic-navigation">
+            <a href="#notes">Notes</a>
+            <a href="#examples">Worked Examples</a>
+            <a href="#practice">Practice</a>
+            <a href="#quiz">Quiz</a>
+        </nav>
+
+        <!-- NOTES -->
+        <section id="notes" class="section">
+
+            <h2>1. Study Notes</h2>
+
+            <article class="note-card">
+                <h3>What is an equation?</h3>
+
+                <p>
+                    An equation is a mathematical statement
+                    showing that two expressions are equal.
+                </p>
+
+                <p><strong>Example:</strong></p>
+                <p class="math">2x + 4 = 12</p>
+
+                <p>
+                    Our goal is to find the value of x that
+                    makes the equation true.
+                </p>
+            </article>
+
+            <article class="note-card">
+                <h3>Solving linear equations</h3>
+
+                <p>
+                    A linear equation has the variable raised
+                    to the power of 1.
+                </p>
+
+                <p><strong>Example:</strong></p>
+                <p class="math">3x + 5 = 20</p>
+
+                <p>Step 1: Subtract 5 from both sides.</p>
+                <p class="math">3x = 15</p>
+
+                <p>Step 2: Divide both sides by 3.</p>
+                <p class="math">x = 5</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Quadratic equations</h3>
+
+                <p>
+                    A quadratic equation has the highest
+                    power of the variable equal to 2.
+                </p>
+
+                <p class="math">ax² + bx + c = 0</p>
+
+                <p>Methods of solving include:</p>
+
+                <ul>
+                    <li>Factorisation</li>
+                    <li>Completing the square</li>
+                    <li>Quadratic formula</li>
+                </ul>
+
+                <p><strong>Quadratic formula:</strong></p>
+
+                <p class="math">
+                    x = (-b ± √(b² - 4ac)) / 2a
+                </p>
+            </article>
+
+            <article class="note-card">
+                <h3>What is an inequality?</h3>
+
+                <p>
+                    An inequality compares two expressions
+                    that are not necessarily equal.
+                </p>
+
+                <ul>
+                    <li>&lt; means less than</li>
+                    <li>&gt; means greater than</li>
+                    <li>≤ means less than or equal to</li>
+                    <li>≥ means greater than or equal to</li>
+                </ul>
+
+                <p><strong>Example:</strong></p>
+                <p class="math">x + 3 &gt; 7</p>
+                <p class="math">x &gt; 4</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Important inequality rule</h3>
+
+                <p>
+                    When multiplying or dividing both sides
+                    of an inequality by a negative number,
+                    reverse the inequality sign.
+                </p>
+
+                <p><strong>Example:</strong></p>
+                <p class="math">-2x &gt; 8</p>
+                <p class="math">x &lt; -4</p>
+            </article>
+
+        </section>
+
+        <!-- WORKED EXAMPLES -->
+        <section id="examples" class="section">
+
+            <h2>2. Worked Examples</h2>
+
+            <p>
+                Study these examples and open the solutions
+                to understand each step.
+            </p>
+
+            <div id="workedExamples"></div>
+
+        </section>
+
+        <!-- PRACTICE -->
+        <section id="practice" class="section">
+
+            <h2>3. Practice Questions</h2>
+
+            <p>
+                Try each question before revealing its answer.
+            </p>
+
+            <div id="equationsPractice"></div>
+
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz" class="section">
+
+            <h2>4. Test Your Knowledge</h2>
+
+            <div class="quiz-intro">
+                <p>
+                    Test your understanding with 50 multiple-choice
+                    questions.
+                </p>
+
+                <ul>
+                    <li>15 Easy questions</li>
+                    <li>20 Medium questions</li>
+                    <li>15 Difficult questions</li>
+                </ul>
+
+                <p>
+                    Your quiz will be marked automatically.
+                    After submitting, you will see corrections
+                    and explanations for every question.
+                </p>
+
+                <button id="startQuiz" class="primary-button">
+                    Start Quiz
+                </button>
+            </div>
+
+            <div id="quizArea" hidden>
+
+                <div class="quiz-progress">
+                    <p id="questionProgress">0 of 50 answered</p>
+
+                    <div class="progress-track">
+                        <div id="progressBar"></div>
+                    </div>
+                </div>
+
+                <div id="quizQuestions"></div>
+
+                <button id="submitQuiz" class="primary-button">
+                    Submit Quiz
+                </button>
+
+            </div>
+
+            <div id="quizResults" class="quiz-results" hidden>
+
+                <h3>Your Quiz Results</h3>
+
+                <p id="finalScore"></p>
+                <p id="finalFeedback"></p>
+
+                <div id="correctionsContainer"></div>
+
+                <button id="retryQuiz" class="primary-button">
+                    Try Again
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MathsHelpSA | Learn Mathematics Step by Step</p>
+    </footer>
+
+    <script src="equations.js"></script>
+
+</body>
+</html>

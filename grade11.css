@@ -1,57 +1,87 @@
 
+/* =====================================
+   MATHSHELP SA - GRADE 11
+   MAIN WEBSITE STYLING
+===================================== */
+
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f1f5ff;
     color: #172554;
+    line-height: 1.6;
 }
 
-/* Navigation */
+/* =====================================
+   HEADER / NAVIGATION
+===================================== */
+
 .header {
     background: #102a56;
     color: white;
-    padding: 16px;
+    padding: 17px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.15);
 }
 
 .header h1 {
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 .back-link {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    font-weight: bold;
 }
 
-/* Main page */
+.back-link:hover {
+    color: #bfdbfe;
+}
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
 .container {
     width: 92%;
-    max-width: 900px;
-    margin: 25px auto;
+    max-width: 1100px;
+    margin: 30px auto;
 }
 
-/* Welcome section */
+/* =====================================
+   WELCOME SECTION
+===================================== */
+
 .welcome {
     background: linear-gradient(135deg, #1d4ed8, #102a56);
     color: white;
-    padding: 25px 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
+    padding: 35px 30px;
+    border-radius: 18px;
+    margin-bottom: 35px;
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.15);
 }
 
 .grade-label {
     display: inline-block;
     background: white;
     color: #1d4ed8;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
@@ -59,338 +89,143 @@ body {
 }
 
 .welcome h2 {
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 12px;
+    line-height: 1.3;
 }
 
 .welcome p {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.8;
+    max-width: 750px;
 }
 
-/* Topic heading */
+/* =====================================
+   SECTION HEADINGS
+===================================== */
+
 .section-title {
-    margin-bottom: 18px;
-    font-size: 22px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #102a56;
 }
 
-/* Topic cards */
+/* =====================================
+   TOPIC CARDS
+===================================== */
+
 .topics {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
 }
 
 .topic-card {
     background: white;
-    padding: 22px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(30, 64, 175, 0.12);
 }
 
 .topic-icon {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     background: #dbeafe;
     color: #1d4ed8;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    font-size: 23px;
+    border-radius: 12px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 
 .topic-card h3 {
     font-size: 20px;
+    color: #102a56;
     margin-bottom: 10px;
 }
 
 .topic-card p {
     color: #64748b;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-/* Buttons */
-.learn-button,
-.step-button {
-    width: 100%;
-    border: none;
-    padding: 13px;
-    border-radius: 8px;
-    background: #2563eb;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 17px;
-}
-
-.learn-button:hover,
-.step-button:hover {
-    background: #1e40af;
-}
-
-/* Lesson content */
-.lesson {
-    display: none;
-    margin-top: 20px;
-    padding-top: 18px;
-    border-top: 1px solid #e2e8f0;
-}
-
-.lesson h4 {
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.math-question {
-    background: #eff6ff;
-    color: #1e40af;
-    padding: 18px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 12px;
-}
-
-/* Solution steps */
-.steps {
-    display: none;
-    margin-top: 18px;
-    background: #f8fafc;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.steps p {
-    margin-bottom: 12px;
-    color: #334155;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.answer {
-    background: #dcfce7;
-    color: #166534 !important;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 25px 15px;
-    color: #64748b;
-    font-size: 13px;
-}
-
-/* Tablet and laptop screens */
-@media (min-width: 650px) {
-    .topics {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .welcome {
-        padding: 35px;
-    }
-
-    .welcome h2 {
-        font-size: 32px;
-    }
-}
-
-/* Practice questions section */
-.practice-section {
-    margin-top: 25px;
-}
-
-.practice-section h4 {
-    font-size: 20px;
-    color: #1e3a8a;
-    margin-bottom: 10px;
-}
-
-.practice-section > p {
-    color: #64748b;
-    line-height: 1.6;
-    margin-bottom: 18px;
-}
-
-.practice-question {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 16px;
-    border-radius: 12px;
-    margin-bottom: 14px;
-}
-
-.practice-question h5 {
-    display: inline-block;
-    font-size: 15px;
-    margin-right: 8px;
-    color: #1e293b;
-}
-
-.question-tag {
-    display: inline-block;
-    background: #dbeafe;
-    color: #1d4ed8;
-    padding: 5px 9px;
-    border-radius: 20px;
-    font-size: 10px;
-    font-weight: bold;
-}
-
-.trick-tag {
-    background: #fef3c7;
-    color: #92400e;
-}
-
-.practice-question > p {
-    margin: 14px 0;
-    line-height: 1.6;
-    color: #334155;
-}
-
-.answer-button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 11px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.answer-button:hover {
-    background: #1d4ed8;
-}
-
-.answer-box {
-    background: #dcfce7;
-    color: #166534;
-    padding: 14px;
-    border-radius: 8px;
-    margin-top: 12px;
     line-height: 1.7;
-    white-space: pre-line;
-}
-
-.answer-box[hidden] {
-    display: none;
-}
-
-/* Mobile phone layout */
-@media (max-width: 600px) {
-    .practice-question {
-        padding: 13px;
-    }
-
-    .practice-question > p {
-        font-size: 14px;
-    }
-
-    .answer-button {
-        width: 100%;
-        padding: 13px;
-    }
-
-    .practice-section h4 {
-        font-size: 18px;
-    }
-}
-
-/* Coming Soon Section */
-
-.coming-soon {
-    margin: 45px 0;
-    padding: 25px 18px;
-    background: #eff6ff;
-    border-radius: 18px;
-}
-
-.coming-soon h2 {
-    text-align: center;
-    color: #1e3a8a;
-    font-size: 24px;
-    margin-bottom: 12px;
-}
-
-.coming-soon > p {
-    text-align: center;
-    color: #64748b;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.coming-topics {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-.coming-topic-card {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.coming-topic-card > span:first-child {
-    font-size: 30px;
-}
-
-.coming-topic-card h3 {
-    color: #1e3a8a;
-    margin: 12px 0;
-    font-size: 17px;
-}
-
-.coming-topic-card p {
-    color: #64748b;
     font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.coming-label {
-    display: inline-block;
-    background: #dbeafe;
-    color: #1d4ed8;
-    padding: 7px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.coming-message {
-    margin-top: 25px;
-    font-weight: bold;
-    color: #1e40af;
-}
-
-@media (min-width: 650px) {
-    .coming-topics {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 950px) {
-    .coming-topics {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 /* =====================================
-   TRIGONOMETRY AND IDENTITY LESSONS
+   BUTTONS
 ===================================== */
+
+/* START LEARNING BUTTON */
+
+.learn-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 20px;
+
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+
+    transition: all 0.25s ease;
+}
+
+.learn-button:hover {
+    background: linear-gradient(135deg, #1e40af, #102a56);
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 16px rgba(30, 64, 175, 0.25);
+}
+
+.learn-button:active {
+    transform: scale(0.98);
+}
+
+/* Arrow inside button */
+
+.learn-button::after {
+    content: "→";
+    font-size: 19px;
+    transition: transform 0.25s ease;
+}
+
+.learn-button:hover::after {
+    transform: translateX(5px);
+}
+/* =====================================
+   LESSON CONTENT
+===================================== */
+
+.lesson {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
 
 .lesson h3 {
     color: #1e40af;
@@ -400,14 +235,15 @@ footer {
 
 .lesson h4 {
     color: #1e3a8a;
-    margin-top: 22px;
+    font-size: 18px;
+    margin: 20px 0 12px;
     line-height: 1.5;
 }
 
-.lesson hr {
-    border: none;
-    border-top: 1px solid #dbeafe;
-    margin: 28px 0;
+.lesson p {
+    margin-top: 10px;
+    line-height: 1.8;
+    color: #334155;
 }
 
 .lesson ul {
@@ -420,46 +256,143 @@ footer {
     margin-bottom: 7px;
 }
 
-.lesson > p {
-    margin-top: 10px;
-    line-height: 1.7;
+.lesson hr {
+    border: none;
+    border-top: 1px solid #dbeafe;
+    margin: 28px 0;
 }
 
-/* Formula boxes */
+/* =====================================
+   MATHEMATICAL FORMULAS
+===================================== */
 
 .math-question {
-    overflow-wrap: anywhere;
+    background: #eff6ff;
+    color: #1e40af;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
     line-height: 1.8;
+    overflow-wrap: anywhere;
 }
 
-/* Step-by-step proofs */
+/* =====================================
+   SOLUTION STEPS
+===================================== */
 
 .steps {
+    display: none;
+    margin-top: 18px;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 10px;
     border-left: 4px solid #2563eb;
-    line-height: 1.7;
 }
 
 .steps p {
+    margin-bottom: 12px;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.8;
     overflow-wrap: anywhere;
 }
 
-/* Final answers */
-
 .answer {
+    background: #dcfce7;
+    color: #166534 !important;
+    padding: 13px;
+    border-radius: 8px;
+    font-weight: bold;
     margin-top: 12px;
+}
+
+/* =====================================
+   PRACTICE QUESTIONS
+===================================== */
+
+.practice-section {
+    margin-top: 30px;
+}
+
+.practice-section h4 {
+    font-size: 21px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.practice-section > p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.practice-question {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 13px;
+    margin-bottom: 16px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.practice-question h5 {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 8px;
+    color: #1e293b;
+}
+
+.question-tag,
+.trick-tag {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
     font-weight: bold;
 }
 
-/* Graph containers */
+.trick-tag {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.practice-question > p {
+    margin: 15px 0;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.answer-box {
+    background: #dcfce7;
+    color: #166534;
+    padding: 15px;
+    border-radius: 9px;
+    margin-top: 13px;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.answer-box[hidden] {
+    display: none !important;
+}
+
+/* =====================================
+   GRAPHS AND IMAGES
+===================================== */
 
 .graph-container {
     width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 12px;
+    max-width: 550px;
+    margin: 22px auto;
+    padding: 15px;
     background: white;
     border: 1px solid #dbeafe;
-    border-radius: 12px;
+    border-radius: 13px;
     overflow: hidden;
 }
 
@@ -469,15 +402,13 @@ footer {
     height: auto;
 }
 
-/* Uploaded functions image */
-
 .function-image {
     width: 100%;
-    margin: 18px auto;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 12px;
     background: white;
     border: 1px solid #dbeafe;
-    border-radius: 12px;
+    border-radius: 13px;
 }
 
 .function-image img {
@@ -488,9 +419,252 @@ footer {
     border-radius: 8px;
 }
 
-/* Better spacing on small screens */
+/* =====================================
+   COMING SOON
+===================================== */
+
+.coming-soon {
+    margin: 45px 0;
+    padding: 30px 22px;
+    background: #eaf2ff;
+    border-radius: 18px;
+}
+
+.coming-soon h2 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.coming-soon > p {
+    text-align: center;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.coming-topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.coming-topic-card {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.coming-topic-card > span:first-child {
+    font-size: 32px;
+}
+
+.coming-topic-card h3 {
+    color: #1e3a8a;
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.coming-topic-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.coming-label {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.coming-message {
+    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+/* =====================================
+   STUDY GUIDE
+===================================== */
+
+.study-guide {
+    background: white;
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.07);
+    border-left: 5px solid #1e40af;
+}
+
+.study-guide h2 {
+    color: #1e40af;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.study-guide p {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.book-button {
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.book-button:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   CLICKABLE TOPIC CARDS
+===================================== */
+
+.topic-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.topic-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.12);
+}
+
+.topic-link:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 4px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 850px) {
+
+    .container {
+        max-width: 750px;
+    }
+
+    .topics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome h2 {
+        font-size: 27px;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
 
 @media (max-width: 600px) {
+
+    .header {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 19px;
+    }
+
+    .back-link {
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .welcome {
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .topics,
+    .coming-topics {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .topic-card {
+        padding: 20px;
+    }
+
+    .topic-card h3 {
+        font-size: 19px;
+    }
+
+    .learn-button,
+    .step-button,
+    .answer-button {
+        width: 100%;
+        padding: 13px;
+    }
+
+    .practice-question {
+        padding: 15px;
+    }
+
+    .practice-question > p {
+        font-size: 14px;
+    }
+
+    .practice-section h4 {
+        font-size: 19px;
+    }
 
     .lesson h3 {
         font-size: 19px;
@@ -506,62 +680,23 @@ footer {
     }
 
     .steps {
-        padding: 13px;
+        padding: 14px;
     }
 
     .graph-container {
-        padding: 5px;
+        padding: 6px;
     }
-}
 
-/* VIA AFRIKA STUDY GUIDE */
+    .coming-soon {
+        padding: 23px 15px;
+    }
 
-.study-guide {
-    background: white;
-    max-width: 900px;
-    margin: 35px auto;
-    padding: 30px 25px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    border-left: 5px solid #1e40af;
-}
+    .coming-soon h2 {
+        font-size: 21px;
+    }
 
-.study-guide h2 {
-    color: #1e40af;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.study-guide p {
-    color: #475569;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 22px;
-}
-
-.book-button {
-    display: inline-block;
-    background: #1e40af;
-    color: white;
-    padding: 13px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.book-button:hover {
-    background: #1e3a8a;
-    transform: translateY(-2px);
-}
-
-/* Mobile styling */
-
-@media (max-width: 600px) {
     .study-guide {
-        margin: 20px 12px;
+        margin: 22px 0;
         padding: 22px 16px;
     }
 
@@ -576,6 +711,34 @@ footer {
     .book-button {
         display: block;
         width: 100%;
-        padding: 12px;
     }
+}
+/* Light blue background for the entire topic card */
+
+.topic-card {
+    background: #dbeafe;
+    border: 1px solid #bfdbfe;
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Keep the text visible */
+.topic-card h3 {
+    color: #1e3a8a;
+}
+
+.topic-card p {
+    color: #334155;
+}
+
+/* Make sure the button fits inside the card */
+.topic-card .learn-button,
+.topic-card .coming-label,
+.topic-card .start-button {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
 }

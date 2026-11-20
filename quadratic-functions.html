@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quadratic Functions | MathsHelpSA</title>
+
+    <!-- Reuse the Functions and Graphs CSS -->
+    <link rel="stylesheet" href="quadratic-functions.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>MathsHelpSA</h1>
+        <a href="functions.html" class="back-link">
+            ← Back to Functions and Graphs
+        </a>
+    </header>
+
+    <main class="container">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <span class="grade-label">Grade 11 Mathematics</span>
+
+            <h2>Quadratic Functions</h2>
+
+            <p>
+                Learn how to understand, analyse and sketch quadratic
+                graphs called parabolas.
+            </p>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav class="topic-navigation">
+            <a href="#notes">Study Notes</a>
+            <a href="#examples">Worked Examples</a>
+            <a href="#practice">Practice</a>
+        </nav>
+
+        <!-- STUDY NOTES -->
+        <section class="content-section" id="notes">
+
+            <button class="section-toggle"
+                onclick="toggleSection('notesContent', this)">
+                📘 Study Notes
+                <span>＋</span>
+            </button>
+
+            <div id="notesContent" class="section-content" hidden>
+
+                <h3>1. What is a Quadratic Function?</h3>
+
+                <p>
+                    A quadratic function is a function whose highest
+                    exponent of x is 2.
+                </p>
+
+                <div class="formula-box">
+                    <strong>General form:</strong>
+                    <p>f(x) = ax² + bx + c</p>
+                    <p>where a ≠ 0</p>
+                </div>
+
+                <p>
+                    The graph of a quadratic function is called a
+                    <strong>parabola</strong>.
+                </p>
+
+                <h3>2. Understanding a, b and c</h3>
+
+                <ul>
+                    <li><strong>a:</strong> Determines whether the parabola opens upwards or downwards.</li>
+                    <li><strong>b:</strong> Helps determine the position of the turning point.</li>
+                    <li><strong>c:</strong> Gives the y-intercept.</li>
+                </ul>
+
+                <div class="important-note">
+                    If a is positive, the parabola opens upwards.
+                    If a is negative, the parabola opens downwards.
+                </div>
+
+                <h3>3. The Shape of a Parabola</h3>
+
+                <p>
+                    A parabola can open upwards or downwards.
+                </p>
+
+                <div class="formula-box">
+                    <p><strong>a &gt; 0:</strong> Opens upwards (minimum turning point).</p>
+                    <p><strong>a &lt; 0:</strong> Opens downwards (maximum turning point).</p>
+                </div>
+
+                <h3>4. The Turning Point</h3>
+
+                <p>
+                    The turning point is the highest or lowest point
+                    on the parabola.
+                </p>
+
+                <p>
+                    For f(x) = ax² + bx + c, the x-coordinate of the
+                    turning point is:
+                </p>
+
+                <div class="formula-box">
+                    <p>x = -b / 2a</p>
+                </div>
+
+                <p>
+                    Substitute this x-value into the original function
+                    to calculate the y-coordinate.
+                </p>
+
+                <h3>5. Axis of Symmetry</h3>
+
+                <p>
+                    The axis of symmetry is the vertical line that
+                    divides the parabola into two equal halves.
+                </p>
+
+                <div class="formula-box">
+                    <p>x = -b / 2a</p>
+                </div>
+
+                <h3>6. The y-intercept</h3>
+
+                <p>
+                    The y-intercept is where the graph crosses the
+                    y-axis.
+                </p>
+
+                <p>
+                    To find it, let x = 0.
+                </p>
+
+                <div class="formula-box">
+                    <p>f(0) = c</p>
+                    <p>Therefore, the y-intercept is (0 ; c).</p>
+                </div>
+
+                <h3>7. The x-intercepts</h3>
+
+                <p>
+                    The x-intercepts are where the parabola crosses
+                    or touches the x-axis.
+                </p>
+
+                <p>
+                    To find them, let f(x) = 0 and solve:
+                </p>
+
+                <div class="formula-box">
+                    <p>ax² + bx + c = 0</p>
+                </div>
+
+                <p>
+                    You can use factorisation or the quadratic formula
+                    where appropriate.
+                </p>
+
+                <h3>8. How to Sketch a Parabola</h3>
+
+                <ol>
+                    <li>Identify a, b and c.</li>
+                    <li>Determine whether it opens upwards or downwards.</li>
+                    <li>Calculate the turning point.</li>
+                    <li>Find the axis of symmetry.</li>
+                    <li>Calculate the y-intercept.</li>
+                    <li>Find the x-intercepts, if they exist.</li>
+                    <li>Plot the points and draw the parabola.</li>
+                </ol>
+
+                <h3>9. Domain and Range</h3>
+
+                <p>
+                    The domain is the set of possible x-values.
+                    For a standard quadratic function, the domain is
+                    all real numbers.
+                </p>
+
+                <p>
+                    The range depends on the turning point and whether
+                    the parabola opens upwards or downwards.
+                </p>
+
+                <div class="formula-box">
+                    <p>
+                        If the minimum turning point is (p ; q),
+                        the range is y ≥ q.
+                    </p>
+                    <p>
+                        If the maximum turning point is (p ; q),
+                        the range is y ≤ q.
+                    </p>
+                </div>
+
+                <h3>10. Important Graph Features</h3>
+
+                <ul>
+                    <li>Turning point</li>
+                    <li>Axis of symmetry</li>
+                    <li>x-intercepts</li>
+                    <li>y-intercept</li>
+                    <li>Direction of opening</li>
+                    <li>Domain and range</li>
+                </ul>
+
+            </div>
+        </section>
+
+
+<!-- QUADRATIC GRAPHS -->
+<section class="content-section" id="graphs">
+
+    <button class="section-toggle"
+        onclick="toggleSection('graphsContent', this)">
+        📈 Quadratic Graphs and Illustrations
+        <span>＋</span>
+    </button>
+
+    <div id="graphsContent" class="section-content" hidden>
+
+        <h3>1. Upward-opening Parabola</h3>
+        <p>Example: f(x) = x²</p>
+        <div id="upwardGraph" class="graph-grid"></div>
+
+        <h3>2. Downward-opening Parabola</h3>
+        <p>Example: f(x) = -x²</p>
+        <div id="downwardGraph" class="graph-grid"></div>
+
+        <h3>3. Shifted Parabola</h3>
+        <p>Example: f(x) = (x - 2)² - 1</p>
+        <div id="shiftedGraph" class="graph-grid"></div>
+
+        <h3>4. Understanding the Important Features</h3>
+
+        <p>
+            Study the labelled parabola below. It shows the
+            turning point, intercepts and axis of symmetry.
+        </p>
+
+        <div class="graph-card">
+            <svg viewBox="0 0 500 370"
+                 width="100%"
+                 role="img"
+                 aria-label="A labelled upward-opening parabola with turning point, x-intercepts, y-intercept and axis of symmetry">
+
+                <!-- Grid -->
+                <defs>
+                    <pattern id="quadGrid" width="35" height="35"
+                             patternUnits="userSpaceOnUse">
+                        <path d="M 35 0 L 0 0 0 35"
+                              fill="none"
+                              stroke="#dbeafe"
+                              stroke-width="1"/>
+                    </pattern>
+                </defs>
+
+                <rect x="30" y="15" width="440" height="315"
+                      fill="url(#quadGrid)"/>
+
+                <!-- Axes -->
+                <line x1="30" y1="190" x2="470" y2="190"
+                      stroke="#172554" stroke-width="2"/>
+                <line x1="170" y1="15" x2="170" y2="330"
+                      stroke="#172554" stroke-width="2"/>
+
+                <text x="455" y="180" font-size="13">x</text>
+                <text x="180" y="28" font-size="13">y</text>
+
+                <!-- Axis of symmetry -->
+                <line x1="275" y1="35" x2="275" y2="315"
+                      stroke="#f59e0b" stroke-width="2"
+                      stroke-dasharray="7 5"/>
+
+                <!-- Parabola -->
+                <path d="M 135 35 Q 275 455 415 35"
+                      fill="none"
+                      stroke="#2563eb"
+                      stroke-width="4"/>
+
+                <!-- Turning point -->
+                <circle cx="275" cy="260" r="6" fill="#dc2626"/>
+                <text x="285" y="278" font-size="13"
+                      fill="#dc2626">Turning point</text>
+
+                <!-- Intercepts -->
+                <circle cx="205" cy="190" r="5" fill="#16a34a"/>
+                <circle cx="345" cy="190" r="5" fill="#16a34a"/>
+                <circle cx="170" cy="225" r="5" fill="#7c3aed"/>
+
+                <text x="185" y="210" font-size="12">x-intercept</text>
+                <text x="335" y="210" font-size="12">x-intercept</text>
+                <text x="45" y="245" font-size="12">y-intercept</text>
+
+                <text x="285" y="55" font-size="12"
+                      fill="#b45309">Axis of symmetry</text>
+
+            </svg>
+
+            <p><strong>Remember:</strong> The turning point is the minimum or maximum point of the parabola.</p>
+        </div>
+
+    </div>
+</section>
+
+
+        <!-- WORKED EXAMPLES -->
+        <section class="content-section" id="examples">
+
+            <button class="section-toggle"
+                onclick="toggleSection('examplesContent', this)">
+                ✏️ Worked Examples
+                <span>＋</span>
+            </button>
+
+            <div id="examplesContent" class="section-content" hidden>
+
+                <div id="workedExamples"></div>
+
+            </div>
+        </section>
+
+        <!-- PRACTICE -->
+        <section class="content-section" id="practice">
+
+            <button class="section-toggle"
+                onclick="toggleSection('practiceContent', this)">
+                📝 Practice Questions
+                <span>＋</span>
+            </button>
+
+            <div id="practiceContent" class="section-content" hidden>
+
+                <p>
+                    Try these questions before revealing the answers.
+                </p>
+
+                <div id="quadraticPractice"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>MathsHelpSA | Making Mathematics Easier</p>
+    </footer>
+
+    <script src="quadratic-functions.js"></script>
+
+</body>
+</html>
