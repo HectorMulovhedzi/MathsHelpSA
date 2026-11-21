@@ -1,0 +1,662 @@
+
+/* ==========================================
+   MATHSHELP SA - GRADE 11
+   EUCLIDEAN GEOMETRY
+========================================== */
+
+
+/* ==========================================
+   1. RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5ff;
+    color: #172554;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   2. HEADER
+========================================== */
+
+.header {
+    background: #102a56;
+    color: white;
+    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+}
+
+.header p {
+    font-size: 13px;
+    color: #dbeafe;
+    margin-top: 3px;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}
+
+.back-link {
+    display: inline-block;
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: #facc15;
+}
+
+
+/* ==========================================
+   3. MAIN CONTAINER
+========================================== */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* ==========================================
+   4. WELCOME SECTION
+========================================== */
+
+.welcome {
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #eff6ff
+    );
+
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+    border: 1px solid #bfdbfe;
+}
+
+.welcome h2 {
+    color: #1e40af;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #334155;
+    max-width: 750px;
+    margin: auto;
+}
+
+
+/* ==========================================
+   5. TOPIC INTRODUCTION
+========================================== */
+
+.topic-introduction {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.topic-introduction h2 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.topic-introduction p {
+    color: #334155;
+}
+
+
+/* ==========================================
+   6. UNIT SECTIONS
+========================================== */
+
+.unit-section {
+    margin-bottom: 35px;
+}
+
+.unit-title {
+    background: #1e40af;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-size: 21px;
+    margin-bottom: 18px;
+    border-left: 6px solid #facc15;
+}
+
+
+/* ==========================================
+   7. CONTENT SECTIONS
+========================================== */
+
+.content-section {
+    background: #dbeafe;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+
+/* EXPANDABLE BUTTON */
+
+.section-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #1e40af;
+    color: white;
+
+    padding: 17px 20px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.section-toggle:hover {
+    background: #1d4ed8;
+}
+
+.section-toggle span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* EXPANDED CONTENT */
+
+.section-content {
+    padding: 22px;
+    background: #eff6ff;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   8. NOTES
+========================================== */
+
+.section-content h3 {
+    color: #1e40af;
+    font-size: 19px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #bfdbfe;
+    padding-bottom: 7px;
+}
+
+.section-content h3:first-child {
+    margin-top: 0;
+}
+
+.section-content p {
+    margin-bottom: 12px;
+    color: #334155;
+}
+
+.section-content ul,
+.section-content ol {
+    padding-left: 25px;
+    margin: 12px 0 18px;
+}
+
+.section-content li {
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   9. FORMULA BOXES
+========================================== */
+
+.formula-box {
+    background: white;
+    border-left: 5px solid #2563eb;
+    padding: 16px;
+    margin: 18px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+}
+
+.formula-box strong {
+    color: #1e40af;
+    display: block;
+    margin-bottom: 6px;
+}
+
+
+/* IMPORTANT NOTES */
+
+.important-note {
+    background: #fef3c7;
+    border-left: 5px solid #f59e0b;
+    padding: 16px;
+    margin: 18px 0;
+    border-radius: 8px;
+}
+
+.important-note strong {
+    color: #92400e;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.important-note p {
+    color: #78350f;
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   10. GEOMETRY DIAGRAMS
+========================================== */
+
+.geometry-diagram {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 22px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.geometry-diagram h4 {
+    color: #1e40af;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.geometry-diagram svg {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* CIRCLE OUTLINE */
+
+.circle-line {
+    fill: #eff6ff;
+    stroke: #1e40af;
+    stroke-width: 2.5;
+}
+
+
+/* RADIUS */
+
+.radius-line {
+    stroke: #dc2626;
+    stroke-width: 2.5;
+}
+
+
+/* DIAMETER */
+
+.diameter-line {
+    stroke: #2563eb;
+    stroke-width: 2.5;
+}
+
+
+/* CHORD */
+
+.chord-line {
+    stroke: #16a34a;
+    stroke-width: 2.5;
+}
+
+
+/* TANGENT */
+
+.tangent-line {
+    stroke: #dc2626;
+    stroke-width: 2.5;
+}
+
+
+/* QUADRILATERAL */
+
+.quadrilateral-shape {
+    fill: rgba(37, 99, 235, 0.12);
+    stroke: #2563eb;
+    stroke-width: 2.5;
+}
+
+
+/* DIAGRAM POINTS */
+
+.diagram-point {
+    fill: #dc2626;
+    stroke: white;
+    stroke-width: 1;
+}
+
+
+/* DIAGRAM LABELS */
+
+.geometry-diagram svg text {
+    fill: #172554;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+
+/* RIGHT ANGLE MARKER */
+
+.right-angle {
+    fill: none;
+    stroke: #16a34a;
+    stroke-width: 2;
+}
+
+
+/* DIAGRAM DESCRIPTION */
+
+.diagram-caption {
+    background: #eff6ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #334155;
+}
+
+
+/* ==========================================
+   11. WORKED EXAMPLES
+========================================== */
+
+.example-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+}
+
+.example-card h3 {
+    color: #1e40af;
+    border: none;
+    margin: 0 0 12px;
+    font-size: 17px;
+}
+
+.example-card p {
+    margin-bottom: 10px;
+}
+
+
+/* SHOW SOLUTION BUTTON */
+
+.solution-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.solution-button:hover {
+    background: #1e40af;
+}
+
+
+/* SOLUTION */
+
+.solution {
+    background: #eff6ff;
+    border-left: 4px solid #16a34a;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 7px;
+}
+
+.solution p {
+    margin-bottom: 8px;
+}
+
+.solution strong {
+    color: #166534;
+}
+
+
+/* ==========================================
+   12. PRACTICE QUESTIONS
+========================================== */
+
+.practice-card {
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #bfdbfe;
+}
+
+.practice-card p {
+    font-weight: bold;
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+
+/* SHOW ANSWER BUTTON */
+
+.answer-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.answer-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ANSWER BOX */
+
+.practice-answer {
+    background: #dcfce7;
+    color: #166534;
+    padding: 13px;
+    margin-top: 12px;
+    border-radius: 7px;
+    border-left: 4px solid #16a34a;
+}
+
+
+/* ==========================================
+   13. FOOTER
+========================================== */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+
+/* ==========================================
+   14. TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .header {
+        padding: 16px 10px;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .back-link {
+        position: static;
+        display: block;
+        transform: none;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .welcome {
+        padding: 25px 16px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .unit-title {
+        font-size: 19px;
+    }
+
+    .section-toggle {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .section-content {
+        padding: 17px;
+    }
+
+    .geometry-diagram {
+        padding: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   15. SMALL PHONE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .site-title {
+        font-size: 22px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .topic-introduction {
+        padding: 18px;
+    }
+
+    .unit-title {
+        font-size: 17px;
+        padding: 13px;
+    }
+
+    .section-toggle {
+        font-size: 14px;
+        padding: 13px;
+    }
+
+    .section-content {
+        padding: 13px;
+    }
+
+    .section-content h3 {
+        font-size: 17px;
+    }
+
+    .example-card,
+    .practice-card {
+        padding: 14px;
+    }
+
+    .geometry-diagram svg {
+        max-width: 100%;
+    }
+
+    .diagram-caption {
+        font-size: 13px;
+    }
+
+    .solution-button,
+    .answer-button {
+        width: 100%;
+        padding: 11px;
+    }
+
+}

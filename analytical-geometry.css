@@ -1,0 +1,335 @@
+
+/* =====================================
+   MATHSHELP SA - ANALYTICAL GEOMETRY
+===================================== */
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5ff;
+    color: #172554;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+.header {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.header h1 {
+    margin-top: 10px;
+}
+
+.header p {
+    color: #dbeafe;
+}
+
+.back-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* WELCOME */
+
+.welcome {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.grade-label {
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.welcome h2 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* UNIT HEADINGS */
+
+.unit-heading {
+    color: #1e3a8a;
+    background: #dbeafe;
+    padding: 18px 20px;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    margin: 35px 0 18px;
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    background: #dbeafe;
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* SECTION TOGGLE */
+
+.section-toggle {
+    width: 100%;
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 18px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-toggle:hover {
+    background: #1d4ed8;
+}
+
+.section-toggle span {
+    font-size: 22px;
+}
+
+/* SECTION CONTENT */
+
+.section-content {
+    padding: 25px;
+}
+
+.section-content h3 {
+    color: #1e40af;
+    margin: 25px 0 12px;
+}
+
+.section-content h3:first-child {
+    margin-top: 0;
+}
+
+.section-content h4 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.section-content p {
+    margin-bottom: 12px;
+}
+
+.section-content ul,
+.section-content ol {
+    margin: 10px 0 20px 25px;
+}
+
+.section-content li {
+    margin-bottom: 7px;
+}
+
+/* FORMULA BOX */
+
+.formula-box {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.formula {
+    font-size: 23px;
+    font-weight: bold;
+    color: #1e40af;
+    text-align: center;
+    padding: 10px;
+}
+
+/* IMPORTANT NOTES */
+
+.important-note {
+    background: #bfdbfe;
+    border-left: 5px solid #1e40af;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* WORKED EXAMPLES */
+
+.example-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 18px 0;
+}
+
+.example-card h4 {
+    color: #1e40af;
+}
+
+/* SOLUTION BUTTON */
+
+.solution-button,
+.answer-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.solution-button:hover,
+.answer-button:hover {
+    background: #2563eb;
+}
+
+/* SOLUTION CONTENT */
+
+.solution {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.solution p {
+    margin-bottom: 8px;
+}
+
+/* PRACTICE */
+
+.practice-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    border: 1px solid #bfdbfe;
+}
+
+.practice-card h4 {
+    color: #1e40af;
+}
+
+.practice-answer {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    color: #1e3a8a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+    border-radius: 12px;
+}
+
+/* HIDDEN CONTENT */
+
+[hidden] {
+    display: none !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .welcome {
+        padding: 22px 15px;
+    }
+
+    .unit-heading {
+        font-size: 19px;
+        padding: 15px;
+    }
+
+    .section-toggle {
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    .section-content {
+        padding: 17px;
+    }
+
+    .formula {
+        font-size: 19px;
+    }
+
+    .example-card,
+    .practice-card {
+        padding: 16px;
+    }
+
+}
+
+/* KEEP HEADER FIXED WHILE SCROLLING */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}

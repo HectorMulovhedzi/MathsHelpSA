@@ -1,0 +1,641 @@
+
+/* ==========================================
+   MATHSHELP SA - TRIGONOMETRY RULES
+   GRADE 11
+========================================== */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5ff;
+    color: #172554;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+    background: #102a56;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    background: #1e40af;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background: #2563eb;
+}
+
+.site-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #dbeafe;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* ==========================================
+   WELCOME SECTION
+========================================== */
+
+.welcome {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-left: 6px solid #2563eb;
+}
+
+.welcome h2 {
+    color: #1e40af;
+    margin-bottom: 12px;
+    font-size: 25px;
+}
+
+.welcome p {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* ==========================================
+   UNIT SECTIONS
+========================================== */
+
+.unit-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    border-top: 5px solid #2563eb;
+}
+
+.unit-title {
+    color: #1e40af;
+    font-size: 23px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+
+/* ==========================================
+   SECTION TOGGLE BUTTONS
+========================================== */
+
+.section-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #1e40af;
+    color: white;
+
+    border: none;
+    border-radius: 9px;
+
+    padding: 15px 18px;
+    margin: 12px 0;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.section-toggle:hover {
+    background: #2563eb;
+}
+
+.section-toggle span {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   SECTION CONTENT
+========================================== */
+
+.section-content {
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+
+    padding: 22px;
+    margin-bottom: 15px;
+}
+
+.section-content h3 {
+    color: #1e40af;
+    margin: 18px 0 10px;
+}
+
+.section-content p {
+    margin-bottom: 12px;
+}
+
+.section-content ul,
+.section-content ol {
+    margin: 12px 0 18px 25px;
+}
+
+.section-content li {
+    margin-bottom: 7px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   FORMULA BOX
+========================================== */
+
+.formula-box {
+    background: #dbeafe;
+    border-left: 5px solid #2563eb;
+
+    padding: 20px;
+    margin: 20px 0;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+.formula-box h3 {
+    margin-top: 5px;
+    color: #1e40af;
+}
+
+.formula-box p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #172554;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   IMPORTANT NOTES
+========================================== */
+
+.important-note {
+    background: #fff7d6;
+    border-left: 5px solid #eab308;
+
+    padding: 15px;
+    margin: 20px 0;
+
+    border-radius: 8px;
+    color: #713f12;
+}
+
+
+/* ==========================================
+   TRIANGLE DIAGRAMS
+========================================== */
+
+.triangle-container {
+    background: white;
+    border: 2px solid #bfdbfe;
+
+    border-radius: 12px;
+    padding: 15px;
+
+    margin: 20px 0;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.triangle-diagram {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+}
+
+.triangle-diagram polygon {
+    stroke-linejoin: round;
+}
+
+.triangle-diagram text {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    fill: #172554;
+}
+
+.diagram-caption {
+    font-size: 14px;
+    color: #475569;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* ==========================================
+   WORKED EXAMPLES
+========================================== */
+
+.example-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+
+    border-radius: 12px;
+    padding: 20px;
+
+    margin: 18px 0;
+    box-shadow: 0 3px 8px rgba(30, 64, 175, 0.06);
+}
+
+.example-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.example-question {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.solution-button {
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 10px 16px;
+    margin-top: 10px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.solution-button:hover {
+    background: #1e3a8a;
+}
+
+.solution {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+
+    padding: 15px;
+    margin-top: 15px;
+
+    border-radius: 8px;
+}
+
+.solution p {
+    margin-bottom: 10px;
+}
+
+.solution-step {
+    padding: 5px 0;
+}
+
+.final-answer {
+    background: #dcfce7;
+    border-left: 5px solid #16a34a;
+
+    padding: 12px;
+    margin-top: 12px;
+
+    border-radius: 7px;
+    font-weight: bold;
+    color: #14532d;
+}
+
+
+/* ==========================================
+   PRACTICE QUESTIONS
+========================================== */
+
+.practice-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+
+    padding: 18px;
+    border-radius: 10px;
+
+    margin: 15px 0;
+}
+
+.practice-card h3 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.question-number {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+
+    padding: 4px 10px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.answer-button {
+    background: #1e40af;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 9px 15px;
+    margin-top: 12px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.answer-button:hover {
+    background: #2563eb;
+}
+
+.practice-answer {
+    background: #dcfce7;
+    border-left: 4px solid #16a34a;
+
+    padding: 14px;
+    margin-top: 12px;
+
+    border-radius: 8px;
+}
+
+.practice-answer p {
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   EXAM-STYLE QUESTIONS
+========================================== */
+
+.exam-intro {
+    background: #dbeafe;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.exam-question {
+    background: white;
+    border: 2px solid #bfdbfe;
+
+    padding: 22px;
+    border-radius: 12px;
+
+    margin: 20px 0;
+}
+
+.exam-question h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.exam-label {
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+
+    padding: 5px 12px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.exam-marks {
+    color: #64748b;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.exam-diagram {
+    background: #f8fbff;
+    border: 1px solid #bfdbfe;
+
+    padding: 15px;
+    border-radius: 10px;
+
+    margin: 15px 0;
+}
+
+
+/* ==========================================
+   TABLES
+========================================== */
+
+.math-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: white;
+}
+
+.math-table th,
+.math-table td {
+    border: 1px solid #bfdbfe;
+    padding: 10px;
+    text-align: center;
+}
+
+.math-table th {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.math-table tr:nth-child(even) {
+    background: #f8fbff;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    background: #102a56;
+    color: white;
+
+    text-align: center;
+    padding: 22px;
+
+    margin-top: 40px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .header {
+        padding: 20px 12px;
+    }
+
+    .site-title {
+        font-size: 25px;
+    }
+
+    .welcome {
+        padding: 22px 15px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .unit-section {
+        padding: 17px;
+    }
+
+    .unit-title {
+        font-size: 20px;
+    }
+
+    .section-content {
+        padding: 15px;
+    }
+
+    .formula-box p {
+        font-size: 17px;
+    }
+
+    .triangle-container {
+        padding: 8px;
+    }
+
+    .triangle-diagram text {
+        font-size: 17px;
+    }
+
+    .example-card,
+    .practice-card,
+    .exam-question {
+        padding: 15px;
+    }
+
+    .math-table th,
+    .math-table td {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .site-title {
+        font-size: 22px;
+    }
+
+    .section-toggle {
+        font-size: 15px;
+        padding: 13px;
+    }
+
+    .section-content {
+        padding: 12px;
+    }
+
+    .formula-box {
+        padding: 13px;
+    }
+
+    .formula-box p {
+        font-size: 16px;
+    }
+
+    .triangle-diagram text {
+        font-size: 16px;
+    }
+
+    .diagram-caption {
+        font-size: 12px;
+    }
+
+    .solution-button,
+    .answer-button {
+        width: 100%;
+    }
+
+}
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}

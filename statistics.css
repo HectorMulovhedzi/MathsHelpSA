@@ -1,0 +1,441 @@
+/* =====================================
+   MATHSHELP SA - GRADE 11 STATISTICS
+===================================== */
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5ff;
+    color: #172554;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    min-height: 70px;
+    padding: 12px 5%;
+    background: #102a56;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 14px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+}
+
+.back-link:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* WELCOME */
+
+.welcome {
+    padding: 35px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.welcome h2 {
+    color: #1e40af;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.topic-introduction {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.topic-introduction h2 {
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+
+/* UNITS */
+
+.unit-section {
+    margin-bottom: 35px;
+}
+
+.unit-title {
+    background: #1e40af;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    background: #dbeafe;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.section-toggle {
+    width: 100%;
+    padding: 17px 20px;
+    background: #1e40af;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-toggle:hover {
+    background: #1d4ed8;
+}
+
+.section-toggle span {
+    font-size: 22px;
+}
+
+.section-content {
+    padding: 22px;
+    background: #eff6ff;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* NOTES */
+
+.section-content h3 {
+    color: #1e40af;
+    margin: 20px 0 10px;
+}
+
+.section-content h3:first-child {
+    margin-top: 0;
+}
+
+.section-content p {
+    margin-bottom: 12px;
+}
+
+.section-content ul,
+.section-content ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.section-content li {
+    margin-bottom: 7px;
+}
+
+.formula-box {
+    background: white;
+    border-left: 5px solid #2563eb;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    white-space: pre-line;
+}
+
+.important-note {
+    background: #fef3c7;
+    border-left: 5px solid #f59e0b;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 18px 0;
+}
+
+/* TABLES */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    background: white;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #bfdbfe;
+    padding: 10px;
+    text-align: center;
+}
+
+.data-table th {
+    background: #1e40af;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background: #eff6ff;
+}
+
+/* GRAPHS */
+
+.graph-container {
+    width: 100%;
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 22px 0;
+    overflow: hidden;
+}
+
+.graph-container h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.graph-container canvas {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: 350px;
+    margin: auto;
+}
+
+.graph-caption {
+    color: #475569;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* WORKED EXAMPLES */
+
+.example-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+.example-card h3 {
+    color: #1e40af;
+    margin: 0 0 10px;
+}
+
+.example-question {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.solution-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.solution-button:hover {
+    background: #1e40af;
+}
+
+.solution {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 7px;
+    padding: 15px;
+    margin-top: 12px;
+    white-space: pre-line;
+}
+
+/* PRACTICE */
+
+.practice-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+}
+
+.practice-question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.answer-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 9px 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.answer-button:hover {
+    background: #1d4ed8;
+}
+
+.practice-answer {
+    background: #eff6ff;
+    border-left: 4px solid #16a34a;
+    padding: 12px;
+    border-radius: 7px;
+    margin-top: 12px;
+    white-space: pre-line;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+    .unit-title {
+        font-size: 19px;
+    }
+
+    .section-content {
+        padding: 16px;
+    }
+
+    .graph-container canvas {
+        height: 300px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+
+    .site-title {
+        font-size: 23px;
+    }
+
+    .back-link {
+        font-size: 13px;
+        padding: 7px 9px;
+    }
+
+    .welcome {
+        padding: 25px 15px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .unit-title {
+        font-size: 17px;
+        padding: 13px;
+    }
+
+    .section-toggle {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .section-content {
+        padding: 13px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 7px 4px;
+        font-size: 13px;
+    }
+
+    .graph-container {
+        padding: 10px;
+    }
+
+    .graph-container canvas {
+        height: 260px;
+    }
+
+    .example-card,
+    .practice-card {
+        padding: 13px;
+    }
+}

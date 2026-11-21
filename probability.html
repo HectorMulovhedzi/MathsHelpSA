@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grade 11 Probability | MathsHelpSA</title>
+
+    <!-- Reuse the Functions and Graphs design -->
+    <link rel="stylesheet" href="../functions/functions.css">
+    <link rel="stylesheet" href="probability.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+
+        <p>Grade 11 Mathematics</p>
+    </header>
+
+
+    <main class="container">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <h2>Probability</h2>
+
+            <p>
+                Learn how to calculate probabilities, combine events,
+                identify dependent and independent events, and solve
+                problems using tree diagrams.
+            </p>
+
+            <p class="grade-label">Grade 11</p>
+        </section>
+
+
+        <!-- UNIT 1 -->
+        <section class="topic-section">
+
+            <h2 class="section-title">
+                Unit 1: Combinations of Events
+            </h2>
+
+            <!-- NOTES -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit1Notes', this)">
+                <span>＋</span> Notes
+            </button>
+
+            <div class="section-content" id="unit1Notes" hidden>
+
+                <h3>1. What is an event?</h3>
+
+                <p>
+                    An event is an outcome or a group of outcomes
+                    that we are interested in during an experiment.
+                </p>
+
+                <div class="formula-box">
+                    <p><strong>Example:</strong></p>
+                    <p>When rolling a die:</p>
+                    <p>A = getting an even number</p>
+                    <p>A = {2, 4, 6}</p>
+                </div>
+
+                <h3>2. Union of events (A ∪ B)</h3>
+
+                <p>
+                    The union of A and B means that event A happens,
+                    event B happens, or both events happen.
+                </p>
+
+                <div class="formula-box">
+                    <strong>Addition Rule:</strong>
+                    <p>P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</p>
+                </div>
+
+                <div class="important-note">
+                    Remember to subtract the intersection because
+                    it is counted twice when adding P(A) and P(B).
+                </div>
+
+                <h3>3. Intersection of events (A ∩ B)</h3>
+
+                <p>
+                    The intersection means that both events happen
+                    at the same time.
+                </p>
+
+                <p>
+                    Example: A number is even and greater than 3
+                    when rolling a die.
+                </p>
+
+                <p>A ∩ B = {4, 6}</p>
+
+                <h3>4. Complement of an event</h3>
+
+                <p>
+                    The complement of A means that event A does
+                    not happen.
+                </p>
+
+                <div class="formula-box">
+                    <strong>Complement Rule:</strong>
+                    <p>P(A') = 1 − P(A)</p>
+                </div>
+
+                <h3>5. Mutually exclusive events</h3>
+
+                <p>
+                    Two events are mutually exclusive if they
+                    cannot happen at the same time.
+                </p>
+
+                <div class="formula-box">
+                    <p>P(A ∩ B) = 0</p>
+                    <p>P(A ∪ B) = P(A) + P(B)</p>
+                </div>
+
+                <h3>6. Non-mutually exclusive events</h3>
+
+                <p>
+                    These events can happen at the same time.
+                    Their intersection must be subtracted when
+                    using the addition rule.
+                </p>
+
+            </div>
+
+
+            <!-- WORKED EXAMPLES -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit1Examples', this)">
+                <span>＋</span> Worked Examples
+            </button>
+
+            <div class="section-content" id="unit1Examples" hidden>
+
+                <div id="unit1WorkedExamples"></div>
+
+            </div>
+
+
+            <!-- PRACTICE -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit1Practice', this)">
+                <span>＋</span> Practice Questions
+            </button>
+
+            <div class="section-content" id="unit1Practice" hidden>
+
+                <div id="unit1Questions"></div>
+
+            </div>
+
+
+            <!-- QUIZ -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit1Quiz', this)">
+                <span>＋</span> Exam-Level Quiz
+            </button>
+
+            <div class="section-content" id="unit1Quiz" hidden>
+
+                <p>
+                    Test your understanding of combinations of events
+                    with exam-style questions.
+                </p>
+
+                <div id="unit1QuizArea"></div>
+
+                <div id="unit1QuizResults" hidden>
+                    <h3>Your Results</h3>
+                    <p id="unit1QuizScore"></p>
+                    <div id="unit1QuizCorrections"></div>
+
+                    <button class="quiz-button"
+                            onclick="retryProbabilityQuiz(1)">
+                        Try Again
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- UNIT 2 -->
+        <section class="topic-section">
+
+            <h2 class="section-title">
+                Unit 2: Dependent and Independent Events
+            </h2>
+
+            <!-- NOTES -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit2Notes', this)">
+                <span>＋</span> Notes
+            </button>
+
+            <div class="section-content" id="unit2Notes" hidden>
+
+                <h3>1. Independent events</h3>
+
+                <p>
+                    Two events are independent if the outcome of
+                    the first event does not affect the probability
+                    of the second event.
+                </p>
+
+                <p>
+                    Example: Tossing a coin twice. The first toss
+                    does not affect the second toss.
+                </p>
+
+                <div class="formula-box">
+                    <strong>Multiplication Rule:</strong>
+                    <p>P(A ∩ B) = P(A) × P(B)</p>
+                </div>
+
+                <h3>2. Dependent events</h3>
+
+                <p>
+                    Two events are dependent if the outcome of
+                    the first event affects the probability of
+                    the second event.
+                </p>
+
+                <p>
+                    Example: Selecting two balls from a bag
+                    without replacing the first ball.
+                </p>
+
+                <div class="formula-box">
+                    <strong>Multiplication Rule:</strong>
+                    <p>P(A ∩ B) = P(A) × P(B given A)</p>
+                    <p>P(A ∩ B) = P(A) × P(B | A)</p>
+                </div>
+
+                <h3>3. Conditional probability</h3>
+
+                <p>
+                    Conditional probability is the probability
+                    of event B happening when we already know
+                    that event A has happened.
+                </p>
+
+                <div class="formula-box">
+                    <strong>Conditional Probability:</strong>
+                    <p>P(B | A) = P(A ∩ B) / P(A)</p>
+                </div>
+
+                <h3>4. Replacement and no replacement</h3>
+
+                <div class="formula-box">
+                    <strong>With replacement:</strong>
+                    <p>
+                        The item is returned before the next
+                        selection. The probabilities stay the same.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Without replacement:</strong>
+                    <p>
+                        The item is not returned. The total number
+                        of items changes, so the probabilities may change.
+                    </p>
+                </div>
+
+                <div class="important-note">
+                    Exam tip: Always check whether the question says
+                    "with replacement" or "without replacement".
+                </div>
+
+            </div>
+
+
+            <!-- WORKED EXAMPLES -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit2Examples', this)">
+                <span>＋</span> Worked Examples
+            </button>
+
+            <div class="section-content" id="unit2Examples" hidden>
+
+                <div id="unit2WorkedExamples"></div>
+
+            </div>
+
+
+            <!-- PRACTICE -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit2Practice', this)">
+                <span>＋</span> Practice Questions
+            </button>
+
+            <div class="section-content" id="unit2Practice" hidden>
+
+                <div id="unit2Questions"></div>
+
+            </div>
+
+
+            <!-- QUIZ -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit2Quiz', this)">
+                <span>＋</span> Exam-Level Quiz
+            </button>
+
+            <div class="section-content" id="unit2Quiz" hidden>
+
+                <p>
+                    Answer questions involving independent events,
+                    dependent events and conditional probability.
+                </p>
+
+                <div id="unit2QuizArea"></div>
+
+                <div id="unit2QuizResults" hidden>
+                    <h3>Your Results</h3>
+                    <p id="unit2QuizScore"></p>
+                    <div id="unit2QuizCorrections"></div>
+
+                    <button class="quiz-button"
+                            onclick="retryProbabilityQuiz(2)">
+                        Try Again
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- UNIT 3 -->
+        <section class="topic-section">
+
+            <h2 class="section-title">
+                Unit 3: Tree Diagrams
+            </h2>
+
+            <!-- NOTES -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit3Notes', this)">
+                <span>＋</span> Notes
+            </button>
+
+            <div class="section-content" id="unit3Notes" hidden>
+
+                <h3>1. What is a tree diagram?</h3>
+
+                <p>
+                    A tree diagram is a diagram that shows all
+                    possible outcomes of a sequence of events.
+                </p>
+
+                <p>
+                    It is useful when an experiment involves
+                    two or more stages.
+                </p>
+
+                <h3>2. Important rules</h3>
+
+                <div class="formula-box">
+                    <strong>Multiplying along branches:</strong>
+                    <p>
+                        Multiply probabilities along a path to
+                        find the probability of that sequence.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Adding separate paths:</strong>
+                    <p>
+                        Add the probabilities of different paths
+                        when they represent alternative ways
+                        for the required event to happen.
+                    </p>
+                </div>
+
+                <h3>3. Example: Tossing a coin twice</h3>
+
+                <p>
+                    A fair coin is tossed twice. Each toss has
+                    two possible outcomes: Heads (H) or Tails (T).
+                </p>
+
+                <div class="formula-box">
+                    <p>First toss: H = 1/2, T = 1/2</p>
+                    <p>Second toss: H = 1/2, T = 1/2</p>
+                    <p>Possible outcomes: HH, HT, TH, TT</p>
+                </div>
+
+                <p>
+                    Probability of getting two heads:
+                </p>
+
+                <div class="formula-box">
+                    <p>P(HH) = 1/2 × 1/2</p>
+                    <p>P(HH) = 1/4</p>
+                </div>
+
+                <h3>4. Tree diagrams without replacement</h3>
+
+                <p>
+                    When selecting objects without replacement,
+                    the probabilities on the second set of branches
+                    change because the first object is not returned.
+                </p>
+
+                <div class="important-note">
+                    Remember: The probabilities leaving each point
+                    on a complete tree diagram must add up to 1.
+                </div>
+
+            </div>
+
+
+            <!-- WORKED EXAMPLES -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit3Examples', this)">
+                <span>＋</span> Worked Examples
+            </button>
+
+            <div class="section-content" id="unit3Examples" hidden>
+
+                <div id="unit3WorkedExamples"></div>
+
+            </div>
+
+
+            <!-- PRACTICE -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit3Practice', this)">
+                <span>＋</span> Practice Questions
+            </button>
+
+            <div class="section-content" id="unit3Practice" hidden>
+
+                <div id="unit3Questions"></div>
+
+            </div>
+
+
+            <!-- QUIZ -->
+            <button class="section-toggle"
+                    onclick="toggleSection('unit3Quiz', this)">
+                <span>＋</span> Exam-Level Quiz
+            </button>
+
+            <div class="section-content" id="unit3Quiz" hidden>
+
+                <p>
+                    Solve exam-style questions using tree diagrams,
+                    including questions with and without replacement.
+                </p>
+
+                <div id="unit3QuizArea"></div>
+
+                <div id="unit3QuizResults" hidden>
+                    <h3>Your Results</h3>
+                    <p id="unit3QuizScore"></p>
+                    <div id="unit3QuizCorrections"></div>
+
+                    <button class="quiz-button"
+                            onclick="retryProbabilityQuiz(3)">
+                        Try Again
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>MathsHelpSA | Grade 11 Mathematics</p>
+        <p>Learn, Practise and Improve.</p>
+    </footer>
+
+
+    <script src="probability.js"></script>
+
+</body>
+</html>

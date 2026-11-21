@@ -657,3 +657,22 @@ body {
 [hidden] {
     display: none !important;
 }
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}

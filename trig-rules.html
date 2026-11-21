@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trigonometry Rules | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="trig-rules.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+
+        <p>Grade 11 Mathematics</p>
+    </header>
+
+
+    <!-- INTRODUCTION -->
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Trigonometry: Area, Sine and Cosine Rules</h2>
+
+            <p>
+                Learn how to calculate the area of triangles,
+                find missing sides and angles, and solve
+                real-life problems using trigonometry.
+            </p>
+        </section>
+
+
+        <!-- UNIT 1: AREA RULE -->
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 1: The Area Rule</h2>
+
+            <button class="section-toggle"
+                    onclick="toggleSection('areaNotes', this)">
+                Notes <span>＋</span>
+            </button>
+
+            <div class="section-content" id="areaNotes" hidden>
+
+                <h3>1. What is the Area Rule?</h3>
+
+                <p>
+                    The area rule is used to calculate the area
+                    of a triangle when we know two sides and
+                    the angle between them.
+                </p>
+
+                <div class="formula-box">
+                    <h3>Area Rule Formula</h3>
+                    <p>
+                        Area = ½ ab sin(C)
+                    </p>
+                </div>
+
+                <p>Where:</p>
+
+                <ul>
+                    <li><strong>a</strong> = first known side</li>
+                    <li><strong>b</strong> = second known side</li>
+                    <li><strong>C</strong> = angle between the two sides</li>
+                </ul>
+
+                <h3>Triangle Diagram</h3>
+
+                <div class="triangle-container">
+
+                    <svg viewBox="0 0 500 320"
+                         class="triangle-diagram">
+
+                        <polygon points="80,260 420,260 190,55"
+                                 fill="#dbeafe"
+                                 stroke="#1d4ed8"
+                                 stroke-width="3"/>
+
+                        <text x="65" y="280">A</text>
+                        <text x="425" y="280">B</text>
+                        <text x="180" y="42">C</text>
+
+                        <text x="235" y="285">a</text>
+                        <text x="115" y="145">b</text>
+                        <text x="325" y="145">c</text>
+
+                        <text x="105" y="250">C</text>
+
+                        <path d="M110 260 A30 30 0 0 1 100 235"
+                              fill="none"
+                              stroke="#dc2626"
+                              stroke-width="2"/>
+
+                        <text x="115" y="238" fill="#dc2626">θ</text>
+
+                    </svg>
+
+                    <p class="diagram-caption">
+                        The angle must be between the two known sides.
+                    </p>
+
+                </div>
+
+                <h3>Important Steps</h3>
+
+                <ol>
+                    <li>Identify the two known sides.</li>
+                    <li>Identify the angle between those sides.</li>
+                    <li>Substitute into the area formula.</li>
+                    <li>Calculate the answer in square units.</li>
+                </ol>
+
+                <div class="important-note">
+                    Remember: The area is measured in square units,
+                    for example cm² or m².
+                </div>
+
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('areaExamples', this)">
+                Worked Examples <span>＋</span>
+            </button>
+
+            <div class="section-content" id="areaExamples" hidden>
+                <div id="areaWorkedExamples"></div>
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('areaPractice', this)">
+                Practice Questions <span>＋</span>
+            </button>
+
+            <div class="section-content" id="areaPractice" hidden>
+                <div id="areaQuestions"></div>
+            </div>
+
+        </section>
+
+
+
+        <!-- UNIT 2: SINE RULE -->
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 2: The Sine Rule</h2>
+
+            <button class="section-toggle"
+                    onclick="toggleSection('sineNotes', this)">
+                Notes <span>＋</span>
+            </button>
+
+            <div class="section-content" id="sineNotes" hidden>
+
+                <h3>1. What is the Sine Rule?</h3>
+
+                <p>
+                    The sine rule is used to calculate missing
+                    sides or angles in a triangle when we know
+                    a matching opposite side and angle.
+                </p>
+
+                <div class="formula-box">
+                    <h3>Sine Rule Formula</h3>
+
+                    <p>
+                        a / sin(A) = b / sin(B) = c / sin(C)
+                    </p>
+
+                    <p>
+                        Alternatively:
+                    </p>
+
+                    <p>
+                        sin(A) / a = sin(B) / b = sin(C) / c
+                    </p>
+                </div>
+
+                <h3>Triangle Diagram</h3>
+
+                <div class="triangle-container">
+
+                    <svg viewBox="0 0 500 320"
+                         class="triangle-diagram">
+
+                        <polygon points="80,260 420,260 190,55"
+                                 fill="#dbeafe"
+                                 stroke="#1d4ed8"
+                                 stroke-width="3"/>
+
+                        <text x="65" y="280">A</text>
+                        <text x="425" y="280">B</text>
+                        <text x="180" y="42">C</text>
+
+                        <text x="235" y="285">c</text>
+                        <text x="115" y="145">b</text>
+                        <text x="325" y="145">a</text>
+
+                        <text x="115" y="245">A</text>
+                        <text x="380" y="245">B</text>
+                        <text x="190" y="85">C</text>
+
+                    </svg>
+
+                    <p class="diagram-caption">
+                        Each side is opposite its matching angle.
+                    </p>
+
+                </div>
+
+                <h3>How to Identify Opposite Pairs</h3>
+
+                <ul>
+                    <li>Side a is opposite angle A.</li>
+                    <li>Side b is opposite angle B.</li>
+                    <li>Side c is opposite angle C.</li>
+                </ul>
+
+                <h3>When Do We Use the Sine Rule?</h3>
+
+                <ul>
+                    <li>When we know two angles and one side.</li>
+                    <li>When we know two sides and an opposite angle.</li>
+                </ul>
+
+                <div class="important-note">
+                    Always match each side with its opposite angle.
+                    Do not mix up the pairs.
+                </div>
+
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('sineExamples', this)">
+                Worked Examples <span>＋</span>
+            </button>
+
+            <div class="section-content" id="sineExamples" hidden>
+                <div id="sineWorkedExamples"></div>
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('sinePractice', this)">
+                Practice Questions <span>＋</span>
+            </button>
+
+            <div class="section-content" id="sinePractice" hidden>
+                <div id="sineQuestions"></div>
+            </div>
+
+        </section>
+
+
+
+        <!-- UNIT 3: COSINE RULE -->
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 3: The Cosine Rule</h2>
+
+            <button class="section-toggle"
+                    onclick="toggleSection('cosineNotes', this)">
+                Notes <span>＋</span>
+            </button>
+
+            <div class="section-content" id="cosineNotes" hidden>
+
+                <h3>1. What is the Cosine Rule?</h3>
+
+                <p>
+                    The cosine rule is used to calculate a missing
+                    side or angle when the sine rule cannot be
+                    applied directly.
+                </p>
+
+                <div class="formula-box">
+                    <h3>Cosine Rule: Finding a Side</h3>
+
+                    <p>
+                        a² = b² + c² − 2bc cos(A)
+                    </p>
+
+                    <h3>Cosine Rule: Finding an Angle</h3>
+
+                    <p>
+                        cos(A) = (b² + c² − a²) / 2bc
+                    </p>
+                </div>
+
+                <h3>Triangle Diagram</h3>
+
+                <div class="triangle-container">
+
+                    <svg viewBox="0 0 500 320"
+                         class="triangle-diagram">
+
+                        <polygon points="80,260 420,260 190,55"
+                                 fill="#dbeafe"
+                                 stroke="#1d4ed8"
+                                 stroke-width="3"/>
+
+                        <text x="65" y="280">A</text>
+                        <text x="425" y="280">B</text>
+                        <text x="180" y="42">C</text>
+
+                        <text x="235" y="285">c</text>
+                        <text x="115" y="145">b</text>
+                        <text x="325" y="145">a</text>
+
+                        <text x="115" y="245">A</text>
+                        <text x="380" y="245">B</text>
+                        <text x="190" y="85">C</text>
+
+                    </svg>
+
+                    <p class="diagram-caption">
+                        The cosine rule uses two sides and the included
+                        angle to find the third side.
+                    </p>
+
+                </div>
+
+                <h3>When Do We Use the Cosine Rule?</h3>
+
+                <ul>
+                    <li>When three sides are known and we need an angle.</li>
+                    <li>When two sides and the included angle are known.</li>
+                </ul>
+
+                <div class="important-note">
+                    Be careful with the negative term:
+                    −2bc cos(A).
+                </div>
+
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('cosineExamples', this)">
+                Worked Examples <span>＋</span>
+            </button>
+
+            <div class="section-content" id="cosineExamples" hidden>
+                <div id="cosineWorkedExamples"></div>
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('cosinePractice', this)">
+                Practice Questions <span>＋</span>
+            </button>
+
+            <div class="section-content" id="cosinePractice" hidden>
+                <div id="cosineQuestions"></div>
+            </div>
+
+        </section>
+
+
+
+        <!-- UNIT 4: TWO-DIMENSIONAL PROBLEMS -->
+        <section class="unit-section">
+
+            <h2 class="unit-title">
+                Unit 4: Solving Problems in Two Dimensions
+            </h2>
+
+            <button class="section-toggle"
+                    onclick="toggleSection('twoDNotes', this)">
+                Notes <span>＋</span>
+            </button>
+
+            <div class="section-content" id="twoDNotes" hidden>
+
+                <h3>1. What are Two-Dimensional Problems?</h3>
+
+                <p>
+                    These are real-life problems involving triangles
+                    in a flat plane. You may be asked to calculate
+                    distances, heights, directions or angles.
+                </p>
+
+                <h3>Example: Two Points and a Triangle</h3>
+
+                <div class="triangle-container">
+
+                    <svg viewBox="0 0 500 330"
+                         class="triangle-diagram">
+
+                        <polygon points="70,260 430,260 250,65"
+                                 fill="#dbeafe"
+                                 stroke="#1d4ed8"
+                                 stroke-width="3"/>
+
+                        <text x="50" y="280">A</text>
+                        <text x="440" y="280">B</text>
+                        <text x="245" y="50">C</text>
+
+                        <text x="235" y="285">Distance AB</text>
+                        <text x="110" y="150">Distance AC</text>
+                        <text x="345" y="150">Distance BC</text>
+
+                        <text x="100" y="245">40°</text>
+                        <text x="390" y="245">65°</text>
+
+                    </svg>
+
+                    <p class="diagram-caption">
+                        A real-life situation can often be represented
+                        using a triangle.
+                    </p>
+
+                </div>
+
+                <h3>Steps for Solving Exam Questions</h3>
+
+                <ol>
+                    <li>Read the question carefully.</li>
+                    <li>Draw a labelled triangle if one is not provided.</li>
+                    <li>Write down the known sides and angles.</li>
+                    <li>Identify the rule that can be used.</li>
+                    <li>Substitute the values into the formula.</li>
+                    <li>Calculate and include the correct units.</li>
+                </ol>
+
+                <div class="important-note">
+                    Exam tip: Do not choose a formula before identifying
+                    the information given in the question.
+                </div>
+
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('twoDExamples', this)">
+                Worked Examples <span>＋</span>
+            </button>
+
+            <div class="section-content" id="twoDExamples" hidden>
+                <div id="twoDWorkedExamples"></div>
+            </div>
+
+
+            <button class="section-toggle"
+                    onclick="toggleSection('twoDPractice', this)">
+                Practice Questions <span>＋</span>
+            </button>
+
+            <div class="section-content" id="twoDPractice" hidden>
+                <div id="twoDQuestions"></div>
+            </div>
+
+        </section>
+
+
+        <!-- EXAM-STYLE QUESTIONS -->
+        <section class="unit-section">
+
+            <h2 class="unit-title">
+                Exam-Style Trigonometry Questions
+            </h2>
+
+            <p class="exam-intro">
+                Practise questions similar to those you may encounter
+                in Grade 11 examinations. Draw diagrams, show all
+                calculations and round answers as instructed.
+            </p>
+
+            <div id="trigonometryExamQuestions"></div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>MathsHelpSA | Learn Mathematics Step by Step</p>
+    </footer>
+
+
+    <script src="trig-rules.js"></script>
+
+</body>
+</html>

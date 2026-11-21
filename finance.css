@@ -1,0 +1,467 @@
+
+/* ==========================================
+   MATHSHELP SA
+   FINANCE, GROWTH AND DECAY
+   GRADE 11
+========================================== */
+
+
+/* ==========================================
+   MAIN TOPIC SECTIONS
+========================================== */
+
+.topic-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    border-top: 5px solid #2563eb;
+}
+
+
+/* ==========================================
+   SECTION TITLES
+========================================== */
+
+.topic-section .section-title {
+    color: #1e40af;
+    font-size: 23px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+
+/* ==========================================
+   FORMULA BOXES
+========================================== */
+
+.formula-box {
+    background: #dbeafe;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+
+    padding: 20px;
+    margin: 20px 0;
+
+    text-align: center;
+}
+
+.formula-box h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.formula-box p {
+    color: #172554;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.formula-box ul {
+    text-align: left;
+    margin: 15px 0 0 25px;
+}
+
+
+/* ==========================================
+   IMPORTANT NOTES
+========================================== */
+
+.important-note {
+    background: #fff7d6;
+    border-left: 5px solid #eab308;
+    border-radius: 8px;
+
+    padding: 16px;
+    margin: 20px 0;
+
+    color: #713f12;
+}
+
+
+/* ==========================================
+   EXAMPLE CARDS
+========================================== */
+
+.example-card {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+
+    padding: 20px;
+    margin: 18px 0;
+
+    box-shadow: 0 3px 8px rgba(30, 64, 175, 0.06);
+}
+
+.example-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.example-card p {
+    margin: 8px 0;
+}
+
+
+/* ==========================================
+   FINAL ANSWER
+========================================== */
+
+.final-answer {
+    background: #dcfce7;
+    border-left: 5px solid #16a34a;
+
+    padding: 13px;
+    margin-top: 15px;
+
+    border-radius: 8px;
+
+    color: #14532d;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   GRAPH CONTAINERS
+========================================== */
+
+.graph-container {
+    background: #ffffff;
+    border: 2px solid #bfdbfe;
+    border-radius: 12px;
+
+    padding: 15px;
+    margin: 20px 0;
+
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.graph-container canvas {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    min-height: 250px;
+}
+
+
+/* ==========================================
+   WORKED EXAMPLES
+========================================== */
+
+.example-card .solution-button {
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 10px 16px;
+    margin-top: 12px;
+
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.example-card .solution-button:hover {
+    background: #1e3a8a;
+}
+
+.solution {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+
+    padding: 15px;
+    margin-top: 15px;
+
+    border-radius: 8px;
+}
+
+.solution p {
+    margin-bottom: 10px;
+}
+
+.solution-step {
+    padding: 5px 0;
+}
+
+
+/* ==========================================
+   PRACTICE QUESTIONS
+========================================== */
+
+.practice-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+
+    padding: 18px;
+    margin: 15px 0;
+}
+
+.practice-card p {
+    margin: 10px 0;
+}
+
+.question-number {
+    display: inline-block;
+
+    background: #dbeafe;
+    color: #1e40af;
+
+    padding: 5px 11px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.answer-button {
+    background: #1e40af;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 10px 16px;
+    margin-top: 10px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.answer-button:hover {
+    background: #2563eb;
+}
+
+.practice-answer {
+    background: #dcfce7;
+    border-left: 4px solid #16a34a;
+
+    padding: 14px;
+    margin-top: 12px;
+
+    border-radius: 8px;
+}
+
+
+/* ==========================================
+   QUIZ SECTION
+========================================== */
+
+.quiz-question-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+
+    padding: 18px;
+    margin: 18px 0;
+}
+
+.quiz-question-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.quiz-question-card p {
+    margin-bottom: 12px;
+}
+
+.quiz-option {
+    display: block;
+
+    background: #f1f5ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+
+    padding: 12px;
+    margin: 9px 0;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: #dbeafe;
+}
+
+.quiz-option input {
+    margin-right: 10px;
+    accent-color: #2563eb;
+}
+
+
+/* ==========================================
+   QUIZ BUTTONS
+========================================== */
+
+.quiz-button {
+    background: #1e40af;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 20px;
+    margin-top: 15px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-button:hover {
+    background: #2563eb;
+}
+
+.quiz-button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   QUIZ RESULTS
+========================================== */
+
+.quiz-results,
+#growthQuizResults,
+#decayQuizResults {
+    background: #eff6ff;
+    border: 2px solid #bfdbfe;
+
+    border-radius: 12px;
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+#growthQuizScore,
+#decayQuizScore {
+    font-size: 19px;
+    font-weight: bold;
+    color: #1e40af;
+
+    margin: 12px 0;
+}
+
+
+/* ==========================================
+   QUIZ CORRECTIONS
+========================================== */
+
+.quiz-correction {
+    background: white;
+    border-left: 5px solid #2563eb;
+
+    padding: 15px;
+    margin: 12px 0;
+
+    border-radius: 8px;
+}
+
+.quiz-correction.correct {
+    border-left-color: #16a34a;
+}
+
+.quiz-correction.incorrect {
+    border-left-color: #dc2626;
+}
+
+.quiz-correction p {
+    margin: 7px 0;
+}
+
+
+/* ==========================================
+   HIDDEN ELEMENTS
+========================================== */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    .topic-section {
+        padding: 17px;
+    }
+
+    .topic-section .section-title {
+        font-size: 20px;
+    }
+
+    .formula-box {
+        padding: 15px;
+    }
+
+    .formula-box p {
+        font-size: 17px;
+    }
+
+    .example-card,
+    .practice-card,
+    .quiz-question-card {
+        padding: 15px;
+    }
+
+    .graph-container {
+        padding: 8px;
+        min-height: 220px;
+    }
+
+    .graph-container canvas {
+        min-height: 200px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .topic-section {
+        padding: 13px;
+    }
+
+    .topic-section .section-title {
+        font-size: 18px;
+    }
+
+    .formula-box p {
+        font-size: 16px;
+    }
+
+    .quiz-button {
+        width: 100%;
+    }
+
+    .graph-container {
+        min-height: 190px;
+    }
+
+    .graph-container canvas {
+        min-height: 170px;
+    }
+
+}

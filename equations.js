@@ -4,7 +4,27 @@
 // MATHSHELPSA - GRADE 11
 // =====================================
 
+// =====================================
+// OPEN AND CLOSE PAGE SECTIONS
+// =====================================
 
+function toggleSection(sectionId, button) {
+
+    const section = document.getElementById(sectionId);
+
+    if (!section) return;
+
+    const isHidden = section.hidden;
+
+    section.hidden = !isHidden;
+
+    const symbol = button.querySelector("span");
+
+    if (symbol) {
+        symbol.textContent = isHidden ? "−" : "＋";
+    }
+
+}
 // =====================================
 // 1. WORKED EXAMPLES
 // =====================================

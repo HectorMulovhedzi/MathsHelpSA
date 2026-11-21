@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Euclidean Geometry | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="euclidean-geometry.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+
+        <p>Grade 11 Mathematics</p>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+
+            <h2>Euclidean Geometry</h2>
+
+            <p>
+                Explore circles, cyclic quadrilaterals and
+                tangents to circles using geometric properties
+                and theorems.
+            </p>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section class="topic-introduction">
+
+            <h2>Euclidean Geometry</h2>
+
+            <p>
+                Euclidean Geometry studies points, lines,
+                angles and shapes. In this topic, we will
+                focus on circle geometry and learn how to
+                use geometric theorems to solve problems.
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+             UNIT 1: CIRCLES
+        ================================== -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 1: Circles</h2>
+
+
+            <!-- UNIT 1 NOTES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit1Notes', this)">
+
+                    📘 Unit 1: Study Notes
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit1Notes" class="section-content" hidden>
+
+                    <h3>1. Parts of a Circle</h3>
+
+                    <p>
+                        A circle is a closed curved shape in which
+                        every point on the circumference is the
+                        same distance from the centre.
+                    </p>
+
+                    <div class="geometry-diagram">
+
+                        <h4>Diagram 1: Parts of a Circle</h4>
+
+                        <svg viewBox="0 0 340 270"
+                             role="img"
+                             aria-label="Circle showing centre O, radius OB, diameter AC and chord DE">
+
+                            <circle cx="160" cy="130" r="90"
+                                class="circle-line"/>
+
+                            <!-- Diameter -->
+                            <line x1="70" y1="130" x2="250" y2="130"
+                                class="diameter-line"/>
+
+                            <!-- Radius -->
+                            <line x1="160" y1="130" x2="223" y2="66"
+                                class="radius-line"/>
+
+                            <!-- Chord -->
+                            <line x1="100" y1="53" x2="225" y2="86"
+                                class="chord-line"/>
+
+                            <!-- Centre -->
+                            <circle cx="160" cy="130" r="3.5"
+                                class="diagram-point"/>
+
+                            <text x="147" y="148">O</text>
+                            <text x="55" y="135">A</text>
+                            <text x="255" y="135">C</text>
+                            <text x="228" y="62">B</text>
+                            <text x="87" y="48">D</text>
+                            <text x="231" y="83">E</text>
+
+                            <text x="170" y="119">Centre</text>
+
+                        </svg>
+
+                        <p class="diagram-caption">
+                            A diameter passes through the centre.
+                            A radius joins the centre to the circumference.
+                            A chord joins two points on the circumference.
+                        </p>
+
+                    </div>
+
+                    <ul>
+                        <li><strong>Centre:</strong> The middle point of a circle.</li>
+                        <li><strong>Radius:</strong> A line from the centre to the circumference.</li>
+                        <li><strong>Diameter:</strong> A chord passing through the centre.</li>
+                        <li><strong>Chord:</strong> A line joining two points on the circumference.</li>
+                        <li><strong>Circumference:</strong> The boundary of a circle.</li>
+                    </ul>
+
+
+                    <h3>2. Angle at the Centre and Circumference</h3>
+
+                    <div class="geometry-diagram">
+
+                        <h4>Diagram 2: Angle at the Centre</h4>
+
+                        <svg viewBox="0 0 340 270"
+                             role="img"
+                             aria-label="Circle with angle AOB at the centre and angle ACB at the circumference">
+
+                            <circle cx="160" cy="135" r="95"
+                                class="circle-line"/>
+
+                            <line x1="160" y1="135" x2="76" y2="91"
+                                class="radius-line"/>
+
+                            <line x1="160" y1="135" x2="244" y2="91"
+                                class="radius-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="244" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="160" y2="135"
+                                class="chord-line"/>
+
+                            <line x1="76" y1="91" x2="244" y2="91"
+                                class="chord-line"/>
+
+                            <circle cx="160" cy="135" r="3"
+                                class="diagram-point"/>
+
+                            <text x="151" y="153">O</text>
+                            <text x="60" y="88">A</text>
+                            <text x="248" y="88">B</text>
+                            <text x="153" y="31">C</text>
+
+                        </svg>
+
+                        <p class="diagram-caption">
+                            The angle subtended by the same chord
+                            at the centre is twice the angle at
+                            the circumference.
+                        </p>
+
+                    </div>
+
+                    <div class="formula-box">
+
+                        <strong>Angle at the centre theorem</strong>
+
+                        <p>
+                            Angle at the centre = 2 × angle at
+                            the circumference, standing on the
+                            same arc.
+                        </p>
+
+                    </div>
+
+
+                    <h3>3. Angles in the Same Segment</h3>
+
+                    <p>
+                        Angles subtended by the same chord at
+                        the circumference, in the same segment,
+                        are equal.
+                    </p>
+
+                    <div class="formula-box">
+
+                        <strong>Angles in the same segment are equal.</strong>
+
+                    </div>
+
+
+                    <h3>4. Angle in a Semicircle</h3>
+
+                    <p>
+                        The angle subtended by a diameter at
+                        the circumference is always 90°.
+                    </p>
+
+                    <div class="important-note">
+
+                        <strong>Remember:</strong>
+
+                        <p>
+                            Angle in a semicircle = 90°.
+                        </p>
+
+                    </div>
+
+
+                    <h3>5. Perpendicular from the Centre to a Chord</h3>
+
+                    <p>
+                        A perpendicular line drawn from the
+                        centre of a circle to a chord bisects
+                        the chord.
+                    </p>
+
+                    <div class="formula-box">
+
+                        <strong>
+                            Perpendicular from centre to chord
+                            → chord is bisected.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- UNIT 1 EXAMPLES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit1Examples', this)">
+
+                    ✏️ Unit 1: Worked Examples
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit1Examples" class="section-content" hidden>
+
+                    <div id="unit1WorkedExamples"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- UNIT 1 PRACTICE -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit1Practice', this)">
+
+                    📝 Unit 1: Practice Questions
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit1Practice" class="section-content" hidden>
+
+                    <div id="unit1Questions"></div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =================================
+             UNIT 2: CYCLIC QUADRILATERALS
+        ================================== -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">
+                Unit 2: Cyclic Quadrilaterals
+            </h2>
+
+
+            <!-- UNIT 2 NOTES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit2Notes', this)">
+
+                    📘 Unit 2: Study Notes
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit2Notes" class="section-content" hidden>
+
+                    <h3>1. What is a Cyclic Quadrilateral?</h3>
+
+                    <p>
+                        A cyclic quadrilateral is a four-sided
+                        shape whose four vertices all lie
+                        on the circumference of the same circle.
+                    </p>
+
+                    <div class="geometry-diagram">
+
+                        <h4>Diagram 3: Cyclic Quadrilateral</h4>
+
+                        <svg viewBox="0 0 340 290"
+                             role="img"
+                             aria-label="Cyclic quadrilateral ABCD inside a circle">
+
+                            <circle cx="160" cy="140" r="105"
+                                class="circle-line"/>
+
+                            <polygon points="160,35 260,140 160,245 60,140"
+                                class="quadrilateral-shape"/>
+
+                            <circle cx="160" cy="35" r="3"
+                                class="diagram-point"/>
+
+                            <circle cx="260" cy="140" r="3"
+                                class="diagram-point"/>
+
+                            <circle cx="160" cy="245" r="3"
+                                class="diagram-point"/>
+
+                            <circle cx="60" cy="140" r="3"
+                                class="diagram-point"/>
+
+                            <text x="150" y="24">A</text>
+                            <text x="271" y="144">B</text>
+                            <text x="151" y="264">C</text>
+                            <text x="40" y="144">D</text>
+
+                        </svg>
+
+                        <p class="diagram-caption">
+                            All four vertices A, B, C and D
+                            lie on the circle.
+                        </p>
+
+                    </div>
+
+
+                    <h3>2. Opposite Angles of a Cyclic Quadrilateral</h3>
+
+                    <p>
+                        Opposite angles of a cyclic quadrilateral
+                        add up to 180°.
+                    </p>
+
+                    <div class="formula-box">
+
+                        <strong>
+                            A + C = 180°
+                        </strong>
+
+                        <p><strong>B + D = 180°</strong></p>
+
+                    </div>
+
+
+                    <h3>3. Exterior Angle of a Cyclic Quadrilateral</h3>
+
+                    <p>
+                        The exterior angle of a cyclic
+                        quadrilateral is equal to the opposite
+                        interior angle.
+                    </p>
+
+                    <div class="formula-box">
+
+                        <strong>
+                            Exterior angle = Opposite interior angle
+                        </strong>
+
+                    </div>
+
+
+                    <h3>4. Converse of the Cyclic Quadrilateral Theorem</h3>
+
+                    <p>
+                        If a quadrilateral has a pair of
+                        opposite angles that add up to 180°,
+                        then the quadrilateral is cyclic.
+                    </p>
+
+                    <div class="important-note">
+
+                        <strong>Remember:</strong>
+
+                        <p>
+                            Opposite angles supplementary
+                            → quadrilateral is cyclic.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- UNIT 2 EXAMPLES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit2Examples', this)">
+
+                    ✏️ Unit 2: Worked Examples
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit2Examples" class="section-content" hidden>
+
+                    <div id="unit2WorkedExamples"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- UNIT 2 PRACTICE -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit2Practice', this)">
+
+                    📝 Unit 2: Practice Questions
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit2Practice" class="section-content" hidden>
+
+                    <div id="unit2Questions"></div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =================================
+             UNIT 3: TANGENTS TO A CIRCLE
+        ================================== -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">
+                Unit 3: Tangents to a Circle
+            </h2>
+
+
+            <!-- UNIT 3 NOTES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit3Notes', this)">
+
+                    📘 Unit 3: Study Notes
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit3Notes" class="section-content" hidden>
+
+                    <h3>1. What is a Tangent?</h3>
+
+                    <p>
+                        A tangent is a straight line that touches
+                        a circle at exactly one point.
+                    </p>
+
+                    <div class="geometry-diagram">
+
+                        <h4>Diagram 4: Tangent to a Circle</h4>
+
+                        <svg viewBox="0 0 340 270"
+                             role="img"
+                             aria-label="Circle with radius OT perpendicular to tangent line PT at T">
+
+                            <circle cx="130" cy="130" r="75"
+                                class="circle-line"/>
+
+                            <!-- Tangent -->
+                            <line x1="130" y1="35" x2="130" y2="225"
+                                class="tangent-line"/>
+
+                            <!-- Radius -->
+                            <line x1="130" y1="130" x2="130" y2="55"
+                                class="radius-line"/>
+
+                            <!-- Right angle marker -->
+                            <path d="M130 67 L143 67 L143 55"
+                                class="right-angle"/>
+
+                            <circle cx="130" cy="130" r="3"
+                                class="diagram-point"/>
+
+                            <circle cx="130" cy="55" r="3"
+                                class="diagram-point"/>
+
+                            <text x="115" y="145">O</text>
+                            <text x="143" y="53">T</text>
+                            <text x="145" y="215">P</text>
+
+                        </svg>
+
+                        <p class="diagram-caption">
+                            The radius OT is perpendicular to
+                            the tangent at T.
+                        </p>
+
+                    </div>
+
+
+                    <h3>2. Tangent and Radius Theorem</h3>
+
+                    <p>
+                        A tangent to a circle is perpendicular
+                        to the radius drawn to the point of contact.
+                    </p>
+
+                    <div class="formula-box">
+
+                        <strong>
+                            Radius ⟂ Tangent
+                        </strong>
+
+                        <p>Angle between them = 90°</p>
+
+                    </div>
+
+
+                    <h3>3. Equal Tangents</h3>
+
+                    <p>
+                        Tangents drawn from the same external
+                        point to a circle are equal in length.
+                    </p>
+
+                    <div class="geometry-diagram">
+
+                        <h4>Diagram 5: Equal Tangents</h4>
+
+                        <svg viewBox="0 0 340 280"
+                             role="img"
+                             aria-label="Two tangents PA and PB drawn from external point P to a circle">
+
+                            <circle cx="130" cy="145" r="75"
+                                class="circle-line"/>
+
+                            <circle cx="265" cy="145" r="3"
+                                class="diagram-point"/>
+
+                            <line x1="265" y1="145" x2="130" y2="70"
+                                class="tangent-line"/>
+
+                            <line x1="265" y1="145" x2="130" y2="220"
+                                class="tangent-line"/>
+
+                            <circle cx="130" cy="70" r="3"
+                                class="diagram-point"/>
+
+                            <circle cx="130" cy="220" r="3"
+                                class="diagram-point"/>
+
+                            <circle cx="130" cy="145" r="3"
+                                class="diagram-point"/>
+
+                            <text x="273" y="150">P</text>
+                            <text x="111" y="62">A</text>
+                            <text x="111" y="237">B</text>
+                            <text x="110" y="145">O</text>
+
+                        </svg>
+
+                        <p class="diagram-caption">
+                            PA = PB because tangents drawn from
+                            the same external point are equal.
+                        </p>
+
+                    </div>
+
+                    <div class="formula-box">
+
+                        <strong>Equal tangents theorem:</strong>
+
+                        <p>PA = PB</p>
+
+                    </div>
+
+
+                    <h3>4. Important Steps in Geometry Proofs</h3>
+
+                    <ol>
+                        <li>Identify the given information.</li>
+                        <li>Look for radii, chords and tangents.</li>
+                        <li>Identify the relevant theorem.</li>
+                        <li>Use the theorem to calculate unknown angles or lengths.</li>
+                        <li>Give a reason for every statement.</li>
+                    </ol>
+
+                </div>
+
+            </section>
+
+
+            <!-- UNIT 3 EXAMPLES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit3Examples', this)">
+
+                    ✏️ Unit 3: Worked Examples
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit3Examples" class="section-content" hidden>
+
+                    <div id="unit3WorkedExamples"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- UNIT 3 PRACTICE -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit3Practice', this)">
+
+                    📝 Unit 3: Practice Questions
+
+                    <span>＋</span>
+
+                </button>
+
+                <div id="unit3Practice" class="section-content" hidden>
+
+                    <div id="unit3Questions"></div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>© 2026 MathsHelpSA</p>
+
+        <p>Learn Mathematics Step by Step</p>
+
+    </footer>
+
+
+    <script src="euclidean-geometry.js"></script>
+
+</body>
+</html>

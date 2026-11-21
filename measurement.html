@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Combined Objects | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="measurement.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+
+        <p>Grade 11 Mathematics</p>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+
+            <h2>Measurement</h2>
+
+            <p>
+                Learn how to calculate the surface area and
+                volume of combined 3D objects.
+            </p>
+
+        </section>
+
+
+        <!-- TOPIC INTRODUCTION -->
+        <section class="topic-introduction">
+
+            <h2>Combined Objects</h2>
+
+            <p>
+                Combined objects are 3D shapes made by joining
+                two or more familiar geometric solids.
+                We use the formulas for individual shapes to
+                calculate the total surface area and volume.
+            </p>
+
+        </section>
+
+
+        <!-- NOTES -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('notesContent', this)">
+
+                📘 Study Notes
+
+                <span>＋</span>
+
+            </button>
+
+            <div id="notesContent" class="section-content" hidden>
+
+                <h3>1. What are Combined Objects?</h3>
+
+                <p>
+                    A combined object is a 3D object formed by
+                    joining two or more different solids.
+                </p>
+
+                <p>Examples include:</p>
+
+                <ul>
+                    <li>A cylinder with a hemisphere on top.</li>
+                    <li>A cone joined to a cylinder.</li>
+                    <li>A rectangular prism with a triangular prism roof.</li>
+                </ul>
+
+
+                <h3>2. Volume of Combined Objects</h3>
+
+                <p>
+                    Volume is the amount of space occupied by
+                    a three-dimensional object.
+                </p>
+
+                <div class="formula-box">
+
+                    <strong>Volume of combined objects:</strong>
+
+                    <p>
+                        Total volume = Volume of first solid
+                        + Volume of second solid
+                    </p>
+
+                </div>
+
+                <p>
+                    If part of an object is removed, subtract
+                    the volume of the removed part instead.
+                </p>
+
+
+                <h3>3. Surface Area of Combined Objects</h3>
+
+                <p>
+                    Surface area is the total area of the
+                    outside surfaces of an object.
+                </p>
+
+                <div class="formula-box">
+
+                    <strong>Important:</strong>
+
+                    <p>
+                        Only count surfaces that are exposed
+                        on the outside of the combined object.
+                    </p>
+
+                </div>
+
+                <div class="important-note">
+
+                    When two solids are joined, their touching
+                    surfaces are inside the combined object.
+                    Do not include those surfaces in the
+                    external surface area.
+
+                </div>
+
+
+                <h3>4. Important Volume Formulas</h3>
+
+                <div class="formula-box">
+
+                    <p><strong>Cylinder:</strong></p>
+                    <p>V = πr²h</p>
+
+                    <p><strong>Cone:</strong></p>
+                    <p>V = ⅓πr²h</p>
+
+                    <p><strong>Sphere:</strong></p>
+                    <p>V = ⁴⁄₃πr³</p>
+
+                    <p><strong>Hemisphere:</strong></p>
+                    <p>V = ⅔πr³</p>
+
+                    <p><strong>Rectangular prism:</strong></p>
+                    <p>V = length × width × height</p>
+
+                </div>
+
+
+                <h3>5. Important Surface Area Formulas</h3>
+
+                <div class="formula-box">
+
+                    <p><strong>Cylinder:</strong></p>
+                    <p>Curved surface area = 2πrh</p>
+
+                    <p><strong>Cone:</strong></p>
+                    <p>Curved surface area = πrl</p>
+
+                    <p><strong>Sphere:</strong></p>
+                    <p>Surface area = 4πr²</p>
+
+                    <p><strong>Hemisphere:</strong></p>
+                    <p>Curved surface area = 2πr²</p>
+
+                </div>
+
+                <p>
+                    In the cone formula, <strong>l</strong>
+                    represents the slant height.
+                </p>
+
+
+                <h3>6. Steps for Solving Combined Object Problems</h3>
+
+                <ol>
+                    <li>Identify all the individual 3D shapes.</li>
+                    <li>Write down the measurements provided.</li>
+                    <li>Identify which formula is needed.</li>
+                    <li>Calculate each individual volume or area.</li>
+                    <li>Add or subtract where necessary.</li>
+                    <li>Include the correct units in your final answer.</li>
+                </ol>
+
+
+                <div class="important-note">
+
+                    <strong>Remember:</strong>
+
+                    <p>
+                        Volume is measured in cubic units,
+                        for example cm³ or m³.
+                    </p>
+
+                    <p>
+                        Surface area is measured in square
+                        units, for example cm² or m².
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WORKED EXAMPLES -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('examplesContent', this)">
+
+                ✏️ Worked Examples
+
+                <span>＋</span>
+
+            </button>
+
+            <div id="examplesContent" class="section-content" hidden>
+
+                <p>
+                    Follow these examples to understand how
+                    to calculate the volume and surface area
+                    of combined objects.
+                </p>
+
+                <div id="combinedWorkedExamples"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRACTICE -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('practiceContent', this)">
+
+                📝 Practice Questions
+
+                <span>＋</span>
+
+            </button>
+
+            <div id="practiceContent" class="section-content" hidden>
+
+                <p>
+                    Test your understanding by answering
+                    the following questions.
+                </p>
+
+                <div id="combinedPractice"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>© 2026 MathsHelpSA</p>
+
+        <p>Learn Mathematics Step by Step</p>
+
+    </footer>
+
+
+    <script src="measurement.js"></script>
+
+</body>
+</html>

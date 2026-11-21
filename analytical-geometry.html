@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytical Geometry | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="analytical-geometry.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1 class="site-title">
+    <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+</h1>
+        <p>Analytical Geometry</p>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+
+            <span class="grade-label">GRADE 11 MATHEMATICS</span>
+
+            <h2>Analytical Geometry</h2>
+
+            <p>
+                Learn about the inclination of a line and
+                the equation of a straight line.
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+             UNIT 1
+        ================================== -->
+
+        <h2 class="unit-heading">
+            Unit 1: The Inclination of a Line
+        </h2>
+
+
+        <!-- UNIT 1 NOTES -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('unit1Notes', this)">
+
+                📘 Notes
+
+                <span>＋</span>
+
+            </button>
+
+            <div class="section-content" id="unit1Notes" hidden>
+
+                <h3>1. What is the inclination of a line?</h3>
+
+                <p>
+                    The inclination of a straight line is the angle
+                    measured anticlockwise from the positive
+                    x-axis to the straight line.
+                </p>
+
+                <p>
+                    The angle of inclination is represented by
+                    the Greek letter θ (theta).
+                </p>
+
+                <div class="formula-box">
+                    <p><strong>Important:</strong></p>
+                    <p>
+                        The inclination is measured between
+                        0° and 180°.
+                    </p>
+                </div>
+
+
+                <h3>2. Understanding different inclinations</h3>
+
+                <ul>
+                    <li>0°: Horizontal line.</li>
+                    <li>Between 0° and 90°: Line slopes upwards from left to right.</li>
+                    <li>90°: Vertical line.</li>
+                    <li>Between 90° and 180°: Line slopes downwards from left to right.</li>
+                </ul>
+
+
+                <h3>3. Relationship between gradient and inclination</h3>
+
+                <p>
+                    The gradient of a straight line is related
+                    to its inclination using the tangent ratio.
+                </p>
+
+                <div class="formula-box">
+
+                    <p class="formula">m = tan θ</p>
+
+                    <p>Where:</p>
+
+                    <ul>
+                        <li>m = gradient</li>
+                        <li>θ = angle of inclination</li>
+                    </ul>
+
+                </div>
+
+
+                <h3>4. Important gradient facts</h3>
+
+                <div class="important-note">
+
+                    <p>
+                        If 0° < θ < 90°, the gradient is positive.
+                    </p>
+
+                    <p>
+                        If 90° < θ < 180°, the gradient is negative.
+                    </p>
+
+                    <p>
+                        At 0°, the gradient is 0.
+                    </p>
+
+                    <p>
+                        At 90°, the gradient is undefined.
+                    </p>
+
+                </div>
+
+
+                <h3>5. Finding inclination from gradient</h3>
+
+                <p>
+                    When the gradient is given, use the inverse
+                    tangent function to find the inclination.
+                </p>
+
+                <div class="formula-box">
+
+                    <p class="formula">θ = tan⁻¹(m)</p>
+
+                    <p>
+                        Remember that the inclination must be
+                        between 0° and 180°.
+                    </p>
+
+                    <p>
+                        If the gradient is negative, the inclination
+                        is between 90° and 180°.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIT 1 WORKED EXAMPLES -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('unit1Examples', this)">
+
+                📝 Worked Examples
+
+                <span>＋</span>
+
+            </button>
+
+            <div class="section-content" id="unit1Examples" hidden>
+
+                <div id="unit1WorkedExamples"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIT 1 PRACTICE -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('unit1Practice', this)">
+
+                ✏️ Practice
+
+                <span>＋</span>
+
+            </button>
+
+            <div class="section-content" id="unit1Practice" hidden>
+
+                <p>
+                    Attempt the following questions before
+                    checking your answers.
+                </p>
+
+                <div id="unit1Questions"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             UNIT 2
+        ================================== -->
+
+        <h2 class="unit-heading">
+            Unit 2: The Equation of a Straight Line
+        </h2>
+
+
+        <!-- UNIT 2 NOTES -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('unit2Notes', this)">
+
+                📘 Notes
+
+                <span>＋</span>
+
+            </button>
+
+            <div class="section-content" id="unit2Notes" hidden>
+
+                <h3>1. What is the equation of a straight line?</h3>
+
+                <p>
+                    The equation of a straight line describes
+                    the relationship between the x-coordinate
+                    and y-coordinate of points on a straight line.
+                </p>
+
+
+                <h3>2. General equation of a straight line</h3>
+
+                <div class="formula-box">
+
+                    <p class="formula">y = mx + c</p>
+
+                    <p>Where:</p>
+
+                    <ul>
+                        <li>y = y-coordinate</li>
+                        <li>x = x-coordinate</li>
+                        <li>m = gradient</li>
+                        <li>c = y-intercept</li>
+                    </ul>
+
+                </div>
+
+
+                <h3>3. The gradient</h3>
+
+                <p>
+                    The gradient measures the steepness and
+                    direction of a straight line.
+                </p>
+
+                <p>
+                    If two points are given, the gradient
+                    can be calculated using:
+                </p>
+
+                <div class="formula-box">
+
+                    <p class="formula">
+                        m = (y₂ - y₁) / (x₂ - x₁)
+                    </p>
+
+                </div>
+
+
+                <h3>4. The y-intercept</h3>
+
+                <p>
+                    The y-intercept is the point where the
+                    straight line crosses the y-axis.
+                </p>
+
+                <p>
+                    At the y-intercept, x = 0.
+                </p>
+
+
+                <h3>5. Point-gradient form</h3>
+
+                <p>
+                    When the gradient and one point on the line
+                    are given, use the following formula:
+                </p>
+
+                <div class="formula-box">
+
+                    <p class="formula">
+                        y - y₁ = m(x - x₁)
+                    </p>
+
+                </div>
+
+
+                <h3>6. Finding the equation using two points</h3>
+
+                <p>
+                    When two points are given:
+                </p>
+
+                <ol>
+                    <li>Calculate the gradient.</li>
+                    <li>Choose either of the two points.</li>
+                    <li>Substitute into the point-gradient formula.</li>
+                    <li>Simplify to obtain y = mx + c.</li>
+                </ol>
+
+
+                <div class="important-note">
+
+                    <strong>Remember:</strong>
+
+                    <p>
+                        Parallel straight lines have equal gradients.
+                    </p>
+
+                    <p>
+                        A horizontal line has a gradient of zero.
+                    </p>
+
+                    <p>
+                        A vertical line has an undefined gradient
+                        and cannot be written in the form y = mx + c.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIT 2 WORKED EXAMPLES -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('unit2Examples', this)">
+
+                📝 Worked Examples
+
+                <span>＋</span>
+
+            </button>
+
+            <div class="section-content" id="unit2Examples" hidden>
+
+                <div id="unit2WorkedExamples"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIT 2 PRACTICE -->
+        <section class="content-section">
+
+            <button class="section-toggle"
+                onclick="toggleSection('unit2Practice', this)">
+
+                ✏️ Practice
+
+                <span>＋</span>
+
+            </button>
+
+            <div class="section-content" id="unit2Practice" hidden>
+
+                <p>
+                    Attempt the following questions before
+                    checking your answers.
+                </p>
+
+                <div id="unit2Questions"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <p>MathsHelpSA | Learn. Practise. Improve.</p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="analytical-geometry.js"></script>
+
+</body>
+
+</html>

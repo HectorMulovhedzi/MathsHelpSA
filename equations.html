@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,170 +11,212 @@
 
 <body>
 
+    <!-- HEADER -->
     <header class="header">
+
         <a href="grade11.html" class="back-link">
             ← Back to Grade 11
         </a>
 
-        <h1>Equations and Inequalities</h1>
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+
         <p>Grade 11 Mathematics</p>
+
     </header>
 
     <main class="container">
 
+        <!-- WELCOME -->
         <section class="welcome">
+
             <h2>Let's Learn Equations and Inequalities!</h2>
 
             <p>
-                Learn how to solve different types of equations
+                Learn how to solve linear equations, quadratic equations
                 and inequalities step by step.
             </p>
+
         </section>
 
-        <nav class="topic-navigation">
-            <a href="#notes">Notes</a>
-            <a href="#examples">Worked Examples</a>
-            <a href="#practice">Practice</a>
-            <a href="#quiz">Quiz</a>
-        </nav>
-
         <!-- NOTES -->
-        <section id="notes" class="section">
+        <section class="content-section" id="notes">
 
-            <h2>1. Study Notes</h2>
+            <button class="section-toggle"
+                onclick="toggleSection('notesContent', this)">
+                📘 Study Notes
+                <span>＋</span>
+            </button>
 
-            <article class="note-card">
-                <h3>What is an equation?</h3>
+            <div id="notesContent" class="section-content" hidden>
 
-                <p>
-                    An equation is a mathematical statement
-                    showing that two expressions are equal.
-                </p>
+                <article class="note-card">
+                    <h3>1. What is an equation?</h3>
 
-                <p><strong>Example:</strong></p>
-                <p class="math">2x + 4 = 12</p>
+                    <p>
+                        An equation is a mathematical statement showing
+                        that two expressions are equal.
+                    </p>
 
-                <p>
-                    Our goal is to find the value of x that
-                    makes the equation true.
-                </p>
-            </article>
+                    <p><strong>Example:</strong></p>
 
-            <article class="note-card">
-                <h3>Solving linear equations</h3>
+                    <div class="formula-box">2x + 4 = 12</div>
 
-                <p>
-                    A linear equation has the variable raised
-                    to the power of 1.
-                </p>
+                    <p>
+                        Our goal is to find the value of x that makes
+                        the equation true.
+                    </p>
+                </article>
 
-                <p><strong>Example:</strong></p>
-                <p class="math">3x + 5 = 20</p>
+                <article class="note-card">
+                    <h3>2. Solving linear equations</h3>
 
-                <p>Step 1: Subtract 5 from both sides.</p>
-                <p class="math">3x = 15</p>
+                    <p>
+                        A linear equation has the variable raised
+                        to the power of 1.
+                    </p>
 
-                <p>Step 2: Divide both sides by 3.</p>
-                <p class="math">x = 5</p>
-            </article>
+                    <div class="formula-box">3x + 5 = 20</div>
 
-            <article class="note-card">
-                <h3>Quadratic equations</h3>
+                    <p><strong>Step 1:</strong> Subtract 5 from both sides.</p>
+                    <div class="formula-box">3x = 15</div>
 
-                <p>
-                    A quadratic equation has the highest
-                    power of the variable equal to 2.
-                </p>
+                    <p><strong>Step 2:</strong> Divide both sides by 3.</p>
+                    <div class="formula-box">x = 5</div>
+                </article>
 
-                <p class="math">ax² + bx + c = 0</p>
+                <article class="note-card">
+                    <h3>3. Quadratic equations</h3>
 
-                <p>Methods of solving include:</p>
+                    <p>
+                        A quadratic equation has the highest power
+                        of the variable equal to 2.
+                    </p>
 
-                <ul>
-                    <li>Factorisation</li>
-                    <li>Completing the square</li>
-                    <li>Quadratic formula</li>
-                </ul>
+                    <div class="formula-box">ax² + bx + c = 0</div>
 
-                <p><strong>Quadratic formula:</strong></p>
+                    <p>Methods of solving include:</p>
 
-                <p class="math">
-                    x = (-b ± √(b² - 4ac)) / 2a
-                </p>
-            </article>
+                    <ul>
+                        <li>Factorisation</li>
+                        <li>Completing the square</li>
+                        <li>Quadratic formula</li>
+                    </ul>
 
-            <article class="note-card">
-                <h3>What is an inequality?</h3>
+                    <p><strong>Quadratic formula:</strong></p>
 
-                <p>
-                    An inequality compares two expressions
-                    that are not necessarily equal.
-                </p>
+                    <div class="formula-box">
+                        x = (-b ± √(b² - 4ac)) / 2a
+                    </div>
+                </article>
 
-                <ul>
-                    <li>&lt; means less than</li>
-                    <li>&gt; means greater than</li>
-                    <li>≤ means less than or equal to</li>
-                    <li>≥ means greater than or equal to</li>
-                </ul>
+                <article class="note-card">
+                    <h3>4. What is an inequality?</h3>
 
-                <p><strong>Example:</strong></p>
-                <p class="math">x + 3 &gt; 7</p>
-                <p class="math">x &gt; 4</p>
-            </article>
+                    <p>
+                        An inequality compares two expressions that
+                        are not necessarily equal.
+                    </p>
 
-            <article class="note-card">
-                <h3>Important inequality rule</h3>
+                    <ul>
+                        <li>&lt; means less than</li>
+                        <li>&gt; means greater than</li>
+                        <li>≤ means less than or equal to</li>
+                        <li>≥ means greater than or equal to</li>
+                    </ul>
 
-                <p>
-                    When multiplying or dividing both sides
-                    of an inequality by a negative number,
-                    reverse the inequality sign.
-                </p>
+                    <p><strong>Example:</strong></p>
 
-                <p><strong>Example:</strong></p>
-                <p class="math">-2x &gt; 8</p>
-                <p class="math">x &lt; -4</p>
-            </article>
+                    <div class="formula-box">
+                        x + 3 &gt; 7
+                    </div>
 
+                    <div class="formula-box">
+                        x &gt; 4
+                    </div>
+                </article>
+
+                <article class="note-card">
+                    <h3>5. Important inequality rule</h3>
+
+                    <p>
+                        When multiplying or dividing both sides of
+                        an inequality by a negative number, reverse
+                        the inequality sign.
+                    </p>
+
+                    <p><strong>Example:</strong></p>
+
+                    <div class="formula-box">-2x &gt; 8</div>
+                    <div class="formula-box">x &lt; -4</div>
+
+                    <div class="important-note">
+                        Remember: dividing or multiplying by a negative
+                        number changes the direction of the inequality sign.
+                    </div>
+                </article>
+
+            </div>
         </section>
 
         <!-- WORKED EXAMPLES -->
-        <section id="examples" class="section">
+        <section class="content-section" id="examples">
 
-            <h2>2. Worked Examples</h2>
+            <button class="section-toggle"
+                onclick="toggleSection('examplesContent', this)">
+                ✏️ Worked Examples
+                <span>＋</span>
+            </button>
 
-            <p>
-                Study these examples and open the solutions
-                to understand each step.
-            </p>
+            <div id="examplesContent" class="section-content" hidden>
 
-            <div id="workedExamples"></div>
+                <p>
+                    Study the examples below. Select Show Solution
+                    to see the steps.
+                </p>
 
+                <div id="workedExamples"></div>
+
+            </div>
         </section>
 
         <!-- PRACTICE -->
-        <section id="practice" class="section">
+        <section class="content-section" id="practice">
 
-            <h2>3. Practice Questions</h2>
+            <button class="section-toggle"
+                onclick="toggleSection('practiceContent', this)">
+                📝 Practice Questions
+                <span>＋</span>
+            </button>
 
-            <p>
-                Try each question before revealing its answer.
-            </p>
+            <div id="practiceContent" class="section-content" hidden>
 
-            <div id="equationsPractice"></div>
+                <p>
+                    Try each question before revealing the answer.
+                    Questions become more challenging as you progress.
+                </p>
 
+                <div id="equationsPractice"></div>
+
+            </div>
         </section>
 
         <!-- QUIZ -->
-        <section id="quiz" class="section">
+        <section class="content-section" id="quiz">
 
-            <h2>4. Test Your Knowledge</h2>
+            <button class="section-toggle"
+                onclick="toggleSection('quizContent', this)">
+                🏆 Equations and Inequalities Quiz
+                <span>＋</span>
+            </button>
 
-            <div class="quiz-intro">
+            <div id="quizContent" class="section-content" hidden>
+
+                <h3>Test Your Knowledge</h3>
+
                 <p>
-                    Test your understanding with 50 multiple-choice
-                    questions.
+                    The quiz will contain 50 multiple-choice questions:
                 </p>
 
                 <ul>
@@ -184,50 +225,13 @@
                     <li>15 Difficult questions</li>
                 </ul>
 
-                <p>
-                    Your quiz will be marked automatically.
-                    After submitting, you will see corrections
-                    and explanations for every question.
-                </p>
-
-                <button id="startQuiz" class="primary-button">
-                    Start Quiz
-                </button>
-            </div>
-
-            <div id="quizArea" hidden>
-
-                <div class="quiz-progress">
-                    <p id="questionProgress">0 of 50 answered</p>
-
-                    <div class="progress-track">
-                        <div id="progressBar"></div>
-                    </div>
+                <div class="important-note">
+                    The quiz questions and automatic marking system
+                    are still being prepared. Your notes, worked examples
+                    and practice questions are available now.
                 </div>
 
-                <div id="quizQuestions"></div>
-
-                <button id="submitQuiz" class="primary-button">
-                    Submit Quiz
-                </button>
-
             </div>
-
-            <div id="quizResults" class="quiz-results" hidden>
-
-                <h3>Your Quiz Results</h3>
-
-                <p id="finalScore"></p>
-                <p id="finalFeedback"></p>
-
-                <div id="correctionsContainer"></div>
-
-                <button id="retryQuiz" class="primary-button">
-                    Try Again
-                </button>
-
-            </div>
-
         </section>
 
     </main>

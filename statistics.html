@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Statistics | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="statistics.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+
+    </header>
+
+
+    <!-- WELCOME -->
+    <section class="welcome">
+
+        <h2>Grade 11 Statistics</h2>
+
+        <p>
+            Learn how to organise, represent, interpret and analyse
+            statistical data using graphs and calculations.
+        </p>
+
+    </section>
+
+
+    <main class="container">
+
+        <div class="topic-introduction">
+
+            <h2>Statistics</h2>
+
+            <p>
+                Statistics helps us collect, organise, display and
+                understand information. Work through each unit,
+                study the examples and then test your understanding
+                with the practice questions.
+            </p>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- UNIT 1: HISTOGRAMS -->
+        <!-- ================================= -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 1: Histograms</h2>
+
+            <!-- NOTES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit1Notes', this)">
+                    📘 Notes: Histograms <span>＋</span>
+                </button>
+
+                <div id="unit1Notes" class="section-content" hidden>
+
+                    <h3>1. What is a Histogram?</h3>
+
+                    <p>
+                        A histogram is a graph used to display
+                        grouped numerical data. It uses bars that
+                        touch each other because the data is continuous.
+                    </p>
+
+                    <h3>2. Important Terms</h3>
+
+                    <ul>
+                        <li><strong>Class interval:</strong> A group or range of values.</li>
+                        <li><strong>Frequency:</strong> The number of values in a class.</li>
+                        <li><strong>Class boundaries:</strong> The actual limits of a class.</li>
+                        <li><strong>Class width:</strong> The difference between the upper and lower class boundaries.</li>
+                    </ul>
+
+                    <h3>3. How to Draw a Histogram</h3>
+
+                    <ol>
+                        <li>Place the class intervals on the horizontal axis.</li>
+                        <li>Place the frequency on the vertical axis.</li>
+                        <li>Choose a suitable scale for both axes.</li>
+                        <li>Draw a bar for each class interval.</li>
+                        <li>Make sure the bars touch each other.</li>
+                        <li>Give the graph a suitable title.</li>
+                    </ol>
+
+                    <div class="formula-box">
+                        **For equal class widths:**
+
+                        The height of each bar represents its frequency.
+                    </div>
+
+                    <div class="important-note">
+                        **Remember:** Histogram bars touch each other.
+                        A bar graph usually has spaces between its bars.
+                    </div>
+
+                    <h3>4. Example Histogram</h3>
+
+                    <p>
+                        The following data shows the marks obtained
+                        by learners in a test.
+                    </p>
+
+                    <table class="data-table">
+                        <tr>
+                            <th>Marks</th>
+                            <th>Frequency</th>
+                        </tr>
+                        <tr><td>0 – 9</td><td>3</td></tr>
+                        <tr><td>10 – 19</td><td>5</td></tr>
+                        <tr><td>20 – 29</td><td>8</td></tr>
+                        <tr><td>30 – 39</td><td>6</td></tr>
+                        <tr><td>40 – 49</td><td>4</td></tr>
+                    </table>
+
+                    <div class="graph-container">
+                        <h3>Histogram</h3>
+                        <canvas id="histogramGraph"></canvas>
+                        <p class="graph-caption">
+                            The bars touch because the class intervals
+                            represent continuous numerical data.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- WORKED EXAMPLES -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit1Examples', this)">
+                    ✏️ Worked Examples <span>＋</span>
+                </button>
+
+                <div id="unit1Examples" class="section-content" hidden>
+                    <div id="unit1WorkedExamples"></div>
+                </div>
+
+            </section>
+
+
+            <!-- PRACTICE -->
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit1Practice', this)">
+                    📝 Practice Questions <span>＋</span>
+                </button>
+
+                <div id="unit1Practice" class="section-content" hidden>
+                    <div id="unit1Questions"></div>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- UNIT 2: FREQUENCY POLYGONS -->
+        <!-- ================================= -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 2: Frequency Polygons</h2>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit2Notes', this)">
+                    📘 Notes: Frequency Polygons <span>＋</span>
+                </button>
+
+                <div id="unit2Notes" class="section-content" hidden>
+
+                    <h3>1. What is a Frequency Polygon?</h3>
+
+                    <p>
+                        A frequency polygon is a line graph that
+                        represents a frequency distribution.
+                        It is drawn by plotting the midpoint of each
+                        class interval against its frequency and
+                        joining the points with straight lines.
+                    </p>
+
+                    <h3>2. Finding the Class Midpoint</h3>
+
+                    <div class="formula-box">
+                        Class midpoint = (Lower class boundary + Upper class boundary) ÷ 2
+                    </div>
+
+                    <p>For example, for the class 10 – 19:</p>
+
+                    <p>
+                        Midpoint = (9.5 + 19.5) ÷ 2 = 14.5
+                    </p>
+
+                    <h3>3. How to Draw a Frequency Polygon</h3>
+
+                    <ol>
+                        <li>Calculate the midpoint of every class interval.</li>
+                        <li>Place the midpoints on the horizontal axis.</li>
+                        <li>Place the frequencies on the vertical axis.</li>
+                        <li>Plot each midpoint against its frequency.</li>
+                        <li>Join consecutive points using straight lines.</li>
+                    </ol>
+
+                    <div class="important-note">
+                        **Remember:** A frequency polygon uses class
+                        midpoints, not the class intervals themselves.
+                    </div>
+
+                    <h3>4. Example Frequency Polygon</h3>
+
+                    <div class="graph-container">
+                        <h3>Frequency Polygon</h3>
+                        <canvas id="frequencyPolygonGraph"></canvas>
+                        <p class="graph-caption">
+                            Each point represents the frequency at
+                            the midpoint of a class interval.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit2Examples', this)">
+                    ✏️ Worked Examples <span>＋</span>
+                </button>
+
+                <div id="unit2Examples" class="section-content" hidden>
+                    <div id="unit2WorkedExamples"></div>
+                </div>
+
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit2Practice', this)">
+                    📝 Practice Questions <span>＋</span>
+                </button>
+
+                <div id="unit2Practice" class="section-content" hidden>
+                    <div id="unit2Questions"></div>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- UNIT 3: OGIVES -->
+        <!-- ================================= -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 3: Ogives</h2>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit3Notes', this)">
+                    📘 Notes: Ogives <span>＋</span>
+                </button>
+
+                <div id="unit3Notes" class="section-content" hidden>
+
+                    <h3>1. What is an Ogive?</h3>
+
+                    <p>
+                        An ogive is a cumulative frequency graph.
+                        It shows the running total of frequencies
+                        as the class intervals increase.
+                    </p>
+
+                    <h3>2. What is Cumulative Frequency?</h3>
+
+                    <p>
+                        Cumulative frequency is found by adding
+                        each frequency to the total of all the
+                        previous frequencies.
+                    </p>
+
+                    <h3>3. Example of a Cumulative Frequency Table</h3>
+
+                    <table class="data-table">
+                        <tr>
+                            <th>Marks</th>
+                            <th>Frequency</th>
+                            <th>Cumulative Frequency</th>
+                        </tr>
+                        <tr><td>0 – 9</td><td>3</td><td>3</td></tr>
+                        <tr><td>10 – 19</td><td>5</td><td>8</td></tr>
+                        <tr><td>20 – 29</td><td>8</td><td>16</td></tr>
+                        <tr><td>30 – 39</td><td>6</td><td>22</td></tr>
+                        <tr><td>40 – 49</td><td>4</td><td>26</td></tr>
+                    </table>
+
+                    <h3>4. How to Draw an Ogive</h3>
+
+                    <ol>
+                        <li>Calculate the cumulative frequency.</li>
+                        <li>Use the upper class boundaries on the horizontal axis.</li>
+                        <li>Use cumulative frequency on the vertical axis.</li>
+                        <li>Start at the lower boundary of the first class with cumulative frequency zero.</li>
+                        <li>Plot the points and join them with a smooth increasing curve or line segments.</li>
+                    </ol>
+
+                    <div class="important-note">
+                        **Remember:** An ogive must never decrease.
+                        Cumulative frequency stays the same or increases.
+                    </div>
+
+                    <h3>5. Example Ogive</h3>
+
+                    <div class="graph-container">
+                        <h3>Cumulative Frequency Graph (Ogive)</h3>
+                        <canvas id="ogiveGraph"></canvas>
+                        <p class="graph-caption">
+                            The final cumulative frequency is equal
+                            to the total number of observations.
+                        </p>
+                    </div>
+
+                    <h3>6. Reading Information from an Ogive</h3>
+
+                    <p>
+                        An ogive can be used to estimate the median,
+                        quartiles and the number of observations
+                        below or above a particular value.
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit3Examples', this)">
+                    ✏️ Worked Examples <span>＋</span>
+                </button>
+
+                <div id="unit3Examples" class="section-content" hidden>
+                    <div id="unit3WorkedExamples"></div>
+                </div>
+
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit3Practice', this)">
+                    📝 Practice Questions <span>＋</span>
+                </button>
+
+                <div id="unit3Practice" class="section-content" hidden>
+                    <div id="unit3Questions"></div>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- UNIT 4: VARIANCE AND STANDARD DEVIATION -->
+        <!-- ================================= -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">
+                Unit 4: Variance and Standard Deviation of Ungrouped Data
+            </h2>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit4Notes', this)">
+                    📘 Notes: Variance and Standard Deviation <span>＋</span>
+                </button>
+
+                <div id="unit4Notes" class="section-content" hidden>
+
+                    <h3>1. What is Ungrouped Data?</h3>
+
+                    <p>
+                        Ungrouped data is data presented as individual
+                        values rather than grouped into class intervals.
+                    </p>
+
+                    <h3>2. Mean</h3>
+
+                    <div class="formula-box">
+                        Mean = Sum of all values ÷ Number of values
+                    </div>
+
+                    <h3>3. Variance</h3>
+
+                    <p>
+                        Variance measures how far the data values
+                        are spread out from the mean.
+                    </p>
+
+                    <div class="formula-box">
+                        Population variance:
+
+                        σ² = Σ(x − x̄)² ÷ n
+                    </div>
+
+                    <p>
+                        Here, x is an individual value, x̄ is the mean,
+                        and n is the number of values.
+                    </p>
+
+                    <h3>4. Standard Deviation</h3>
+
+                    <p>
+                        Standard deviation measures the typical spread
+                        of values around the mean.
+                    </p>
+
+                    <div class="formula-box">
+                        Standard deviation:
+
+                        σ = √Variance
+                    </div>
+
+                    <h3>5. Steps to Calculate Variance</h3>
+
+                    <ol>
+                        <li>Calculate the mean.</li>
+                        <li>Subtract the mean from each value.</li>
+                        <li>Square each difference.</li>
+                        <li>Add all the squared differences.</li>
+                        <li>Divide by the number of values, n, when treating the data as a population.</li>
+                    </ol>
+
+                    <div class="important-note">
+                        **Important:** Use the formula and divisor
+                        specified in the question. Population variance
+                        divides by n; sample variance divides by n − 1.
+                    </div>
+
+                    <h3>6. Example</h3>
+
+                    <p>Calculate the variance and standard deviation of:</p>
+
+                    <p><strong>2 ; 4 ; 6 ; 8 ; 10</strong></p>
+
+                    <p>
+                        Mean = (2 + 4 + 6 + 8 + 10) ÷ 5 = 6
+                    </p>
+
+                    <table class="data-table">
+                        <tr>
+                            <th>x</th>
+                            <th>x − 6</th>
+                            <th>(x − 6)²</th>
+                        </tr>
+                        <tr><td>2</td><td>-4</td><td>16</td></tr>
+                        <tr><td>4</td><td>-2</td><td>4</td></tr>
+                        <tr><td>6</td><td>0</td><td>0</td></tr>
+                        <tr><td>8</td><td>2</td><td>4</td></tr>
+                        <tr><td>10</td><td>4</td><td>16</td></tr>
+                        <tr><th>Total</th><th>0</th><th>40</th></tr>
+                    </table>
+
+                    <p>
+                        Population variance = 40 ÷ 5 = 8
+                    </p>
+
+                    <p>
+                        Standard deviation = √8 ≈ 2.83
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit4Examples', this)">
+                    ✏️ Worked Examples <span>＋</span>
+                </button>
+
+                <div id="unit4Examples" class="section-content" hidden>
+                    <div id="unit4WorkedExamples"></div>
+                </div>
+
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit4Practice', this)">
+                    📝 Practice Questions <span>＋</span>
+                </button>
+
+                <div id="unit4Practice" class="section-content" hidden>
+                    <div id="unit4Questions"></div>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- UNIT 5: SYMMETRICAL AND SKEWED DATA -->
+        <!-- ================================= -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 5: Symmetrical and Skewed Data</h2>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit5Notes', this)">
+                    📘 Notes: Symmetrical and Skewed Data <span>＋</span>
+                </button>
+
+                <div id="unit5Notes" class="section-content" hidden>
+
+                    <h3>1. Symmetrical Distribution</h3>
+
+                    <p>
+                        A symmetrical distribution has two sides
+                        that are approximately mirror images of
+                        each other around the centre.
+                    </p>
+
+                    <ul>
+                        <li>The mean, median and mode are approximately equal.</li>
+                        <li>The left and right sides have similar shapes.</li>
+                    </ul>
+
+                    <h3>2. Positively Skewed Distribution</h3>
+
+                    <p>
+                        A positively skewed distribution has a longer
+                        tail extending to the right.
+                    </p>
+
+                    <ul>
+                        <li>Most values are concentrated on the left.</li>
+                        <li>The mean is usually greater than the median.</li>
+                        <li>The median is usually greater than the mode.</li>
+                    </ul>
+
+                    <h3>3. Negatively Skewed Distribution</h3>
+
+                    <p>
+                        A negatively skewed distribution has a longer
+                        tail extending to the left.
+                    </p>
+
+                    <ul>
+                        <li>Most values are concentrated on the right.</li>
+                        <li>The mean is usually less than the median.</li>
+                        <li>The median is usually less than the mode.</li>
+                    </ul>
+
+                    <div class="important-note">
+                        **Remember:**
+
+                        <ul>
+                            <li>Positive skew: tail points right.</li>
+                            <li>Negative skew: tail points left.</li>
+                            <li>Symmetrical: both sides are balanced.</li>
+                        </ul>
+                    </div>
+
+                    <h3>4. Comparing the Distributions</h3>
+
+                    <div class="graph-container">
+                        <h3>Shapes of Distributions</h3>
+                        <canvas id="distributionGraph"></canvas>
+                        <p class="graph-caption">
+                            Compare the direction of the tails
+                            to identify the type of distribution.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit5Examples', this)">
+                    ✏️ Worked Examples <span>＋</span>
+                </button>
+
+                <div id="unit5Examples" class="section-content" hidden>
+                    <div id="unit5WorkedExamples"></div>
+                </div>
+
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit5Practice', this)">
+                    📝 Practice Questions <span>＋</span>
+                </button>
+
+                <div id="unit5Practice" class="section-content" hidden>
+                    <div id="unit5Questions"></div>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- UNIT 6: IDENTIFYING OUTLIERS -->
+        <!-- ================================= -->
+
+        <section class="unit-section">
+
+            <h2 class="unit-title">Unit 6: Identifying Outliers</h2>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit6Notes', this)">
+                    📘 Notes: Identifying Outliers <span>＋</span>
+                </button>
+
+                <div id="unit6Notes" class="section-content" hidden>
+
+                    <h3>1. What is an Outlier?</h3>
+
+                    <p>
+                        An outlier is a value that is unusually far
+                        from the other values in a data set.
+                    </p>
+
+                    <h3>2. Quartiles</h3>
+
+                    <ul>
+                        <li><strong>Q₁:</strong> Lower quartile.</li>
+                        <li><strong>Q₂:</strong> Median.</li>
+                        <li><strong>Q₃:</strong> Upper quartile.</li>
+                    </ul>
+
+                    <h3>3. Interquartile Range (IQR)</h3>
+
+                    <div class="formula-box">
+                        IQR = Q₃ − Q₁
+                    </div>
+
+                    <p>
+                        The IQR measures the spread of the middle
+                        50% of the data.
+                    </p>
+
+                    <h3>4. The Outlier Rule</h3>
+
+                    <div class="formula-box">
+                        Lower boundary = Q₁ − 1.5(IQR)
+
+                        Upper boundary = Q₃ + 1.5(IQR)
+                    </div>
+
+                    <p>
+                        A value below the lower boundary or above
+                        the upper boundary is identified as an
+                        outlier using this rule.
+                    </p>
+
+                    <h3>5. Worked Illustration</h3>
+
+                    <p>Suppose:</p>
+
+                    <ul>
+                        <li>Q₁ = 10</li>
+                        <li>Q₃ = 20</li>
+                    </ul>
+
+                    <p>
+                        IQR = 20 − 10 = 10
+                    </p>
+
+                    <p>
+                        Lower boundary = 10 − 1.5(10) = -5
+                    </p>
+
+                    <p>
+                        Upper boundary = 20 + 1.5(10) = 35
+                    </p>
+
+                    <p>
+                        Therefore, any value below -5 or above 35
+                        is an outlier according to this rule.
+                    </p>
+
+                    <h3>6. Box-and-Whisker Plot</h3>
+
+                    <p>
+                        A box-and-whisker plot displays the minimum,
+                        lower quartile, median, upper quartile and
+                        maximum. Outliers are shown separately.
+                    </p>
+
+                    <div class="graph-container">
+                        <h3>Box-and-Whisker Plot</h3>
+                        <canvas id="boxPlotGraph"></canvas>
+                        <p class="graph-caption">
+                            The isolated point represents an outlier.
+                        </p>
+                    </div>
+
+                    <div class="important-note">
+                        **Remember:** Always calculate the IQR first
+                        before applying the outlier rule.
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit6Examples', this)">
+                    ✏️ Worked Examples <span>＋</span>
+                </button>
+
+                <div id="unit6Examples" class="section-content" hidden>
+                    <div id="unit6WorkedExamples"></div>
+                </div>
+
+            </section>
+
+            <section class="content-section">
+
+                <button class="section-toggle"
+                    onclick="toggleSection('unit6Practice', this)">
+                    📝 Practice Questions <span>＋</span>
+                </button>
+
+                <div id="unit6Practice" class="section-content" hidden>
+                    <div id="unit6Questions"></div>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 MathsHelpSA | Learn Mathematics Step by Step</p>
+    </footer>
+
+
+    <script src="statistics.js"></script>
+
+</body>
+</html>

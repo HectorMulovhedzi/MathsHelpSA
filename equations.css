@@ -1,3 +1,9 @@
+/* =====================================
+   MATHSHELP SA - EQUATIONS
+   GRADE 11
+===================================== */
+
+/* RESET */
 
 * {
     margin: 0;
@@ -11,263 +17,353 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #1e293b;
+    background: #f1f5ff;
+    color: #172554;
     line-height: 1.6;
 }
 
-/* Header */
+/* HEADER */
 
 .header {
     background: #102a56;
     color: white;
-    padding: 25px 7%;
-}
+    padding: 18px 20px;
+    text-align: center;
 
-.header h1 {
-    margin-top: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .back-link {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 22px;
+
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Main content */
+.back-link:hover {
+    color: #facc15;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}
+
+.header p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+/* MAIN CONTAINER */
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 30px auto;
 }
 
+/* WELCOME */
+
 .welcome {
-    background: linear-gradient(135deg, #1e40af, #2563eb);
-    color: white;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 15px;
     margin-bottom: 25px;
+    text-align: center;
+    border: 1px solid #bfdbfe;
 }
 
-/* Navigation */
-
-.topic-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 30px;
-}
-
-.topic-navigation a {
-    background: white;
-    color: #1d4ed8;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-/* Sections */
-
-.section {
-    margin-bottom: 40px;
-    scroll-margin-top: 20px;
-}
-
-.section h2 {
-    color: #1e40af;
-    margin-bottom: 18px;
-}
-
-.note-card,
-.example-card,
-.practice-card {
-    background: white;
-    padding: 22px;
-    border-radius: 10px;
-    margin-bottom: 18px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-.note-card h3 {
-    color: #1d4ed8;
-    margin-bottom: 10px;
-}
-
-.note-card ul {
-    padding-left: 22px;
-}
-
-.math {
-    background: #eff6ff;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 6px;
-    font-weight: bold;
-    color: #1e40af;
-}
-
-/* Examples and practice */
-
-.example-card h3,
-.practice-card h3 {
+.welcome h2 {
     color: #1e40af;
     margin-bottom: 10px;
 }
 
-.solution,
-.practice-answer {
-    display: none;
-    background: #eff6ff;
-    padding: 15px;
-    margin-top: 12px;
-    border-radius: 8px;
+.welcome p {
+    color: #334155;
 }
 
-.solution p,
-.practice-answer p {
-    margin-bottom: 7px;
-}
+/* CONTENT SECTIONS */
 
-button {
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.primary-button,
-.answer-button,
-.solution-button {
-    background: #1d4ed8;
-    color: white;
-    padding: 11px 18px;
-    border-radius: 7px;
-    margin-top: 12px;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-/* Quiz */
-
-.quiz-intro {
-    background: white;
-    padding: 22px;
-    border-radius: 10px;
-}
-
-.quiz-intro ul {
-    padding-left: 22px;
-    margin: 12px 0;
-}
-
-.quiz-progress {
-    background: white;
-    padding: 18px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.progress-track {
+.content-section {
     background: #dbeafe;
-    height: 10px;
-    border-radius: 10px;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 
-#progressBar {
-    width: 0;
-    height: 100%;
-    background: #1d4ed8;
-    transition: width 0.3s;
+/* EXPANDABLE BUTTONS */
+
+.section-toggle {
+    width: 100%;
+    padding: 18px 20px;
+
+    background: #1e40af;
+    color: white;
+
+    border: none;
+    text-align: left;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: background 0.3s;
 }
 
-.quiz-question {
+.section-toggle:hover {
+    background: #1d4ed8;
+}
+
+.section-toggle span {
+    font-size: 22px;
+}
+
+/* SECTION CONTENT */
+
+.section-content {
+    padding: 22px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* NOTES */
+
+.note-card {
     background: white;
     padding: 20px;
-    margin-bottom: 15px;
     border-radius: 10px;
+    margin-bottom: 18px;
+    border-left: 5px solid #2563eb;
 }
 
-.quiz-question label {
-    display: block;
-    padding: 9px;
-    margin-top: 8px;
-    background: #f1f5f9;
-    border-radius: 6px;
-    cursor: pointer;
+.note-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
 }
 
-.quiz-question input {
-    margin-right: 8px;
+.note-card p,
+.note-card ul {
+    margin-bottom: 12px;
 }
 
-.quiz-results {
+.note-card ul {
+    padding-left: 25px;
+}
+
+/* FORMULAS */
+
+.formula-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+
+    padding: 13px;
+    margin: 12px 0;
+
+    color: #1e3a8a;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+}
+
+.important-note {
+    background: #fef9c3;
+    border-left: 5px solid #eab308;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* WORKED EXAMPLES */
+
+.example-card {
     background: white;
-    padding: 22px;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin: 18px 0;
+    border: 1px solid #bfdbfe;
 }
 
-.correction-card {
-    padding: 16px;
+.example-card h3 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.example-card > p {
+    margin-bottom: 12px;
+}
+
+/* SOLUTION BUTTON */
+
+.solution-button {
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    padding: 10px 17px;
+
+    border-radius: 7px;
+    font-weight: bold;
+
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.solution-button:hover {
+    background: #1e40af;
+}
+
+/* SOLUTION */
+
+.solution {
+    display: none;
+
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+
+    padding: 15px;
+    margin-top: 15px;
+
+    border-radius: 7px;
+}
+
+.solution p {
+    margin-bottom: 8px;
+}
+
+.solution p:last-child {
+    color: #1e40af;
+}
+
+/* PRACTICE */
+
+.practice-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
     margin: 15px 0;
-    background: #f8fafc;
-    border: 1px solid #dbeafe;
-    border-radius: 10px;
+    border: 1px solid #bfdbfe;
 }
 
-.correction-card.correct {
-    border-left: 5px solid #16a34a;
+.practice-card h3 {
+    color: #1e40af;
+    margin-bottom: 8px;
 }
 
-.correction-card.incorrect {
-    border-left: 5px solid #dc2626;
+.practice-card p {
+    margin-bottom: 12px;
 }
 
-.correction-card p {
-    margin: 8px 0;
+/* ANSWER BUTTON */
+
+.answer-button {
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    padding: 9px 16px;
+
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* Footer */
+.answer-button:hover {
+    background: #1e40af;
+}
+
+/* PRACTICE ANSWER */
+
+.practice-answer {
+    display: none;
+
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+
+    padding: 13px;
+    margin-top: 12px;
+
+    border-radius: 7px;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+/* FOOTER */
 
 footer {
     background: #102a56;
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: 40px;
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     .header {
-        padding: 20px;
+        padding: 55px 12px 15px;
+    }
+
+    .back-link {
+        top: 12px;
+        left: 12px;
+        font-size: 13px;
+    }
+
+    .site-title {
+        font-size: 25px;
     }
 
     .container {
         width: 94%;
+        margin: 20px auto;
     }
 
     .welcome {
-        padding: 22px;
+        padding: 22px 15px;
     }
 
-    .topic-navigation {
-        gap: 8px;
+    .section-toggle {
+        padding: 15px;
+        font-size: 15px;
     }
 
-    .topic-navigation a {
-        padding: 9px 12px;
-        font-size: 13px;
+    .section-content {
+        padding: 15px;
     }
 
     .note-card,
     .example-card,
     .practice-card {
-        padding: 16px;
+        padding: 15px;
+    }
+
+    .formula-box {
+        font-size: 15px;
+        overflow-wrap: break-word;
     }
 }

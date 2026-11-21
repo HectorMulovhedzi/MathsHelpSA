@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finance, Growth and Decay | MathsHelpSA</title>
+
+    <!-- SAME DESIGN AS FUNCTIONS AND GRAPHS -->
+    <link rel="stylesheet" href="functions.css">
+
+    <!-- FINANCE-SPECIFIC STYLING -->
+    <link rel="stylesheet" href="finance.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="grade11.html" class="back-link">
+            ← Back to Grade 11
+        </a>
+
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+
+        <p>Grade 11 Mathematics</p>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+
+            <h2>Finance, Growth and Decay</h2>
+
+            <p>
+                Learn how money, investments and other quantities
+                increase or decrease over time using compound
+                growth and decay.
+            </p>
+
+        </section>
+
+
+        <!-- ==================================
+             UNIT 1: COMPOUND GROWTH
+        =================================== -->
+
+        <section class="topic-section">
+
+            <h2 class="section-title">
+                Unit 1: Compound Growth
+            </h2>
+
+
+            <!-- NOTES -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('growthNotes', this)">
+
+                <span>＋</span>
+                Notes
+
+            </button>
+
+            <div class="section-content" id="growthNotes" hidden>
+
+                <h3>1. What is Compound Growth?</h3>
+
+                <p>
+                    Compound growth happens when a quantity increases
+                    by the same percentage over regular periods.
+                    Each increase is calculated using the new amount,
+                    not only the original amount.
+                </p>
+
+
+                <div class="formula-box">
+
+                    <h3>Compound Growth Formula</h3>
+
+                    <p>
+                        A = P(1 + i)<sup>n</sup>
+                    </p>
+
+                    <p>Where:</p>
+
+                    <ul>
+                        <li><strong>A</strong> = final amount</li>
+                        <li><strong>P</strong> = original amount (principal)</li>
+                        <li><strong>i</strong> = growth rate per period as a decimal</li>
+                        <li><strong>n</strong> = number of periods</li>
+                    </ul>
+
+                </div>
+
+
+                <h3>2. Converting Percentages to Decimals</h3>
+
+                <p>
+                    Before substituting the interest or growth rate
+                    into the formula, convert the percentage into
+                    a decimal.
+                </p>
+
+                <div class="formula-box">
+
+                    <p>5% = 5 ÷ 100 = 0.05</p>
+
+                    <p>8% = 8 ÷ 100 = 0.08</p>
+
+                    <p>12% = 12 ÷ 100 = 0.12</p>
+
+                </div>
+
+
+                <h3>3. Compound Interest</h3>
+
+                <p>
+                    Compound interest is interest calculated on the
+                    original amount and on interest already earned.
+                </p>
+
+                <p>
+                    For example, if R1 000 earns 10% interest per year,
+                    the amount increases each year.
+                </p>
+
+
+                <h3>4. Example of Compound Growth</h3>
+
+                <div class="example-card">
+
+                    <p>
+                        An investment of R1 000 earns compound
+                        interest at 10% per year for 3 years.
+                    </p>
+
+                    <p><strong>Year 1:</strong></p>
+                    <p>R1 000 × 1.10 = R1 100</p>
+
+                    <p><strong>Year 2:</strong></p>
+                    <p>R1 100 × 1.10 = R1 210</p>
+
+                    <p><strong>Year 3:</strong></p>
+                    <p>R1 210 × 1.10 = R1 331</p>
+
+                    <div class="final-answer">
+                        Final amount = R1 331
+                    </div>
+
+                </div>
+
+
+                <h3>5. Important Things to Remember</h3>
+
+                <ul>
+                    <li>Always convert percentages into decimals.</li>
+                    <li>Check whether the rate is annual or monthly.</li>
+                    <li>Make sure the time and rate use the same period.</li>
+                    <li>Compound growth uses a plus sign.</li>
+                    <li>Do not round too early during calculations.</li>
+                </ul>
+
+
+                <div class="important-note">
+
+                    <strong>Remember:</strong>
+
+                    Compound growth means the amount increases
+                    over time because growth is calculated on
+                    the updated amount.
+
+                </div>
+
+            </div>
+
+
+            <!-- GRAPHS -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('growthGraphs', this)">
+
+                <span>＋</span>
+                Graphs
+
+            </button>
+
+            <div class="section-content" id="growthGraphs" hidden>
+
+                <h3>Graph of Compound Growth</h3>
+
+                <p>
+                    The graph below shows how an investment increases
+                    over time when it earns compound interest.
+                </p>
+
+                <div class="graph-container">
+
+                    <canvas id="growthGraph"></canvas>
+
+                </div>
+
+                <div class="important-note">
+
+                    Notice how the graph curves upwards.
+                    This happens because the increase becomes
+                    larger as the amount grows.
+
+                </div>
+
+            </div>
+
+
+            <!-- WORKED EXAMPLES -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('growthExamples', this)">
+
+                <span>＋</span>
+                Worked Examples
+
+            </button>
+
+            <div class="section-content" id="growthExamples" hidden>
+
+                <div id="growthWorkedExamples"></div>
+
+            </div>
+
+
+            <!-- PRACTICE -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('growthPractice', this)">
+
+                <span>＋</span>
+                Practice Questions
+
+            </button>
+
+            <div class="section-content" id="growthPractice" hidden>
+
+                <div id="growthPracticeQuestions"></div>
+
+            </div>
+
+
+            <!-- QUIZ -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('growthQuiz', this)">
+
+                <span>＋</span>
+                Test Yourself
+
+            </button>
+
+            <div class="section-content" id="growthQuiz" hidden>
+
+                <h3>Compound Growth Quiz</h3>
+
+                <p>
+                    Test your understanding of compound growth.
+                    Select the correct answer for each question.
+                </p>
+
+                <div id="growthQuizArea"></div>
+
+                <button class="quiz-button"
+                        id="submitGrowthQuiz"
+                        type="button">
+
+                    Submit Quiz
+
+                </button>
+
+                <div id="growthQuizResults" hidden>
+
+                    <h3>Your Results</h3>
+
+                    <p id="growthQuizScore"></p>
+
+                    <div id="growthQuizCorrections"></div>
+
+                    <button class="quiz-button"
+                            id="retryGrowthQuiz"
+                            type="button">
+
+                        Try Again
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             UNIT 2: DECAY
+        =================================== -->
+
+        <section class="topic-section">
+
+            <h2 class="section-title">
+                Unit 2: Decay
+            </h2>
+
+
+            <!-- NOTES -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('decayNotes', this)">
+
+                <span>＋</span>
+                Notes
+
+            </button>
+
+            <div class="section-content" id="decayNotes" hidden>
+
+                <h3>1. What is Decay?</h3>
+
+                <p>
+                    Decay happens when a quantity decreases by
+                    the same percentage over regular periods.
+                </p>
+
+                <p>
+                    Examples include the depreciation of cars,
+                    the decrease in the value of equipment and
+                    populations that decrease over time.
+                </p>
+
+
+                <div class="formula-box">
+
+                    <h3>Compound Decay Formula</h3>
+
+                    <p>
+                        A = P(1 − i)<sup>n</sup>
+                    </p>
+
+                    <p>Where:</p>
+
+                    <ul>
+                        <li><strong>A</strong> = final amount</li>
+                        <li><strong>P</strong> = original amount</li>
+                        <li><strong>i</strong> = decay rate as a decimal</li>
+                        <li><strong>n</strong> = number of periods</li>
+                    </ul>
+
+                </div>
+
+
+                <h3>2. Depreciation</h3>
+
+                <p>
+                    Depreciation is the decrease in the value
+                    of an asset over time.
+                </p>
+
+                <p>
+                    For example, a car loses part of its value
+                    every year.
+                </p>
+
+
+                <h3>3. Example of Decay</h3>
+
+                <div class="example-card">
+
+                    <p>
+                        A car is bought for R200 000.
+                        It depreciates by 10% per year.
+                        Calculate its value after 2 years.
+                    </p>
+
+                    <p><strong>Year 1:</strong></p>
+
+                    <p>
+                        R200 000 × 0.90 = R180 000
+                    </p>
+
+                    <p><strong>Year 2:</strong></p>
+
+                    <p>
+                        R180 000 × 0.90 = R162 000
+                    </p>
+
+                    <div class="final-answer">
+                        Value after 2 years = R162 000
+                    </div>
+
+                </div>
+
+
+                <h3>4. Understanding the Decay Factor</h3>
+
+                <div class="formula-box">
+
+                    <p>
+                        100% − 10% = 90%
+                    </p>
+
+                    <p>
+                        90% ÷ 100 = 0.90
+                    </p>
+
+                    <p>
+                        Therefore, the decay factor is 0.90.
+                    </p>
+
+                </div>
+
+
+                <h3>5. Important Things to Remember</h3>
+
+                <ul>
+                    <li>Decay means the amount decreases.</li>
+                    <li>Convert the percentage into a decimal.</li>
+                    <li>Subtract the rate from 1.</li>
+                    <li>Use the number of periods as the exponent.</li>
+                    <li>Check whether the question asks for the amount lost or the amount remaining.</li>
+                </ul>
+
+
+                <div class="important-note">
+
+                    <strong>Remember:</strong>
+
+                    Compound decay uses a minus sign because
+                    the quantity decreases over time.
+
+                </div>
+
+            </div>
+
+
+            <!-- GRAPHS -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('decayGraphs', this)">
+
+                <span>＋</span>
+                Graphs
+
+            </button>
+
+            <div class="section-content" id="decayGraphs" hidden>
+
+                <h3>Graph of Compound Decay</h3>
+
+                <p>
+                    The graph shows how the value of an asset
+                    decreases over time when it depreciates
+                    at a constant percentage rate.
+                </p>
+
+                <div class="graph-container">
+
+                    <canvas id="decayGraph"></canvas>
+
+                </div>
+
+                <div class="important-note">
+
+                    Notice how the graph curves downwards.
+                    The value decreases over time, but the
+                    amount lost each period becomes smaller.
+
+                </div>
+
+            </div>
+
+
+            <!-- WORKED EXAMPLES -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('decayExamples', this)">
+
+                <span>＋</span>
+                Worked Examples
+
+            </button>
+
+            <div class="section-content" id="decayExamples" hidden>
+
+                <div id="decayWorkedExamples"></div>
+
+            </div>
+
+
+            <!-- PRACTICE -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('decayPractice', this)">
+
+                <span>＋</span>
+                Practice Questions
+
+            </button>
+
+            <div class="section-content" id="decayPractice" hidden>
+
+                <div id="decayPracticeQuestions"></div>
+
+            </div>
+
+
+            <!-- QUIZ -->
+
+            <button class="section-toggle"
+                    onclick="toggleSection('decayQuiz', this)">
+
+                <span>＋</span>
+                Test Yourself
+
+            </button>
+
+            <div class="section-content" id="decayQuiz" hidden>
+
+                <h3>Compound Decay Quiz</h3>
+
+                <p>
+                    Test your understanding of compound decay.
+                    Select the correct answer for each question.
+                </p>
+
+                <div id="decayQuizArea"></div>
+
+                <button class="quiz-button"
+                        id="submitDecayQuiz"
+                        type="button">
+
+                    Submit Quiz
+
+                </button>
+
+                <div id="decayQuizResults" hidden>
+
+                    <h3>Your Results</h3>
+
+                    <p id="decayQuizScore"></p>
+
+                    <div id="decayQuizCorrections"></div>
+
+                    <button class="quiz-button"
+                            id="retryDecayQuiz"
+                            type="button">
+
+                        Try Again
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            MathsHelpSA | Learn Mathematics Step by Step
+        </p>
+
+    </footer>
+
+
+    <script src="finance.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+
+/* ==========================================
+   MATHSHELP SA - GRADE 11 PROBABILITY
+   ========================================== */
+
+/* GENERAL PAGE */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f1f5ff;
+    color: #172554;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+.header {
+    background: #102a56;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.header p {
+    margin-top: 8px;
+    color: #dbeafe;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}
+
+.back-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.back-link:hover {
+    color: #facc15;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* WELCOME SECTION */
+
+.welcome {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border-left: 6px solid #2563eb;
+}
+
+.welcome h2 {
+    color: #1e40af;
+    margin-bottom: 10px;
+    font-size: 27px;
+}
+
+.welcome p {
+    margin-bottom: 10px;
+}
+
+.grade-label {
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* UNIT SECTIONS */
+
+.topic-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.section-title {
+    color: #1e40af;
+    font-size: 23px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #dbeafe;
+    padding-bottom: 12px;
+}
+
+/* EXPANDABLE SECTION BUTTONS */
+
+.section-toggle {
+    width: 100%;
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    border: none;
+    padding: 15px 18px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.section-toggle:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+.section-toggle span {
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+/* SECTION CONTENT */
+
+.section-content {
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 5px 0 20px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.section-content h3 {
+    color: #1e40af;
+    margin: 20px 0 10px;
+}
+
+.section-content p {
+    margin-bottom: 12px;
+}
+
+/* FORMULA BOXES */
+
+.formula-box {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.formula-box strong {
+    color: #1e40af;
+}
+
+.formula-box p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+/* IMPORTANT NOTES */
+
+.important-note {
+    background: #fef9c3;
+    border-left: 5px solid #eab308;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    color: #713f12;
+}
+
+/* WORKED EXAMPLES */
+
+.example-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.example-card h3,
+.example-card h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.example-question {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.solution-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.solution-button:hover {
+    background: #1e3a8a;
+}
+
+.solution {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.solution p {
+    margin: 7px 0;
+}
+
+.final-answer {
+    color: #166534;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* PRACTICE QUESTIONS */
+
+.practice-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.practice-card h3 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.question-number {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.answer-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.answer-button:hover {
+    background: #1e40af;
+}
+
+.practice-answer {
+    background: #ecfdf5;
+    color: #166534;
+    border-left: 4px solid #16a34a;
+    padding: 13px;
+    margin-top: 12px;
+    border-radius: 7px;
+}
+
+/* QUIZ AREA */
+
+.quiz-question-card {
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.quiz-question-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.quiz-option {
+    display: block;
+    background: #f1f5ff;
+    border: 1px solid #dbeafe;
+    padding: 12px;
+    margin: 9px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: #dbeafe;
+}
+
+.quiz-option input {
+    margin-right: 10px;
+    accent-color: #2563eb;
+}
+
+.quiz-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.quiz-button:hover {
+    background: #1e3a8a;
+}
+
+/* QUIZ RESULTS */
+
+.quiz-results {
+    background: #eff6ff;
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.quiz-results h3 {
+    color: #1e40af;
+}
+
+.quiz-correction {
+    background: white;
+    border: 1px solid #bfdbfe;
+    padding: 15px;
+    border-radius: 9px;
+    margin: 15px 0;
+}
+
+.quiz-correction p {
+    margin: 7px 0;
+}
+
+.correct-answer {
+    color: #166534;
+    font-weight: bold;
+}
+
+.wrong-answer {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+/* TREE DIAGRAMS */
+
+.tree-diagram {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 18px 0;
+}
+
+.tree-diagram svg {
+    display: block;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+}
+
+.tree-diagram line {
+    stroke: #2563eb;
+    stroke-width: 2;
+}
+
+.tree-diagram text {
+    fill: #172554;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* PROBABILITY TABLES */
+
+.probability-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: white;
+}
+
+.probability-table th,
+.probability-table td {
+    border: 1px solid #bfdbfe;
+    padding: 11px;
+    text-align: center;
+}
+
+.probability-table th {
+    background: #1e40af;
+    color: white;
+}
+
+.probability-table tr:nth-child(even) {
+    background: #eff6ff;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .header {
+        padding: 20px 12px;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .welcome {
+        padding: 18px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .topic-section {
+        padding: 16px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .section-toggle {
+        font-size: 15px;
+        padding: 13px;
+    }
+
+    .section-content {
+        padding: 14px;
+    }
+
+    .example-card,
+    .practice-card,
+    .quiz-question-card {
+        padding: 14px;
+    }
+
+    .probability-table th,
+    .probability-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .quiz-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .section-toggle {
+        font-size: 14px;
+    }
+
+    .formula-box {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .back-link {
+        font-size: 14px;
+    }
+}
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
