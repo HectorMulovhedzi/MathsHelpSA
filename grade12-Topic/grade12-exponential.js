@@ -1143,17 +1143,18 @@ function submitQuiz() {
         'input[name="quizAnswer"]:checked'
     );
 
+    // Save the selected answer
     if (selected) {
         userAnswers[currentQuestion] = selected.value;
     }
 
-    if (!userAnswers[currentQuestion]) {
-
+    // Check whether the learner selected an answer
+    if (userAnswers[currentQuestion] === undefined) {
         alert("Please select an answer before continuing.");
         return;
-
     }
 
+    // Move to the next question
     if (currentQuestion < quizData.length - 1) {
 
         currentQuestion++;

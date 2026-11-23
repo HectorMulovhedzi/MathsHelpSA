@@ -1,0 +1,596 @@
+
+/* =========================================
+   MATHSHELPSA - GRADE 12
+   EUCLIDEAN GEOMETRY
+========================================= */
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5ff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.maths {
+    color: white;
+}
+
+.helpsa {
+    color: #facc15;
+}
+
+.header p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back-link {
+    display: inline-block;
+    color: #f4f6fb;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #2563eb;
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    padding: 35px 25px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 16px;
+    max-width: 750px;
+    margin: auto;
+}
+
+
+/* =========================================
+   UNIT CARDS
+========================================= */
+
+.unit {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    border: 1px solid #dbeafe;
+}
+
+
+/* UNIT BUTTON */
+
+.unit-button {
+    width: 100%;
+    border: none;
+    background: #1e40af;
+    color: white;
+    padding: 18px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.unit-button:hover {
+    background: #2563eb;
+}
+
+.unit-button span {
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+
+/* UNIT CONTENT */
+
+.unit-content {
+    padding: 22px;
+    background: white;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   LESSON SECTIONS
+========================================= */
+
+.lesson-section {
+    margin-bottom: 28px;
+}
+
+.lesson-section h3 {
+    color: #1e40af;
+    font-size: 21px;
+    border-bottom: 2px solid #dbeafe;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.lesson-section h4 {
+    color: #1e3a8a;
+    margin: 18px 0 8px;
+}
+
+.lesson-section p {
+    margin-bottom: 12px;
+}
+
+.lesson-section ul,
+.lesson-section ol {
+    margin: 10px 0 15px 25px;
+}
+
+.lesson-section li {
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   NOTES AND FORMULA BOXES
+========================================= */
+
+.note-box {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 7px;
+}
+
+.formula-box {
+    background: #fefce8;
+    border-left: 5px solid #eab308;
+    padding: 16px;
+    margin: 15px 0;
+    border-radius: 7px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+}
+
+.theorem-box {
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 15px 0;
+}
+
+.theorem-box h4 {
+    color: #1e40af;
+    margin-top: 0;
+}
+
+
+/* =========================================
+   WORKED EXAMPLES
+========================================= */
+
+.example-card {
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.example-card h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.example-card p {
+    margin-bottom: 10px;
+}
+
+.solution {
+    background: white;
+    border-left: 4px solid #16a34a;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 6px;
+}
+
+.solution strong {
+    color: #15803d;
+}
+
+
+/* =========================================
+   GEOMETRY DIAGRAMS
+========================================= */
+
+.diagram-box {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 18px auto;
+    text-align: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.diagram-box h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.diagram-box svg {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.diagram-box p {
+    color: #475569;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.diagram-caption {
+    color: #475569;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+
+/* =========================================
+   PRACTICE QUESTIONS
+========================================= */
+
+.practice-question {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 15px;
+}
+
+.practice-question p {
+    margin-bottom: 10px;
+}
+
+.practice-question input {
+    width: 100%;
+    max-width: 400px;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    margin: 8px 0;
+    outline: none;
+}
+
+.practice-question input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.check-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.check-button:hover {
+    background: #2563eb;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.correct {
+    color: #15803d;
+}
+
+.incorrect {
+    color: #dc2626;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 5px 10px 0;
+    transition: 0.3s;
+}
+
+.action-button:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #dbeafe;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #2563eb;
+    transition: width 0.3s;
+}
+
+.quiz-question {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 9px;
+    border: 1px solid #dbeafe;
+    margin-bottom: 15px;
+}
+
+.quiz-question h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.quiz-option {
+    display: block;
+    background: white;
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    border-radius: 7px;
+    margin-bottom: 9px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+
+.quiz-option input {
+    margin-right: 8px;
+}
+
+#quizResults {
+    background: #eff6ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#quizResults h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+#finalScore {
+    font-size: 22px;
+    font-weight: bold;
+    color: #15803d;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px 12px;
+    }
+
+    .site-title {
+        font-size: 26px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .welcome {
+        padding: 25px 18px;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .unit-button {
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    .unit-content {
+        padding: 16px;
+    }
+
+    .lesson-section h3 {
+        font-size: 19px;
+    }
+
+    .diagram-box {
+        padding: 10px;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .site-title {
+        font-size: 23px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .unit-button {
+        font-size: 14px;
+        padding: 14px 12px;
+    }
+
+    .unit-content {
+        padding: 13px;
+    }
+
+    .example-card {
+        padding: 13px;
+    }
+
+    .formula-box {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .action-button {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .quiz-info {
+        flex-direction: column;
+    }
+
+    .diagram-box svg {
+        min-width: 280px;
+    }
+}

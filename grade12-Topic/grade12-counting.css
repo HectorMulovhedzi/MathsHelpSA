@@ -1,0 +1,619 @@
+
+/* =========================================
+   MATHSHELPSA - GRADE 12
+   COUNTING PRINCIPLES AND PROBABILITY
+========================================= */
+
+
+/* GENERAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5ff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+.header {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.site-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.maths {
+    color: white;
+}
+
+.helpsa {
+    color: #facc15;
+}
+
+.header p {
+    font-size: 15px;
+    color: #dbeafe;
+}
+
+
+/* BACK LINK */
+
+.back-link {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 18px;
+    background: #1e40af;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    max-width: 1100px;
+    width: 92%;
+    margin: 25px auto;
+}
+
+
+/* WELCOME SECTION */
+
+.welcome-section {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(30, 64, 175, 0.15);
+}
+
+.welcome-section h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+}
+
+
+/* INTRODUCTION */
+
+.intro-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.intro-section h2 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+
+/* UNIT CARDS */
+
+.unit {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    border: 1px solid #dbeafe;
+}
+
+.unit-button {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: #1e40af;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.unit-button:hover {
+    background: #2563eb;
+}
+
+.unit-content {
+    padding: 25px;
+}
+
+
+/* HIDE CONTENT */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* LESSON SECTIONS */
+
+.lesson-section {
+    margin-bottom: 30px;
+}
+
+.lesson-section h3 {
+    color: #1e40af;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.lesson-section h4 {
+    color: #102a56;
+    margin: 18px 0 10px;
+}
+
+.lesson-section p {
+    margin-bottom: 12px;
+}
+
+.lesson-section ul,
+.lesson-section ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.lesson-section li {
+    margin-bottom: 8px;
+}
+
+
+/* FORMULA BOX */
+
+.formula-box {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 18px;
+    margin: 18px 0;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #102a56;
+    overflow-x: auto;
+}
+
+
+/* DIAGRAM BOX */
+
+.diagram-box {
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    padding: 20px;
+    margin: 22px 0;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.diagram-box h4 {
+    color: #1e40af;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.diagram-box svg {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px auto 15px;
+}
+
+.diagram-box p {
+    color: #475569;
+    margin-top: 12px;
+}
+
+
+/* VENN DIAGRAMS */
+
+.venn-diagram {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+
+/* TREE DIAGRAMS */
+
+.tree-diagram {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+
+/* CONTINGENCY TABLE */
+
+.contingency-table {
+    width: 100%;
+    min-width: 350px;
+    border-collapse: collapse;
+    margin: 15px auto;
+    background: white;
+}
+
+.contingency-table th,
+.contingency-table td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: center;
+}
+
+.contingency-table th {
+    background: #1e40af;
+    color: white;
+    font-weight: bold;
+}
+
+.contingency-table tbody tr:nth-child(even) {
+    background: #eff6ff;
+}
+
+.contingency-table tbody tr:hover {
+    background: #dbeafe;
+}
+
+
+/* WORKED EXAMPLES */
+
+.example-card {
+    background: white;
+    border: 1px solid #dbeafe;
+    border-left: 5px solid #2563eb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.example-card h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.example-card p {
+    margin-bottom: 12px;
+}
+
+.example-card ol {
+    padding-left: 22px;
+}
+
+.example-card li {
+    margin-bottom: 8px;
+}
+
+
+/* PRACTICE QUESTIONS */
+
+.practice-card {
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.practice-card h4 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.practice-card p {
+    margin-bottom: 12px;
+}
+
+.practice-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.practice-card input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ACTION BUTTONS */
+
+.action-button {
+    display: inline-block;
+    padding: 11px 20px;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-button:hover {
+    background: #2563eb;
+}
+
+
+/* QUIZ SECTION */
+
+.quiz-section {
+    background: white;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.quiz-section h2 {
+    color: #1e40af;
+    margin-bottom: 15px;
+}
+
+.quiz-question {
+    margin: 20px 0;
+}
+
+.quiz-question h3 {
+    color: #102a56;
+    margin-bottom: 18px;
+}
+
+
+/* QUIZ OPTIONS */
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f1f5ff;
+    padding: 14px;
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: #dbeafe;
+    border-color: #2563eb;
+}
+
+.quiz-option input {
+    accent-color: #1e40af;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
+/* QUIZ PROGRESS */
+
+#questionProgress {
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+#quizScore {
+    font-weight: bold;
+    color: #102a56;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#progressBar {
+    width: 0;
+    height: 100%;
+    background: #2563eb;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+
+/* QUIZ RESULTS */
+
+#quizResults {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#finalScore {
+    color: #1e40af;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+#finalFeedback {
+    margin-bottom: 18px;
+    color: #334155;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .site-title {
+        font-size: 25px;
+    }
+
+    .header {
+        padding: 18px 12px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .welcome-section {
+        padding: 25px 18px;
+    }
+
+    .welcome-section h2 {
+        font-size: 22px;
+    }
+
+    .unit-button {
+        font-size: 16px;
+        padding: 17px;
+    }
+
+    .unit-content {
+        padding: 17px;
+    }
+
+    .lesson-section h3 {
+        font-size: 20px;
+    }
+
+    .formula-box {
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    .diagram-box {
+        padding: 12px;
+    }
+
+    .diagram-box svg {
+        max-width: 100%;
+    }
+
+    .example-card,
+    .practice-card {
+        padding: 15px;
+    }
+
+    .quiz-section {
+        padding: 18px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .site-title {
+        font-size: 22px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .back-link {
+        margin: 15px;
+        padding: 9px 13px;
+        font-size: 14px;
+    }
+
+    .welcome-section h2 {
+        font-size: 20px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .unit-button {
+        font-size: 15px;
+    }
+
+    .diagram-box h4 {
+        font-size: 16px;
+    }
+
+    .contingency-table th,
+    .contingency-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .action-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .practice-card input {
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Statistics | Grade 12 MathsHelpSA</title>
+
+    <link rel="stylesheet" href="grade12-statistics.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="site-title">
+            <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+        </h1>
+        <p>
+            <!-- BACK BUTTON -->
+        <a href="../grade12.html" class="back-link">
+            ← Back to Grade 12
+        </a>
+        </p>
+    </header>
+
+    <main class="container">
+
+        
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <h2>Statistics</h2>
+            <p>
+                Learn how to interpret skewed and symmetric data,
+                analyse bivariate data, draw scatter plots,
+                understand correlation and use regression lines.
+            </p>
+        </section>
+
+
+        <!-- UNIT 1 -->
+        <section class="unit">
+
+            <button class="unit-button"
+                onclick="toggleSection('unit1Content', this)">
+                Unit 1: Revision of Skewed and Symmetric Data
+                <span>＋</span>
+            </button>
+
+            <div class="unit-content" id="unit1Content" hidden>
+
+                <section class="lesson-section">
+                    <h3>Lesson Notes</h3>
+                    <div id="unit1Notes"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Worked Examples</h3>
+                    <div id="unit1Examples"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Practice Questions</h3>
+                    <div id="unit1Practice"></div>
+                </section>
+
+            </div>
+        </section>
+
+
+        <!-- UNIT 2 -->
+        <section class="unit">
+
+            <button class="unit-button"
+                onclick="toggleSection('unit2Content', this)">
+                Unit 2: Bivariate Data, Scatter Plots, Regression Lines and Correlation
+                <span>＋</span>
+            </button>
+
+            <div class="unit-content" id="unit2Content" hidden>
+
+                <section class="lesson-section">
+                    <h3>Lesson Notes</h3>
+                    <div id="unit2Notes"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Worked Examples</h3>
+                    <div id="unit2Examples"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Practice Questions</h3>
+                    <div id="unit2Practice"></div>
+                </section>
+
+            </div>
+        </section>
+
+
+        <!-- QUIZ SECTION -->
+        <section class="unit">
+
+            <button class="unit-button"
+                onclick="toggleSection('quizContent', this)">
+                Statistics Quiz
+                <span>＋</span>
+            </button>
+
+            <div class="unit-content" id="quizContent" hidden>
+
+                <div class="quiz-intro">
+                    <h3>Test Your Knowledge</h3>
+                    <p>
+                        Answer the questions to test your understanding
+                        of Statistics.
+                    </p>
+
+                    <button class="action-button" id="startQuiz"
+                        onclick="startQuiz()">
+                        Start Quiz
+                    </button>
+                </div>
+
+                <div id="quizArea" hidden>
+
+                    <div class="quiz-information">
+                        <p id="questionProgress"></p>
+                        <p id="quizScore">Score: 0</p>
+                    </div>
+
+                    <div class="progress-container">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <div id="quizQuestions"></div>
+
+                    <button class="action-button" id="submitQuiz"
+                        onclick="submitQuiz()">
+                        Submit Answer
+                    </button>
+
+                </div>
+
+                <div id="quizResults" hidden>
+                    <h3>Quiz Completed!</h3>
+                    <h2 id="finalScore"></h2>
+                    <p id="finalFeedback"></p>
+
+                    <button class="action-button" id="retryQuiz"
+                        onclick="retryQuiz()">
+                        Try Again
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 MathsHelpSA | Learn Mathematics Step by Step</p>
+    </footer>
+
+
+    <script src="grade12-statistics.js"></script>
+
+</body>
+</html>

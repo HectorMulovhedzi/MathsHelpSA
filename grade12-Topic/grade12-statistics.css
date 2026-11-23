@@ -1,0 +1,591 @@
+
+/* =========================================
+   MATHSHELPSA - GRADE 12 STATISTICS
+========================================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5ff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.maths {
+    color: white;
+}
+
+.helpsa {
+    color: #facc15;
+}
+
+.header p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    max-width: 1100px;
+    width: 92%;
+    margin: 30px auto;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #f9fbff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   UNIT CARDS
+========================================= */
+
+.unit {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.unit-button {
+    width: 100%;
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.unit-button:hover {
+    background: #2563eb;
+}
+
+.unit-button span {
+    font-size: 23px;
+}
+
+
+/* =========================================
+   UNIT CONTENT
+========================================= */
+
+.unit-content {
+    padding: 25px;
+}
+
+.lesson-section {
+    margin-bottom: 30px;
+}
+
+.lesson-section h3 {
+    color: #1e40af;
+    font-size: 21px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dbeafe;
+    padding-bottom: 8px;
+}
+
+
+/* =========================================
+   NOTES AND FORMULAS
+========================================= */
+
+.note-box {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+}
+
+.formula-box {
+    background: #fff7d6;
+    border-left: 5px solid #facc15;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    overflow-x: auto;
+}
+
+.theorem-box {
+    background: #f0fdf4;
+    border-left: 5px solid #16a34a;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   GRAPH AND DIAGRAM CONTAINERS
+========================================= */
+
+.diagram-box {
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.diagram-box svg {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: auto;
+}
+
+.diagram-caption {
+    color: #475569;
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* =========================================
+   STATISTICS GRAPHS
+========================================= */
+
+.statistics-graph {
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.statistics-graph h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.statistics-graph svg {
+    display: block;
+    width: 100%;
+    min-width: 280px;
+    max-width: 700px;
+    height: auto;
+    margin: auto;
+}
+
+.graph-label {
+    color: #475569;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   SCATTER PLOTS
+========================================= */
+
+.scatter-plot {
+    background: #ffffff;
+    padding: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.scatter-plot svg {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: auto;
+}
+
+.correlation-positive {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.correlation-negative {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.correlation-none {
+    color: #64748b;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   WORKED EXAMPLES
+========================================= */
+
+.example-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.example-card h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.solution {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 12px;
+    border-left: 4px solid #2563eb;
+}
+
+.solution p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   PRACTICE QUESTIONS
+========================================= */
+
+.practice-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.practice-card p {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.practice-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.practice-card button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.practice-card button:hover {
+    background: #2563eb;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.action-button:hover {
+    background: #2563eb;
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-intro {
+    background: #eff6ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quiz-information {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.quiz-question {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.quiz-question h4 {
+    margin-bottom: 15px;
+}
+
+.quiz-option {
+    display: block;
+    padding: 12px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.quiz-option:hover {
+    background: #eff6ff;
+}
+
+.quiz-option input {
+    margin-right: 8px;
+}
+
+#quizResults {
+    background: #eff6ff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#finalScore {
+    color: #1e40af;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px 12px;
+    }
+
+    .site-title {
+        font-size: 25px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .welcome-section {
+        padding: 25px 18px;
+    }
+
+    .welcome-section h2 {
+        font-size: 25px;
+    }
+
+    .unit-content {
+        padding: 18px;
+    }
+
+    .unit-button {
+        font-size: 15px;
+        padding: 17px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .site-title {
+        font-size: 23px;
+    }
+
+    .welcome-section h2 {
+        font-size: 22px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .unit-button {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .unit-content {
+        padding: 14px;
+    }
+
+    .lesson-section h3 {
+        font-size: 18px;
+    }
+
+    .example-card,
+    .practice-card {
+        padding: 14px;
+    }
+
+    .diagram-box,
+    .statistics-graph,
+    .scatter-plot {
+        padding: 10px;
+    }
+
+    .quiz-information {
+        font-size: 13px;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+
+}

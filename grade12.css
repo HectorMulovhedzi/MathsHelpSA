@@ -1,17 +1,35 @@
 
+/* ==========================================
+   MATHSHELPSA - GRADE 12
+   MAIN PAGE STYLESHEET
+========================================== */
+
+
+/* ==========================================
+   1. GENERAL RESET
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f1f5f9;
     color: #1e293b;
+    line-height: 1.6;
 }
 
-/* Navigation */
+
+/* ==========================================
+   2. HEADER AND NAVIGATION
+========================================== */
 
 .header {
     background: #1e40af;
@@ -21,10 +39,25 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
 .header h1 {
     font-size: 21px;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
 }
 
 .back-link {
@@ -34,7 +67,14 @@ body {
     font-size: 14px;
 }
 
-/* Main container */
+.back-link:hover {
+    color: #facc15;
+}
+
+
+/* ==========================================
+   3. MAIN CONTAINER
+========================================== */
 
 .container {
     width: 100%;
@@ -43,7 +83,10 @@ body {
     padding: 20px;
 }
 
-/* Welcome section */
+
+/* ==========================================
+   4. WELCOME SECTION
+========================================== */
 
 .welcome {
     background: linear-gradient(135deg, #2563eb, #1e3a8a);
@@ -55,7 +98,7 @@ body {
 
 .grade-label {
     display: inline-block;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     padding: 7px 12px;
     border-radius: 20px;
     font-size: 12px;
@@ -73,12 +116,21 @@ body {
     font-size: 15px;
 }
 
-/* Topics */
+
+/* ==========================================
+   5. SECTION TITLES
+========================================== */
 
 .section-title {
     font-size: 23px;
     margin-bottom: 20px;
+    color: #1e3a8a;
 }
+
+
+/* ==========================================
+   6. TOPIC GRID
+========================================== */
 
 .topics {
     display: grid;
@@ -90,7 +142,14 @@ body {
     background: white;
     padding: 22px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.09);
 }
 
 .topic-icon {
@@ -110,6 +169,7 @@ body {
 .topic-card h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: #1e3a8a;
 }
 
 .topic-card > p {
@@ -118,16 +178,22 @@ body {
     margin-bottom: 18px;
 }
 
-/* Buttons */
+
+/* ==========================================
+   7. TOPIC BUTTONS
+========================================== */
 
 .learn-button,
-.step-button {
+.step-button,
+.topic-button {
     border: none;
     border-radius: 8px;
     padding: 13px 16px;
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .learn-button {
@@ -150,7 +216,22 @@ body {
     background: #bfdbfe;
 }
 
-/* Lessons */
+.topic-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #2563eb;
+    color: white;
+}
+
+.topic-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   8. LESSONS
+========================================== */
 
 .lesson {
     display: none;
@@ -162,12 +243,26 @@ body {
 .lesson h4 {
     font-size: 18px;
     margin-bottom: 12px;
+    color: #1e3a8a;
 }
 
 .lesson p {
     line-height: 1.7;
     margin-bottom: 8px;
 }
+
+.lesson-content {
+    display: none;
+}
+
+.solution-steps {
+    display: none;
+}
+
+
+/* ==========================================
+   9. MATH QUESTIONS
+========================================== */
 
 .math-question {
     background: #eff6ff;
@@ -194,7 +289,10 @@ body {
     margin-top: 12px;
 }
 
-/* Practice questions */
+
+/* ==========================================
+   10. PRACTICE SECTION
+========================================== */
 
 .practice-section {
     margin-top: 25px;
@@ -215,6 +313,7 @@ body {
 .practice-group-title {
     margin: 22px 0 12px;
     font-size: 17px;
+    color: #1e3a8a;
 }
 
 .practice-question {
@@ -229,6 +328,16 @@ body {
     font-size: 15px;
     margin-bottom: 10px;
 }
+
+.practice-question > p {
+    line-height: 1.7;
+    margin-bottom: 13px;
+}
+
+
+/* ==========================================
+   11. QUESTION DIFFICULTY LABELS
+========================================== */
 
 .question-tag {
     display: inline-block;
@@ -254,10 +363,10 @@ body {
     color: #991b1b;
 }
 
-.practice-question > p {
-    line-height: 1.7;
-    margin-bottom: 13px;
-}
+
+/* ==========================================
+   12. ANSWER BUTTONS
+========================================== */
 
 .answer-button {
     width: 100%;
@@ -268,6 +377,7 @@ body {
     padding: 12px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .answer-button:hover {
@@ -284,69 +394,13 @@ body {
 }
 
 .answer-box[hidden] {
-    display: none;
+    display: none !important;
 }
 
-/* Bottom message */
 
-.grade-message {
-    background: #dbeafe;
-    color: #1e3a8a;
-    padding: 25px;
-    border-radius: 15px;
-    margin-top: 35px;
-    text-align: center;
-}
-
-.grade-message h2 {
-    margin-bottom: 10px;
-}
-
-.grade-message p {
-    line-height: 1.7;
-}
-
-/* Footer */
-
-footer {
-    background: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 35px;
-    font-size: 14px;
-}
-
-/* Tablet and desktop */
-
-@media (min-width: 650px) {
-    .topics {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .welcome {
-        padding: 40px;
-    }
-
-    .welcome h2 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 400px) {
-    .container {
-        padding: 12px;
-    }
-
-    .topic-card {
-        padding: 17px;
-    }
-
-    .welcome h2 {
-        font-size: 22px;
-    }
-}
-/* Coming Soon Section */
+/* ==========================================
+   13. COMING SOON SECTION
+========================================== */
 
 .coming-soon-section {
     margin-top: 40px;
@@ -403,41 +457,202 @@ footer {
     font-weight: bold;
 }
 
-/* Responsive layout */
+
+/* ==========================================
+   14. GRADE 12 STUDY GUIDE SECTION
+========================================== */
+
+.study-guide {
+    margin-top: 40px;
+    padding: 25px 20px;
+    background: #eef5ff;
+    border-radius: 15px;
+}
+
+.study-guide h2 {
+    text-align: center;
+    color: #173b70;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.study-guide > p {
+    text-align: center;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* BOOK CARDS */
+
+.book-resource {
+    background: white;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    border: 1px solid #dbeafe;
+}
+
+.book-resource h3 {
+    color: #173b70;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.book-resource p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+
+/* BOOK BUTTON */
+
+.book-button {
+    display: block;
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.book-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   15. BOTTOM MESSAGE
+========================================== */
+
+.grade-message {
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.grade-message h2 {
+    margin-bottom: 10px;
+}
+
+.grade-message p {
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   16. FOOTER
+========================================== */
+
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   17. RESPONSIVE TABLET DESIGN
+========================================== */
 
 @media (min-width: 650px) {
+
+    .topics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome {
+        padding: 40px;
+    }
+
+    .welcome h2 {
+        font-size: 30px;
+    }
+
     .coming-soon-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .book-resource {
+        padding: 25px;
+    }
+
+    .book-button {
+        width: fit-content;
+        min-width: 240px;
+    }
+
 }
 
+
+/* ==========================================
+   18. RESPONSIVE DESKTOP DESIGN
+========================================== */
+
 @media (min-width: 950px) {
+
     .coming-soon-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-.lesson-content {
-    display: none;
+
 }
 
-.solution-steps {
-    display: none;
-}
 
-.practice-section {
-    margin-top: 20px;
-}
-.site-title .maths {
-    color: white;
-}
+/* ==========================================
+   19. SMALL MOBILE SCREENS
+========================================== */
 
-.site-title .helpsa {
-    color: #facc15;
-}
+@media (max-width: 400px) {
 
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
+    .container {
+        padding: 12px;
+    }
+
+    .topic-card {
+        padding: 17px;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+    }
+
+    .header {
+        padding: 14px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .study-guide {
+        padding: 18px 12px;
+    }
+
+    .book-resource {
+        padding: 17px;
+    }
+
+    .study-guide h2 {
+        font-size: 20px;
+    }
+
+    .book-resource h3 {
+        font-size: 16px;
+    }
+
 }
