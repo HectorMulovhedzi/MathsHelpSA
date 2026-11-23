@@ -203,36 +203,81 @@
         </section>
 
         <!-- QUIZ -->
-        <section class="content-section" id="quiz">
+        
+<section class="content-section" id="quiz">
 
-            <button class="section-toggle"
-                onclick="toggleSection('quizContent', this)">
-                🏆 Equations and Inequalities Quiz
-                <span>＋</span>
+    <button class="section-toggle"
+        onclick="toggleSection('quizContent', this)">
+        🏆 Equations and Inequalities Quiz
+        <span>＋</span>
+    </button>
+
+    <div id="quizContent" class="section-content" hidden>
+
+        <div class="quiz-intro">
+            <h3>Test Your Knowledge</h3>
+
+            <p>
+                Test your understanding with 50 multiple-choice questions.
+                Each question is worth 1 mark.
+            </p>
+
+            <ul>
+                <li>15 Easy questions</li>
+                <li>20 Medium questions</li>
+                <li>15 Difficult questions</li>
+                <li>Total: 50 marks</li>
+            </ul>
+
+            <p>
+                Your corrections and explanations will appear
+                after you submit the quiz.
+            </p>
+
+            <button id="startQuiz" class="primary-button">
+                Start Quiz
+            </button>
+        </div>
+
+        <div id="quizArea" hidden>
+
+            <div class="quiz-progress">
+                <p id="questionProgress">Question 0 of 50</p>
+                <p id="quizScore">Answered: 0/50</p>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+            <div id="quizQuestions"></div>
+
+            <button id="submitQuiz" class="primary-button">
+                Submit Quiz
             </button>
 
-            <div id="quizContent" class="section-content" hidden>
+        </div>
 
-                <h3>Test Your Knowledge</h3>
+        <div id="quizResults" class="quiz-results" hidden>
 
-                <p>
-                    The quiz will contain 50 multiple-choice questions:
-                </p>
+            <h3>Your Quiz Results</h3>
 
-                <ul>
-                    <li>15 Easy questions</li>
-                    <li>20 Medium questions</li>
-                    <li>15 Difficult questions</li>
-                </ul>
+            <h2 id="finalScore">0 / 50</h2>
 
-                <div class="important-note">
-                    The quiz questions and automatic marking system
-                    are still being prepared. Your notes, worked examples
-                    and practice questions are available now.
-                </div>
+            <p id="finalFeedback"></p>
 
-            </div>
-        </section>
+            <div id="correctionsContainer"></div>
+
+            <button id="retryQuiz" class="primary-button">
+                Try Again
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
 
     </main>
 

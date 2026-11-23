@@ -403,35 +403,382 @@ function createPractice() {
 }
 
 
+
 // ==========================================
-// 5. QUIZ QUESTION DATA
-// WE WILL CREATE THE 50 QUESTIONS TOGETHER
+// 5. QUIZ QUESTIONS - 50 QUESTIONS
+// GRADE 11: EXPONENTS AND SURDS
 // ==========================================
 
-const quizQuestions = [];
+const quizQuestions = [
 
-/*
-LATER WE WILL ADD:
+    // ======================================
+    // EASY QUESTIONS: 1-15
+    // ======================================
 
-15 EASY QUESTIONS
-20 MEDIUM QUESTIONS
-15 DIFFICULT QUESTIONS
+    {
+        difficulty: "Easy",
+        question: "Calculate: 2³",
+        options: ["6", "8", "9", "12"],
+        answer: 1,
+        explanation: "2³ = 2 × 2 × 2 = 8."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: 5²",
+        options: ["10", "20", "25", "32"],
+        answer: 2,
+        explanation: "5² = 5 × 5 = 25."
+    },
+    {
+        difficulty: "Easy",
+        question: "Simplify: a² × a³",
+        options: ["a⁵", "a⁶", "a¹", "a⁹"],
+        answer: 0,
+        explanation: "When multiplying powers with the same base, add the exponents: a² × a³ = a⁵."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: 7⁰",
+        options: ["0", "7", "-7", "1"],
+        answer: 3,
+        explanation: "Any non-zero number raised to the power zero equals 1."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: 3⁻²",
+        options: ["-9", "1/9", "9", "1/6"],
+        answer: 1,
+        explanation: "3⁻² = 1/3² = 1/9."
+    },
+    {
+        difficulty: "Easy",
+        question: "Simplify: (2³)²",
+        options: ["2⁵", "2⁹", "2⁶", "2¹"],
+        answer: 2,
+        explanation: "Multiply the exponents: (2³)² = 2⁶."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: √49",
+        options: ["7", "8", "6", "9"],
+        answer: 0,
+        explanation: "√49 = 7 because 7 × 7 = 49."
+    },
+    {
+        difficulty: "Easy",
+        question: "Simplify: √12",
+        options: ["3√2", "2√3", "4√3", "6√2"],
+        answer: 1,
+        explanation: "√12 = √(4 × 3) = 2√3."
+    },
+    {
+        difficulty: "Easy",
+        question: "Simplify: 3√2 + 4√2",
+        options: ["7√4", "12√2", "√6", "7√2"],
+        answer: 3,
+        explanation: "Add the coefficients of like surds: 3√2 + 4√2 = 7√2."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: √3 × √12",
+        options: ["3", "12", "6", "15"],
+        answer: 2,
+        explanation: "√3 × √12 = √36 = 6."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: 27^(1/3)",
+        options: ["9", "3", "6", "27"],
+        answer: 1,
+        explanation: "27^(1/3) = ∛27 = 3."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: 16^(1/2)",
+        options: ["4", "8", "2", "16"],
+        answer: 0,
+        explanation: "16^(1/2) = √16 = 4."
+    },
+    {
+        difficulty: "Easy",
+        question: "Simplify: x⁶ ÷ x²",
+        options: ["x⁸", "x³", "x⁴", "x¹²"],
+        answer: 2,
+        explanation: "Subtract the exponents: x⁶ ÷ x² = x⁴, where x ≠ 0."
+    },
+    {
+        difficulty: "Easy",
+        question: "Simplify: (3a²)²",
+        options: ["3a⁴", "6a⁴", "9a²", "9a⁴"],
+        answer: 3,
+        explanation: "(3a²)² = 3² × a⁴ = 9a⁴."
+    },
+    {
+        difficulty: "Easy",
+        question: "Calculate: (-2)⁴",
+        options: ["-16", "16", "-8", "8"],
+        answer: 1,
+        explanation: "(-2)⁴ = (-2)(-2)(-2)(-2) = 16."
 
-Each question will contain:
+    },
 
-{
-    question: "Question goes here",
-    options: ["A", "B", "C", "D"],
-    answer: 0,
-    difficulty: "Easy"
-}
+    // ======================================
+    // MEDIUM QUESTIONS: 16-35
+    // ======================================
 
-The answer number represents the correct option:
-0 = A
-1 = B
-2 = C
-3 = D
-*/
+    {
+        difficulty: "Medium",
+        question: "Simplify: 2⁴ × 2⁻²",
+        options: ["2⁶", "2⁸", "4", "2⁻⁶"],
+        answer: 2,
+        explanation: "Add the exponents: 2⁴ × 2⁻² = 2² = 4."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: 5³ ÷ 5",
+        options: ["125", "25", "5", "625"],
+        answer: 1,
+        explanation: "Write 5 as 5¹. Then 5³ ÷ 5¹ = 5² = 25."
+    },
+    {
+        difficulty: "Medium",
+        question: "Calculate: 81^(3/4)",
+        options: ["27", "9", "3", "81"],
+        answer: 0,
+        explanation: "The fourth root of 81 is 3. Then 3³ = 27."
+    },
+    {
+        difficulty: "Medium",
+        question: "Calculate: 32^(2/5)",
+        options: ["2", "8", "16", "4"],
+        answer: 3,
+        explanation: "The fifth root of 32 is 2. Then 2² = 4."
+    },
+    {
+        difficulty: "Medium",
+        question: "Rewrite x⁻³ using a positive exponent.",
+        options: ["-x³", "1/x³", "x³", "1/3x"],
+        answer: 1,
+        explanation: "A negative exponent means take the reciprocal: x⁻³ = 1/x³."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: (2a³b⁻²)²",
+        options: ["4a⁵b⁻⁴", "2a⁶b⁻²", "4a⁶/b⁴", "4a⁶b⁴"],
+        answer: 2,
+        explanation: "Square every factor: 2² × a⁶ × b⁻⁴ = 4a⁶/b⁴."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: √75",
+        options: ["5√3", "3√5", "15√3", "25√3"],
+        answer: 0,
+        explanation: "√75 = √(25 × 3) = 5√3."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: 3√8 - √18",
+        options: ["√2", "3√2", "5√2", "6√2"],
+        answer: 1,
+        explanation: "3√8 - √18 = 3(2√2) - 3√2 = 3√2."
+    },
+    {
+        difficulty: "Medium",
+        question: "Calculate: √5 × √20",
+        options: ["5", "10", "20", "100"],
+        answer: 1,
+        explanation: "√5 × √20 = √100 = 10."
+    },
+    {
+        difficulty: "Medium",
+        question: "Calculate: √48 ÷ √3",
+        options: ["3", "16", "4", "8"],
+        answer: 2,
+        explanation: "√48 ÷ √3 = √(48/3) = √16 = 4."
+    },
+    {
+        difficulty: "Medium",
+        question: "Calculate: 64^(1/3)",
+        options: ["4", "8", "16", "32"],
+        answer: 0,
+        explanation: "The cube root of 64 is 4."
+    },
+    {
+        difficulty: "Medium",
+        question: "Solve: 2ˣ = 64",
+        options: ["4", "5", "6", "8"],
+        answer: 2,
+        explanation: "64 = 2⁶. Therefore x = 6."
+    },
+    {
+        difficulty: "Medium",
+        question: "Solve: 3^(x-1) = 27",
+        options: ["2", "4", "3", "5"],
+        answer: 1,
+        explanation: "27 = 3³. Therefore x - 1 = 3, so x = 4."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: x⁴ × x⁻⁷",
+        options: ["x¹¹", "x³", "x⁻¹¹", "1/x³"],
+        answer: 3,
+        explanation: "x⁴ × x⁻⁷ = x⁻³ = 1/x³, where x ≠ 0."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: √180",
+        options: ["6√5", "5√6", "9√2", "3√20"],
+        answer: 0,
+        explanation: "√180 = √(36 × 5) = 6√5."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: 2√12 + √27",
+        options: ["5√3", "7√3", "6√3", "9√3"],
+        answer: 1,
+        explanation: "2√12 + √27 = 2(2√3) + 3√3 = 7√3."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: √(a²), where a is a real number.",
+        options: ["a²", "-a", "|a|", "a"],
+        answer: 2,
+        explanation: "The principal square root is non-negative, so √(a²) = |a|."
+    },
+    {
+        difficulty: "Medium",
+        question: "What is the difference between (-3)² and -3²?",
+        options: ["Both are 9", "Both are -9", "Both are 6", "9 and -9 respectively"],
+        answer: 3,
+        explanation: "(-3)² = 9, while -3² = -(3²) = -9."
+    },
+    {
+        difficulty: "Medium",
+        question: "Simplify: 4³ ÷ 2⁴",
+        options: ["2", "4", "8", "16"],
+        answer: 1,
+        explanation: "4³ = 64 and 2⁴ = 16. Therefore 64 ÷ 16 = 4."
+    },
+    {
+        difficulty: "Medium",
+        question: "Calculate: 9^(1/2) + 16^(1/2)",
+        options: ["5", "7", "9", "25"],
+        answer: 1,
+        explanation: "√9 + √16 = 3 + 4 = 7."
+    },
+
+    // ======================================
+    // DIFFICULT QUESTIONS: 36-50
+    // ======================================
+
+    {
+        difficulty: "Difficult",
+        question: "Simplify: (2⁻² × 2⁵) ÷ 2",
+        options: ["2", "4", "8", "16"],
+        answer: 1,
+        explanation: "2⁻² × 2⁵ ÷ 2¹ = 2⁻²⁺⁵⁻¹ = 2² = 4."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: (3²)³ ÷ 3⁴",
+        options: ["3", "9", "27", "81"],
+        answer: 1,
+        explanation: "(3²)³ ÷ 3⁴ = 3⁶ ÷ 3⁴ = 3² = 9."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Calculate: (16³ ÷ 4²)^(1/2)",
+        options: ["8", "12", "16", "32"],
+        answer: 2,
+        explanation: "16³ ÷ 4² = 4096 ÷ 16 = 256. √256 = 16."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Calculate: 27^(2/3) ÷ 9",
+        options: ["1", "2", "3", "9"],
+        answer: 0,
+        explanation: "27^(2/3) = (∛27)² = 3² = 9. Then 9 ÷ 9 = 1."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: (x³y⁻²)² ÷ (x⁻¹y)",
+        options: ["x⁵/y³", "x⁷/y⁵", "x⁶/y⁴", "x⁷y⁵"],
+        answer: 1,
+        explanation: "(x³y⁻²)² = x⁶y⁻⁴. Dividing by x⁻¹y gives x⁷y⁻⁵ = x⁷/y⁵."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: √200 - √50",
+        options: ["5√2", "10√2", "15√2", "5√3"],
+        answer: 0,
+        explanation: "√200 - √50 = 10√2 - 5√2 = 5√2."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: 3√27 - 2√12 + √75",
+        options: ["5√3", "8√3", "10√3", "12√3"],
+        answer: 2,
+        explanation: "9√3 - 4√3 + 5√3 = 10√3."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: (√5 + √2)(√5 - √2)",
+        options: ["7", "√3", "5", "3"],
+        answer: 3,
+        explanation: "Use difference of two squares: (√5)² - (√2)² = 5 - 2 = 3."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Calculate: 1 ÷ 2⁻³",
+        options: ["1/8", "8", "-8", "6"],
+        answer: 1,
+        explanation: "2⁻³ = 1/8. Therefore 1 ÷ 1/8 = 8."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Solve: 5^(2x-1) = 125",
+        options: ["1", "2", "3", "4"],
+        answer: 1,
+        explanation: "125 = 5³. Therefore 2x - 1 = 3, so 2x = 4 and x = 2."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Solve: 4^(x+1) = 1/16",
+        options: ["-3", "-2", "2", "3"],
+        answer: 0,
+        explanation: "1/16 = 4⁻². Therefore x + 1 = -2, so x = -3."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: (2x⁻²y³)⁻¹",
+        options: ["2x²/y³", "x²/(2y³)", "2y³/x²", "x²y³/2"],
+        answer: 1,
+        explanation: "Take the reciprocal: 1/(2x⁻²y³) = x²/(2y³)."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Calculate: √18 × √8",
+        options: ["6", "10", "12", "24"],
+        answer: 2,
+        explanation: "√18 × √8 = √144 = 12."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: (√3 + √12)²",
+        options: ["9", "12", "18", "27"],
+        answer: 3,
+        explanation: "√12 = 2√3. Therefore (3√3)² = 9 × 3 = 27."
+    },
+    {
+        difficulty: "Difficult",
+        question: "Simplify: (3⁴ × 9⁻¹) ÷ 27^(1/3)",
+        options: ["1", "2", "3", "9"],
+        answer: 2,
+        explanation: "3⁴ = 81, 9⁻¹ = 1/9 and 27^(1/3) = 3. So (81 ÷ 9) ÷ 3 = 3."
+    }
+
+];
+
 
 
 // ==========================================
@@ -447,24 +794,15 @@ let selectedAnswers = {};
 
 function startQuiz() {
 
-    if (quizQuestions.length !== 50) {
-
-        alert(
-            "The 50 quiz questions have not been added yet. We will create them together."
-        );
-
-        return;
-    }
-
     selectedAnswers = {};
 
+    document.querySelector(".quiz-intro").hidden = true;
     document.getElementById("quizResults").hidden = true;
     document.getElementById("quizArea").hidden = false;
 
     document.getElementById("quizQuestions").innerHTML = "";
 
     displayQuizQuestions();
-
     updateQuizProgress();
 
 }
@@ -476,8 +814,7 @@ function startQuiz() {
 
 function displayQuizQuestions() {
 
-    const container =
-        document.getElementById("quizQuestions");
+    const container = document.getElementById("quizQuestions");
 
     quizQuestions.forEach((item, index) => {
 
@@ -485,11 +822,14 @@ function displayQuizQuestions() {
         card.className = "quiz-question";
 
         const heading = document.createElement("h4");
-
         heading.textContent =
             `Question ${index + 1}: ${item.question}`;
 
-        card.appendChild(heading);
+        const difficulty = document.createElement("p");
+        difficulty.className = "question-tag";
+        difficulty.textContent = item.difficulty;
+
+        card.append(heading, difficulty);
 
         item.options.forEach((option, optionIndex) => {
 
@@ -502,16 +842,18 @@ function displayQuizQuestions() {
             radio.name = `question${index}`;
             radio.value = optionIndex;
 
-            radio.addEventListener("change", () => {
+            radio.addEventListener("change", function () {
 
                 selectedAnswers[index] = optionIndex;
-
                 updateQuizProgress();
 
             });
 
-            label.append(radio, document.createTextNode(option));
+            const optionText = document.createTextNode(
+                ` ${String.fromCharCode(65 + optionIndex)}. ${option}`
+            );
 
+            label.append(radio, optionText);
             card.appendChild(label);
 
         });
@@ -529,11 +871,12 @@ function displayQuizQuestions() {
 
 function updateQuizProgress() {
 
-    const answered =
-        Object.keys(selectedAnswers).length;
+    const answered = Object.keys(selectedAnswers).length;
 
-    const progress =
-        (answered / 50) * 100;
+    const progress = (answered / quizQuestions.length) * 100;
+
+    document.getElementById("questionProgress").textContent =
+        `50 Questions`;
 
     document.getElementById("quizScore").textContent =
         `Answered: ${answered}/50`;
@@ -550,11 +893,12 @@ function updateQuizProgress() {
 
 function submitQuiz() {
 
-    if (Object.keys(selectedAnswers).length !== 50) {
+    if (Object.keys(selectedAnswers).length !== quizQuestions.length) {
 
         alert("Please answer all 50 questions before submitting.");
 
         return;
+
     }
 
     let score = 0;
@@ -567,33 +911,112 @@ function submitQuiz() {
 
     });
 
-    const percentage = (score / 50) * 100;
+    const percentage = (score / quizQuestions.length) * 100;
 
     document.getElementById("quizArea").hidden = true;
-
     document.getElementById("quizResults").hidden = false;
 
     document.getElementById("finalScore").textContent =
-        `Your score: ${score}/50 (${percentage}%)`;
+        `${score}/50 (${percentage}%)`;
 
     let feedback;
 
     if (percentage >= 80) {
-        feedback = "Excellent work! You understand this topic very well.";
+
+        feedback = "Excellent work! You understand Exponents and Surds very well.";
+
     } else if (percentage >= 50) {
-        feedback = "Good effort! Keep practising to improve your result.";
+
+        feedback = "Good effort! Review the corrections and keep practising.";
+
     } else {
-        feedback = "Keep learning. Review the notes and worked examples, then try again.";
+
+        feedback = "Keep learning! Go through your notes and worked examples before trying again.";
+
     }
 
-    document.getElementById("finalFeedback").textContent =
-        feedback;
+    document.getElementById("finalFeedback").textContent = feedback;
+
+    displayCorrections();
 
 }
 
 
 // ==========================================
-// 11. RETRY QUIZ
+// 11. DISPLAY CORRECTIONS
+// ==========================================
+
+function displayCorrections() {
+
+    const container =
+        document.getElementById("correctionsContainer");
+
+    container.innerHTML = "<h3>Quiz Corrections</h3>";
+
+    quizQuestions.forEach((question, index) => {
+
+        const card = document.createElement("div");
+        card.className = "correction-card";
+
+        const questionText = document.createElement("h4");
+
+        questionText.textContent =
+            `Question ${index + 1}: ${question.question}`;
+
+        const userAnswer = document.createElement("p");
+
+        const selected = selectedAnswers[index];
+
+        userAnswer.textContent =
+            `Your answer: ${question.options[selected]}`;
+
+        const correctAnswer = document.createElement("p");
+
+        correctAnswer.textContent =
+            `Correct answer: ${question.options[question.answer]}`;
+
+        const explanation = document.createElement("p");
+
+        explanation.textContent =
+            `Explanation: ${question.explanation}`;
+
+        if (selected === question.answer) {
+
+            card.classList.add("correct-answer");
+
+            const result = document.createElement("p");
+            result.textContent = "Correct!";
+            result.className = "correct-text";
+
+            card.append(questionText, result, userAnswer, explanation);
+
+        } else {
+
+            card.classList.add("wrong-answer");
+
+            const result = document.createElement("p");
+            result.textContent = "Incorrect";
+            result.className = "wrong-text";
+
+            card.append(
+                questionText,
+                result,
+                userAnswer,
+                correctAnswer,
+                explanation
+            );
+
+        }
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+// ==========================================
+// 12. RETRY QUIZ
 // ==========================================
 
 function retryQuiz() {
@@ -604,7 +1027,7 @@ function retryQuiz() {
 
 
 // ==========================================
-// 12. CONNECT BUTTONS
+// 13. CONNECT BUTTONS
 // ==========================================
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -622,8 +1045,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("retryQuiz")
         .addEventListener("click", retryQuiz);
 
-    console.log(
-        "MathsHelpSA Exponents and Surds connected successfully!"
-    );
+    console.log("Exponents and Surds quiz loaded!");
 
 });
