@@ -427,3 +427,17 @@ footer {
 .practice-section {
     margin-top: 20px;
 }
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}

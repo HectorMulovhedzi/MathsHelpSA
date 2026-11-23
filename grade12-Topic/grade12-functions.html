@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Functions and Inverse Functions | Grade 12 MathsHelpSA</title>
+
+    <link rel="stylesheet" href="grade12-functions.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    
+<header class="header">
+
+    <h1 class="site-title">
+        <span class="maths">Maths</span><span class="helpsa">HelpSA</span>
+    </h1>
+
+    <p><a href="../grade12.html" class="back-link">
+            ← Back to Grade 12
+        </a></p>
+</header>
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <h2>Functions and Inverse Functions</h2>
+            <p>
+                Learn about functions, their properties, graphs and inverse
+                functions through notes, worked examples and practice questions.
+            </p>
+        </section>
+
+        <!-- TOPIC NAVIGATION -->
+        <nav class="topic-navigation">
+            <a href="#unit1">Functions</a>
+            <a href="#unit2">Inverse Functions</a>
+            <a href="#quiz">Final Quiz</a>
+        </nav>
+
+        <!-- UNIT 1 -->
+        <section class="unit" id="unit1">
+
+            <button class="unit-button"
+                onclick="toggleSection('unit1Content', this)">
+                <span>Unit 1: Functions</span>
+                <span>+</span>
+            </button>
+
+            <div class="unit-content" id="unit1Content" hidden>
+
+                <section class="lesson-section">
+                    <h3>Notes</h3>
+                    <div id="unit1Notes"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Worked Examples</h3>
+                    <div id="unit1Examples"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Practice Questions</h3>
+                    <div id="unit1Practice"></div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- UNIT 2 -->
+        <section class="unit" id="unit2">
+
+            <button class="unit-button"
+                onclick="toggleSection('unit2Content', this)">
+                <span>Unit 2: Inverse Functions</span>
+                <span>+</span>
+            </button>
+
+            <div class="unit-content" id="unit2Content" hidden>
+
+                <section class="lesson-section">
+                    <h3>Notes</h3>
+                    <div id="unit2Notes"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Worked Examples</h3>
+                    <div id="unit2Examples"></div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>Practice Questions</h3>
+                    <div id="unit2Practice"></div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- FINAL QUIZ -->
+        <section class="unit quiz-section" id="quiz">
+
+            <button class="unit-button"
+                onclick="toggleSection('quizContent', this)">
+                <span>Final Quiz: Functions and Inverse Functions</span>
+                <span>+</span>
+            </button>
+
+            <div class="unit-content" id="quizContent" hidden>
+
+                <div class="quiz-intro">
+                    <h3>Test Your Understanding</h3>
+                    <p>
+                        Answer all 10 questions. Each question carries
+                        1 mark. Total: 10 marks.
+                    </p>
+
+                    <button id="startQuiz" class="action-button"
+                        onclick="startQuiz()">
+                        Start Quiz
+                    </button>
+                </div>
+
+                <div id="quizArea" hidden>
+
+                    <div class="quiz-progress">
+                        <p id="questionProgress">Question 1 of 10</p>
+                        <p id="quizScore">Answered: 0 / 10</p>
+
+                        <div class="progress-track">
+                            <div id="progressBar"></div>
+                        </div>
+                    </div>
+
+                    <div id="quizQuestions"></div>
+
+                    <button id="submitQuiz" class="action-button"
+                        onclick="submitQuiz()">
+                        Submit Quiz
+                    </button>
+
+                </div>
+
+                <div id="quizResults" hidden>
+                    <h3>Quiz Results</h3>
+                    <p id="finalScore"></p>
+                    <p id="finalFeedback"></p>
+
+                    <button class="action-button"
+                        onclick="retryQuiz()">
+                        Try Again
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 MathsHelpSA | Learn Mathematics with Confidence</p>
+    </footer>
+
+    <script src="grade12-functions.js"></script>
+
+</body>
+</html>

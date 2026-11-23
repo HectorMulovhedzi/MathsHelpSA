@@ -1,0 +1,741 @@
+
+/* ==========================================
+   MATHS HELP SA - GRADE 12
+   FUNCTIONS AND INVERSE FUNCTIONS
+========================================== */
+
+
+/* ==========================================
+   1. RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5ff;
+    color: #172554;
+    line-height: 1.7;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   2. HEADER
+========================================== */
+
+.header {
+    background: #102a56;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.site-title .maths {
+    color: white;
+}
+
+.site-title .helpsa {
+    color: #facc15;
+}
+
+.header p {
+    color: white;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background: #1e40af;
+    padding: 9px 17px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background: #2563eb;
+}
+
+
+/* ==========================================
+   3. MAIN CONTAINER
+========================================== */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* ==========================================
+   4. WELCOME SECTION
+========================================== */
+
+.welcome {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    padding: 35px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 5px 15px rgba(30, 64, 175, 0.15);
+    border-bottom: 4px solid #facc15;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.welcome p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   5. TOPIC NAVIGATION
+========================================== */
+
+.topic-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+}
+
+.topic-navigation a {
+    text-decoration: none;
+    color: #1e40af;
+    background: #dbeafe;
+    padding: 9px 15px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.topic-navigation a:hover {
+    background: #1e40af;
+    color: white;
+}
+
+
+/* ==========================================
+   6. UNIT SECTIONS
+========================================== */
+
+.unit {
+    background: white;
+    border-radius: 13px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.07);
+    border: 1px solid #dbeafe;
+}
+
+.unit-button {
+    width: 100%;
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 19px 22px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.unit-button:hover {
+    background: #1d4ed8;
+}
+
+.unit-button span:last-child {
+    color: #facc15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.unit-content {
+    padding: 25px;
+    background: #ffffff;
+}
+
+
+/* ==========================================
+   7. UNIT PARTS
+========================================== */
+
+.lesson-section {
+    margin-bottom: 28px;
+}
+
+.lesson-section:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-section h3 {
+    color: #1e40af;
+    font-size: 20px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.lesson-section p {
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   8. NOTES
+========================================== */
+
+.unit-notes {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.unit-notes h4 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.unit-notes ul,
+.unit-notes ol {
+    padding-left: 22px;
+    margin: 10px 0;
+}
+
+.unit-notes li {
+    margin-bottom: 8px;
+}
+
+.formula-box {
+    background: #dbeafe;
+    color: #172554;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 17px;
+    font-weight: bold;
+    overflow-x: auto;
+}
+
+
+/* ==========================================
+   9. WORKED EXAMPLES
+========================================== */
+
+.worked-examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.example-card {
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.example-card h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.example-question {
+    background: #eff6ff;
+    padding: 13px;
+    border-radius: 7px;
+    font-weight: bold;
+    margin: 12px 0;
+    overflow-x: auto;
+}
+
+.step-button,
+.steps-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.step-button:hover,
+.steps-button:hover {
+    background: #1e40af;
+}
+
+.solution-steps,
+.steps {
+    background: #ecfdf5;
+    border-left: 4px solid #16a34a;
+    padding: 17px;
+    border-radius: 7px;
+    margin-top: 12px;
+}
+
+.solution-steps p,
+.steps p {
+    margin-bottom: 9px;
+}
+
+.answer {
+    color: #15803d;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+
+/* ==========================================
+   10. FUNCTION GRAPHS
+========================================== */
+
+.graph-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+}
+
+.graph-container h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.function-graph {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: white;
+}
+
+.graph-caption {
+    text-align: center;
+    color: #475569;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.graph-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.graph-legend span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.graph-legend .function-line {
+    width: 20px;
+    height: 4px;
+    background: #2563eb;
+}
+
+.graph-legend .inverse-line {
+    width: 20px;
+    height: 4px;
+    background: #eab308;
+}
+
+.graph-legend .reflection-line {
+    width: 20px;
+    height: 4px;
+    background: #16a34a;
+}
+
+
+/* ==========================================
+   11. PRACTICE QUESTIONS
+========================================== */
+
+.practice-questions,
+.practice-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.practice-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.practice-card h4 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.practice-card input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #94a3b8;
+    border-radius: 7px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.check-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.check-button:hover {
+    background: #2563eb;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   12. FINAL QUIZ
+========================================== */
+
+.quiz-section {
+    border: 2px solid #2563eb;
+}
+
+.quiz-section .unit-button {
+    background: #102a56;
+}
+
+.quiz-intro {
+    text-align: center;
+    padding: 15px;
+}
+
+.quiz-intro h3 {
+    color: #1e40af;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.quiz-intro p {
+    margin-bottom: 10px;
+}
+
+.action-button {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.action-button:hover {
+    background: #2563eb;
+}
+
+.quiz-progress {
+    background: #eff6ff;
+    padding: 17px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+}
+
+.quiz-progress p {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 10px;
+    background: #cbd5e1;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #2563eb;
+    transition: width 0.3s;
+}
+
+.quiz-question {
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 17px;
+}
+
+.quiz-question h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.quiz-option {
+    display: block;
+    background: white;
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    border-radius: 7px;
+    margin: 9px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+
+.quiz-option input {
+    margin-right: 9px;
+    accent-color: #1e40af;
+}
+
+#quizResults {
+    text-align: center;
+    background: #eff6ff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#quizResults h3 {
+    color: #1e40af;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+#finalScore {
+    font-size: 23px;
+    font-weight: bold;
+    color: #15803d;
+    margin: 12px 0;
+}
+
+
+/* ==========================================
+   13. FOOTER
+========================================== */
+
+.footer {
+    background: #102a56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   14. RESPONSIVE DESIGN - TABLETS
+========================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 16px 4%;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .welcome {
+        padding: 25px;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+    .unit-button {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .unit-content {
+        padding: 18px;
+    }
+
+    .lesson-section h3 {
+        font-size: 18px;
+    }
+
+}
+
+
+/* ==========================================
+   15. RESPONSIVE DESIGN - MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .site-title {
+        font-size: 23px;
+    }
+
+    .back-link {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .welcome {
+        padding: 21px;
+        border-radius: 12px;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .topic-navigation {
+        padding: 12px;
+        gap: 7px;
+    }
+
+    .topic-navigation a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .unit-button {
+        padding: 15px 13px;
+        font-size: 14px;
+    }
+
+    .unit-content {
+        padding: 14px;
+    }
+
+    .lesson-section h3 {
+        font-size: 17px;
+    }
+
+    .example-card,
+    .practice-card {
+        padding: 14px;
+    }
+
+    .formula-box {
+        font-size: 15px;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+
+    .quiz-question {
+        padding: 14px;
+    }
+
+    .graph-container {
+        padding: 8px;
+    }
+
+    .graph-caption {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 17px 10px;
+    }
+
+}
