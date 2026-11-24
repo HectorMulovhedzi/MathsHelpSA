@@ -784,3 +784,33 @@ footer {
     color: #dbeafe;
     line-height: 1.5;
 }
+/* AI TUTOR NAVIGATION LINK */
+
+.ai-tutor-link {
+    display: inline-block;
+    background: #facc15;
+    color: #102a56;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.ai-tutor-link:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .ai-tutor-link {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+}
