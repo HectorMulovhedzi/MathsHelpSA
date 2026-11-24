@@ -656,3 +656,28 @@ footer {
     }
 
 }
+.ai-tutor-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #102a56, #2563eb);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.ai-tutor-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(16, 42, 86, 0.2);
+}
+
+.ai-tutor-link small {
+    display: block;
+    margin-top: 5px;
+    color: #dbeafe;
+    line-height: 1.5;
+}

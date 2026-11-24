@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Maths Tutor | MathsHelpSA</title>
+
+    <link rel="stylesheet" href="ai-tutor.css">
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']]
+        },
+        options: {
+            skipHtmlTags: [
+                'script', 'noscript', 'style',
+                'textarea', 'pre', 'code'
+            ]
+        },
+        startup: {
+            typeset: false
+        }
+    };
+</script>
+
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">MathsHelpSA</a>
+
+        <a href="index.html" class="back-link">
+            ← Back to Home
+        </a>
+    </header>
+
+    <main class="chat-container">
+
+        <section class="welcome-section">
+            <div class="ai-icon">AI</div>
+
+            <h1>Maths AI Tutor</h1>
+
+            <p>
+                Your personal Mathematics learning assistant.
+                Ask questions, get explanations and learn step by step.
+            </p>
+        </section>
+
+        <section class="chat-box">
+
+            <div class="chat-header">
+                <div>
+                    <h2>MathsHelpSA Assistant</h2>
+                    <span class="online-status">
+                        ● AI Tutor
+                    </span>
+                </div>
+
+                <button id="clearChat" class="clear-button">
+                    Clear Chat
+                </button>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="message ai-message">
+                    <div class="message-avatar">AI</div>
+
+                    <div class="message-content">
+                        <p>
+                            Hello! Welcome to MathsHelpSA AI Tutor.
+                        </p>
+
+                        <p>
+                            I'm here to help you understand
+                            Grade 11 and Grade 12 Mathematics.
+                            What would you like to learn today?
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="suggestions">
+                <button class="suggestion"
+                    data-question="Explain quadratic equations step by step.">
+                    Quadratic equations
+                </button>
+
+                <button class="suggestion"
+                    data-question="Explain differentiation with examples.">
+                    Differentiation
+                </button>
+
+                <button class="suggestion"
+                    data-question="Teach me trigonometric identities.">
+                    Trigonometry
+                </button>
+            </div>
+
+            <form id="chatForm" class="chat-input-area">
+
+                <textarea
+                    id="userMessage"
+                    placeholder="Ask your Mathematics question..."
+                    rows="1"
+                    required
+                ></textarea>
+
+                <button type="submit" id="sendButton">
+                    Send
+                </button>
+
+            </form>
+
+            <p class="disclaimer">
+                MathsHelpSA AI can make mistakes.
+                Always check your calculations.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="ai-tutor.js"></script>
+
+</body>
+</html>
