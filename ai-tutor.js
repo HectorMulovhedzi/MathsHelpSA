@@ -1,47 +1,37 @@
 
-// ========================================
-// MATHSHELPSA AI TUTOR
-// ========================================
-
-// Get HTML elements
 const chatForm = document.getElementById("chatForm");
 const userMessage = document.getElementById("userMessage");
 const chatMessages = document.getElementById("chatMessages");
 const sendButton = document.getElementById("sendButton");
 const clearChat = document.getElementById("clearChat");
 
+const API_URL = "http://localhost:3000/api/chat";
 
-// ========================================
-// DISPLAY A MESSAGE
-// ========================================
-
-
-
+// Display a message in the chat
 function addMessage(message, sender) {
 
     const messageDiv = document.createElement("div");
+    messageDiv.classList.add("message");
 
-    messageDiv.classList.add("message", sender + "-message");
+    if (sender === "ai") {
+        messageDiv.classList.add("ai-message");
+    } else {
+        messageDiv.classList.add("user-message");
+    }
 
     const avatar = document.createElement("div");
     avatar.classList.add("message-avatar");
-    avatar.textContent = sender === "ai" ? "AI" : "YOU";
+    avatar.textContent = sender === "ai" ? "AI" : "You";
 
     const content = document.createElement("div");
     content.classList.add("message-content");
 
-    // Convert AI response into readable paragraphs
-    const lines = message.split("\n");
+    // Use textContent to safely display user messages.
+    // AI Markdown formatting can be added separately later.
+    const paragraph = document.createElement("p");
+    paragraph.textContent = message;
 
-    lines.forEach(line => {
-
-        const paragraph = document.createElement("p");
-
-        paragraph.textContent = line || "\u00A0";
-
-        content.appendChild(paragraph);
-
-    });
+    content.appendChild(paragraph);
 
     messageDiv.appendChild(avatar);
     messageDiv.appendChild(content);
@@ -50,163 +40,86 @@ function addMessage(message, sender) {
 
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // Format mathematical equations using MathJax
-    if (sender === "ai" && window.MathJax) {
-
+    // Render mathematical notation
+    if (window.MathJax) {
         MathJax.typesetPromise([content]).catch(error => {
             console.error("MathJax error:", error);
         });
-
     }
-
 }
 
 
-// ========================================
-// SHOW LOADING MESSAGE
-// ========================================
-
-function showLoading() {
-
-    const loading = document.createElement("div");
-
-    loading.id = "typingIndicator";
-    loading.classList.add("typing-indicator");
-
-    loading.textContent = "MathsHelpSA AI is thinking...";
-
-    chatMessages.appendChild(loading);
-
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-
-}
-
-
-function removeLoading() {
-
-    const loading = document.getElementById("typingIndicator");
-
-    if (loading) {
-        loading.remove();
-    }
-
-}
-
-
-// ========================================
-// SEND QUESTION TO AI BACKEND
-// ========================================
-
+// Send a question to the AI backend
 async function sendQuestion(question) {
 
-    if (!question.trim()) {
-        return;
-    }
-
-    // Display learner's question
     addMessage(question, "user");
 
-    userMessage.value = "";
-
     sendButton.disabled = true;
-    userMessage.disabled = true;
-
-    showLoading();
+    sendButton.textContent = "Thinking...";
 
     try {
 
-        const response = await fetch(
-            "http://127.0.0.1:3000/api/chat",
-            {
-                method: "POST",
+        const response = await fetch(API_URL, {
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+            method: "POST",
 
-                body: JSON.stringify({
-                    message: question
-                })
-            }
-        );
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                message: question
+            })
+
+        });
 
         const data = await response.json();
 
-        removeLoading();
-
         if (!response.ok) {
-
-            throw new Error(
-                data.error || "Something went wrong."
-            );
-
+            throw new Error(data.error || "Something went wrong.");
         }
 
-        // Display AI answer
         addMessage(data.reply, "ai");
 
     } catch (error) {
 
-        removeLoading();
+        console.error("AI Tutor error:", error);
 
         addMessage(
-            "Sorry, I could not connect to the AI Tutor. " +
-            "Please make sure your backend and Ollama are running.",
+            "Sorry, I could not connect to the AI Tutor. Please check that the backend and Ollama are running.",
             "ai"
         );
 
-        console.error("AI Tutor error:", error);
+    } finally {
+
+        sendButton.disabled = false;
+        sendButton.textContent = "Send";
 
     }
-
-    sendButton.disabled = false;
-    userMessage.disabled = false;
-
-    userMessage.focus();
 
 }
 
 
-// ========================================
-// SEND BUTTON
-// ========================================
-
+// Handle form submission
 chatForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
     const question = userMessage.value.trim();
 
+    if (!question) {
+        return;
+    }
+
+    userMessage.value = "";
+
     sendQuestion(question);
 
 });
 
 
-// ========================================
-// ENTER KEY TO SEND
-// SHIFT + ENTER = NEW LINE
-// ========================================
-
-userMessage.addEventListener("keydown", function(event) {
-
-    if (event.key === "Enter" && !event.shiftKey) {
-
-        event.preventDefault();
-
-        chatForm.requestSubmit();
-
-    }
-
-});
-
-
-// ========================================
-// SUGGESTED QUESTIONS
-// ========================================
-
-const suggestions = document.querySelectorAll(".suggestion");
-
-suggestions.forEach(button => {
+// Suggested questions
+document.querySelectorAll(".suggestion").forEach(button => {
 
     button.addEventListener("click", function() {
 
@@ -219,38 +132,24 @@ suggestions.forEach(button => {
 });
 
 
-// ========================================
-// CLEAR CHAT
-// ========================================
-
+// Clear chat
 clearChat.addEventListener("click", function() {
 
     chatMessages.innerHTML = "";
 
-    addMessage(
-        "Hello! Welcome back to MathsHelpSA AI Tutor. What Mathematics question can I help you with?",
-        "ai"
-    );
+    const welcomeMessage = document.createElement("div");
+
+    welcomeMessage.className = "message ai-message";
+
+    welcomeMessage.innerHTML = `
+        <div class="message-avatar">AI</div>
+
+        <div class="message-content">
+            <p>Hello! Welcome back to MathsHelpSA AI Tutor.</p>
+            <p>What Mathematics topic would you like help with?</p>
+        </div>
+    `;
+
+    chatMessages.appendChild(welcomeMessage);
 
 });
-
-
-// ========================================
-// AUTO-RESIZE TEXTAREA
-// ========================================
-
-userMessage.addEventListener("input", function() {
-
-    this.style.height = "auto";
-
-    this.style.height = Math.min(this.scrollHeight, 120) + "px";
-
-});
-
-
-// ========================================
-// WELCOME MESSAGE
-// ========================================
-
-console.log("MathsHelpSA AI Tutor loaded successfully!");
-
