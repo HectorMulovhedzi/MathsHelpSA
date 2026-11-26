@@ -2,12 +2,31 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(express.json());
+// Allow requests from the MathsHelpSA website
+app.use(cors({
+    origin: "https://hectormulovhedzi.github.io"
+}));
+
+// Limit the number of requests from each IP address
+const aiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    limit: 20, // Maximum 20 requests per IP
+    standardHeaders: "draft-8",
+    legacyHeaders: false,
+    message: {
+        error: "You have reached the question limit. Please try again later."
+    }
+});
+
+app.use(express.json({ limit: "10kb" }));
+
+// Apply the limit to the AI endpoint
+app.use("/api/chat", aiLimiter);
 
 app.get("/", (req, res) => {
     res.send("MathsHelpSA AI Backend is running!");

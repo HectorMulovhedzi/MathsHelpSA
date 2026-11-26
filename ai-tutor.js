@@ -5,8 +5,7 @@ const chatMessages = document.getElementById("chatMessages");
 const sendButton = document.getElementById("sendButton");
 const clearChat = document.getElementById("clearChat");
 
-const API_URL = "http://localhost:3000/api/chat";
-
+const API_URL = "https://junction-north-diagnosis-counting.trycloudflare.com/api/chat";
 // Display a message in the chat
 function addMessage(message, sender) {
 
